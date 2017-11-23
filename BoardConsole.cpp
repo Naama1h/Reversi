@@ -20,6 +20,8 @@ BoardConsole::BoardConsole(int size) {
     this->board[size/2][size/2] = White;
     this->board[(size/2)-1][size/2] = Black;
     this->board[size/2][(size/2)-1] = Black;
+    this->oCounter = 2;
+    this->xCounter = 2;
 }
 
 BoardConsole::BoardConsole() {
@@ -37,6 +39,8 @@ BoardConsole::BoardConsole() {
     this->board[this->size/2][this->size/2] = White;
     this->board[(this->size/2)-1][this->size/2] = Black;
     this->board[this->size/2][(this->size/2)-1] = Black;
+    this->oCounter = 2;
+    this->xCounter = 2;
 }
 
 BoardConsole::~BoardConsole() {
@@ -94,6 +98,7 @@ bool BoardConsole::ifFull() const {
 }
 
 celltype BoardConsole::whoWins() const {
+    /*
     int blackC = 0, whiteC = 0;
     for (int i = 0; i < this->size; i++) {
         for (int j = 0; j < this->size; j++) {
@@ -110,6 +115,13 @@ celltype BoardConsole::whoWins() const {
         return White;
     }
     return Empty;
+     */
+    if (this->xCounter > this->oCounter) {
+        return Black;
+    } else if (this->oCounter > this->xCounter) {
+        return White;
+    }
+    return Empty;
 }
 
 celltype** BoardConsole::getBoard() const {
@@ -118,4 +130,20 @@ celltype** BoardConsole::getBoard() const {
 
 int BoardConsole::getSize() const {
     return this->size;
+}
+
+int BoardConsole::getXCounter() const {
+    return this->xCounter;
+}
+
+int BoardConsole::getOCounter() const {
+    return this->oCounter;
+}
+
+void BoardConsole::setXCounter(int x) {
+    this->xCounter = x;
+}
+
+void BoardConsole::setOCounter(int o) {
+    this->oCounter = o;
 }

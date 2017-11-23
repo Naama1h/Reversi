@@ -142,9 +142,13 @@ bool StandartLogic::checkCells(Point p, int rowDelta, int coulmnDelta, celltype 
 }
 
 
-
 void StandartLogic::makeMove(Point p, int rowDelta, int columnDelta, celltype c) {
     this->board1->getBoard()[p.getX() - 1][p.getY() - 1] = c;
+    if (c == White) {
+        this->board1->setOCounter(this->board1->getOCounter() + 1);
+    } else if (c == Black) {
+        this->board1->setXCounter(this->board1->getXCounter() + 1);
+    }
     int currentRow = p.getX() - 1 + rowDelta, currentColunm = p.getY() - 1 + columnDelta;
     while (this->board1->getBoard()[currentRow][currentColunm] != c &&
            this->board1->getBoard()[currentRow][currentColunm] != Empty &&
@@ -153,6 +157,7 @@ void StandartLogic::makeMove(Point p, int rowDelta, int columnDelta, celltype c)
            currentColunm >= 0 &&
            currentRow >= 0) {
         this->board1->getBoard()[currentRow][currentColunm] = c;
+        updateCounter(c);
         currentColunm = currentColunm + columnDelta;
         currentRow = currentRow + rowDelta;
         if (currentColunm > this->board1->getSize() &&
@@ -165,13 +170,30 @@ void StandartLogic::makeMove(Point p, int rowDelta, int columnDelta, celltype c)
 }
 
 
+void StandartLogic::updateCounter(celltype c) {
+    if (c == White) {
+        this->board1->setOCounter(this->board1->getOCounter() + 1);
+        this->board1->setXCounter(this->board1->getXCounter() - 1);
+    } else if (c == Black) {
+        this->board1->setXCounter(this->board1->getXCounter() + 1);
+        this->board1->setOCounter(this->board1->getOCounter() - 1);
+    }
+}
+
+
 vector<Point>* StandartLogic::getOptionalCells() const {
     return this->optionalCells;
 }
+
 
 bool StandartLogic::ifHaveMoreMoves() const {
     if (this->optionalCells->size() == 0) {
         return false;
     }
     return true;
+}
+
+
+Board* StandartLogic::getBoard() const {
+    return this->board1;
 }

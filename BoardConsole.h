@@ -48,11 +48,30 @@ public:
      * @return int
      */
     virtual int getSize() const;
-
+    /**
+    * returnning the x counter.
+    * @return int
+    */
+    virtual int getXCounter() const;
+    /**
+    * returnning the o counter.
+    * @return int
+    */
+    virtual int getOCounter() const;
+    /**
+    * seturnning the x counter.
+    */
+    virtual void setXCounter(int x);
+    /**
+    * seturnning the o counter.
+    */
+    virtual void setOCounter(int o);
 private:
     // the members.
     int size;
     celltype** board;
+    int xCounter;
+    int oCounter;
 };
 
 

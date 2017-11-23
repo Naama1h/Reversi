@@ -11,10 +11,6 @@ enum celltype {Black, White, Empty};
 class Board {
 public:
     /*
-     * destructor.
-     */
-    virtual ~Board() {};
-    /*
      * printing the board. abstruct.
      */
     virtual void printBoard() const = 0;
@@ -38,11 +34,30 @@ public:
      * @return int
      */
     virtual int getSize() const = 0;
-
+    /**
+    * returnning the x counter.
+    * @return int
+    */
+    virtual int getXCounter() const = 0;
+    /**
+    * returnning the o counter.
+    * @return int
+    */
+    virtual int getOCounter() const = 0;
+    /**
+    * seturnning the x counter.
+    */
+    virtual void setXCounter(int x) = 0;
+    /**
+    * seturnning the o counter.
+    */
+    virtual void setOCounter(int o) = 0;
 private:
     // the members.
     int size;
     celltype** board;
+    int xCounter;
+    int oCounter;
 };
 
 

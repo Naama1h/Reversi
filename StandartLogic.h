@@ -83,7 +83,16 @@ public:
      * @return bool
      */
     virtual bool ifHaveMoreMoves() const;
-
+    /**
+     * return the board.
+     * @return Borad*
+     */
+    virtual Board* getBoard() const;
+    /**
+     * update the counter of c.
+     * @param c celltype
+     */
+    virtual void updateCounter(celltype c);
 private:
     // members.
     vector<Point>* optionalCells;

@@ -17,6 +17,11 @@ public:
      */
     BoardConsole(int size);
     /**
+     * copy constructor
+     * @param oldBoardConsole
+     */
+    BoardConsole(const BoardConsole &oldBoardConsole);
+    /**
      * constructor.
      */
     BoardConsole();

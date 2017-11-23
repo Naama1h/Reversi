@@ -90,11 +90,6 @@ public:
     * @return Borad*
     */
     virtual Board* getBoard() const = 0;
-    /**
-    * update the counter of c.
-    * @param c celltype
-    */
-    virtual void updateCounter(celltype c);
 private:
     // members.
     vector<Point>* optionalCells;

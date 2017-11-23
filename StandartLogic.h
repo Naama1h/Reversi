@@ -23,6 +23,7 @@ public:
      * @param board1
      */
     StandartLogic(Board* board1);
+    StandartLogic(const StandartLogic &standartLogic);
     /**
      * destructor.
      */
@@ -88,11 +89,7 @@ public:
      * @return Borad*
      */
     virtual Board* getBoard() const;
-    /**
-     * update the counter of c.
-     * @param c celltype
-     */
-    virtual void updateCounter(celltype c);
+
 private:
     // members.
     vector<Point>* optionalCells;

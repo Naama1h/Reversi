@@ -5,6 +5,21 @@
  * 315783217
  * 4/11/17
  */
+BoardConsole::BoardConsole(const BoardConsole &oldBoardConsole) {
+    this->size = oldBoardConsole.size;
+    this->board = new celltype*[size];
+    for (int i=0; i<size; i++) {
+        this->board[i] = new celltype[size];
+    }
+    for (int i=0; i<size; i++) {
+        for (int j=0; j<size; j++) {
+            this->board[i][j] = oldBoardConsole.getBoard()[i][j];
+        }
+    }
+    this->oCounter = oldBoardConsole.getOCounter();
+    this->xCounter = oldBoardConsole.getXCounter();
+}
+
 BoardConsole::BoardConsole(int size) {
     this->size = size;
     this->board = new celltype*[size];

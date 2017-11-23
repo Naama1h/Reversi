@@ -9,6 +9,7 @@
 #include "Player.h"
 #include "Point.h"
 #include "Board.h"
+#include "StandartLogic.h"
 #include <vector>
 
 class PersonP : public Player {
@@ -32,7 +33,7 @@ public:
      * @param options
      * @return Point
      */
-    virtual Point chooseCell(vector<Point>* options) const;
+    virtual Point chooseCell(vector<Point>* options, StandartLogic* logic) const;
     /**
      * get the member cellType1.
      * @return cellType

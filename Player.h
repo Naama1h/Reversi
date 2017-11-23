@@ -10,6 +10,8 @@
 #include <string>
 #include <vector>
 #include "Board.h"
+#include "Logic.h"
+#include "StandartLogic.h"
 using namespace std;
 //enum celltype {Black, White, Empty};
 
@@ -24,7 +26,7 @@ public:
      * @param options
      * @return Point
      */
-    virtual Point chooseCell(vector<Point>* options) const = 0;
+    virtual Point chooseCell(vector<Point>* options, StandartLogic* logic) const = 0;
     /**
      * get the member cellType1.
      * @return cellType

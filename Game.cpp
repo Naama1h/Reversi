@@ -37,7 +37,7 @@ void Game::run() {
         if (vec->size() != 0) {
             ifHaveMove = 0;
             while (!ifValid) {
-                Point p = player->chooseCell(vec);
+                Point p = player->chooseCell(vec, (StandartLogic*)this->logic);
                 ifValid = this->logic->ifCellValid(p, vec);
                 if (ifValid) {
                     this->logic->updateBoard(celltype(player->getCellType()), p);

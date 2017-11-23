@@ -14,7 +14,7 @@ PersonP::PersonP(string name, celltype celltype) {
 }
 
 
-Point PersonP::chooseCell(vector<Point>* options) const {
+Point PersonP::chooseCell(vector<Point>* options, StandartLogic* logic) const {
     cout << name << ": its your move." << endl;
     cout << "Your possible moves: ";
     for (int i = 0; i < options->size(); i++) {

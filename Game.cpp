@@ -43,6 +43,8 @@ void Game::run() {
                     this->logic->updateBoard(celltype(player->getCellType()), p);
                     this->board->printBoard();
                     cout << player->getName() << " played (" << p.getX() << "," << p.getY() << ")" << endl << endl;
+                    cout << "O has " << this->board->getOCounter() << " points" << endl;
+                    cout << "X has " << this->board->getXCounter() << " points" << endl << endl;
                 } else {
                     cout << "cant choose this cell" << endl;
                 }
@@ -57,6 +59,8 @@ void Game::run() {
         delete vec;
     }
     this->board->printBoard();
+    cout << "O has " << this->board->getOCounter() << " points" << endl;
+    cout << "X has " << this->board->getXCounter() << " points" << endl << endl;
     if ((this->board->whoWins() == Black && this->player1->getCellType() == Black) ||
         (this->board->whoWins() == White && this->player1->getCellType() == White)) {
         cout << this->player1->getName() << " wins!" << endl;

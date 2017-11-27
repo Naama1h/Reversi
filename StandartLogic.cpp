@@ -5,21 +5,30 @@
  */
 
 #include "StandartLogic.h"
+#include "BoardConsole.h"
 #include <iostream>
 StandartLogic::StandartLogic(Board* board) {
     this->board1 = board;
 }
 
 StandartLogic::~StandartLogic() {
-
+//    delete this->optionalCells;
 }
 
 StandartLogic::StandartLogic(const StandartLogic &standartLogic) {
-    this->optionalCells = new vector<Point>();
-//    for (int i =0; i < standartLogic.optionalCells->size(); i++) {
-//        this->optionalCells->push_back(standartLogic.optionalCells->at(i));
-//    }
-    this->board1 = standartLogic.getBoard();
+//    this->optionalCells = new vector<Point>();
+    this->board1 = new BoardConsole(); // pay attention that it isn't generic
+    this->board1->setOCounter(standartLogic.getBoard()->getOCounter());
+    this->board1->setXCounter(standartLogic.getBoard()->getXCounter());
+    for (int i=0; i<standartLogic.getBoard()->getSize(); i++) {
+        this->board1->getBoard()[i] = new celltype[standartLogic.getBoard()->getSize()];
+    }
+    for (int i=0; i<standartLogic.getBoard()->getSize(); i++) {
+        for (int j=0; j<standartLogic.getBoard()->getSize(); j++) {
+            this->board1->getBoard()[i][j] = standartLogic.getBoard()->getBoard()[i][j];
+        }
+    }
+//    delete &standartLogic;
 }
 
 vector<Point>* StandartLogic::findCells(celltype c) {
@@ -185,19 +194,20 @@ void StandartLogic::makeMove(Point p, int rowDelta, int columnDelta, celltype c)
 }
 
 
-vector<Point>* StandartLogic::getOptionalCells() const {
-    return this->optionalCells;
-}
+//vector<Point>* StandartLogic::getOptionalCells() const {
+//    return this->optionalCells;
+//}
 
 
-bool StandartLogic::ifHaveMoreMoves() const {
-    if (this->optionalCells->size() == 0) {
-        return false;
-    }
-    return true;
-}
+//bool StandartLogic::ifHaveMoreMoves() const {
+//    if (this->optionalCells->size() == 0) {
+//        return false;
+//    }
+//    return true;
+//}
 
 
 Board* StandartLogic::getBoard() const {
     return this->board1;
 }
+

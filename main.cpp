@@ -22,7 +22,7 @@ int main() {
     } else {
         rival = new ALPlayer("O", White);
     }
-    Board* board = new BoardConsole(8);
+    Board* board = new BoardConsole(4);
     PersonP* personP1 = new PersonP("X" ,Black);
     Logic* standartLogic = new StandartLogic(board);
     Game game(board, standartLogic, personP1, rival);

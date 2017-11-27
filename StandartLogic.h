@@ -52,7 +52,7 @@ public:
      * get of the member optionalCells
      * @return vector<Point>*
      */
-    virtual vector<Point>* getOptionalCells() const;
+//    virtual vector<Point>* getOptionalCells() const;
     /**
      * checking the which cells to change according to the cell that the player chose.
      * @param p
@@ -83,16 +83,17 @@ public:
      * checking if the player has more moves.
      * @return bool
      */
-    virtual bool ifHaveMoreMoves() const;
+//    virtual bool ifHaveMoreMoves() const;
     /**
      * return the board.
      * @return Borad*
      */
     virtual Board* getBoard() const;
 
+
 private:
     // members.
-    vector<Point>* optionalCells;
+//    vector<Point>* optionalCells;
     Board* board1;
 };
 

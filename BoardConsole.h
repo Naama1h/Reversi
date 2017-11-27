@@ -44,12 +44,12 @@ public:
      */
     virtual celltype whoWins() const;
     /**
-     * returnning the board.
+     * returning the board.
      * @return cellType**
      */
     virtual celltype** getBoard() const;
     /**
-     * returnning the size.
+     * returning the size.
      * @return int
      */
     virtual int getSize() const;
@@ -59,18 +59,22 @@ public:
     */
     virtual int getXCounter() const;
     /**
-    * returnning the o counter.
+    * returning the o counter.
     * @return int
     */
     virtual int getOCounter() const;
     /**
-    * seturnning the x counter.
+    * seting the x counter.
     */
     virtual void setXCounter(int x);
     /**
-    * seturnning the o counter.
+    * seting the o counter.
     */
     virtual void setOCounter(int o);
+    /**
+    * seting the o counter.
+    */
+    virtual void setSize(int size);
 private:
     // the members.
     int size;

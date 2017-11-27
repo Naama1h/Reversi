@@ -7,12 +7,12 @@
  */
 BoardConsole::BoardConsole(const BoardConsole &oldBoardConsole) {
     this->size = oldBoardConsole.size;
-    this->board = new celltype*[size];
+    this->board = new celltype*[this->size];
     for (int i=0; i<size; i++) {
-        this->board[i] = new celltype[size];
+        this->board[i] = new celltype[this->size];
     }
-    for (int i=0; i<size; i++) {
-        for (int j=0; j<size; j++) {
+    for (int i=0; i<this->size; i++) {
+        for (int j=0; j<this->size; j++) {
             this->board[i][j] = oldBoardConsole.getBoard()[i][j];
         }
     }
@@ -161,4 +161,8 @@ void BoardConsole::setXCounter(int x) {
 
 void BoardConsole::setOCounter(int o) {
     this->oCounter = o;
+}
+
+void BoardConsole::setSize(int size) {
+    this->size = size;
 }

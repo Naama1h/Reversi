@@ -127,6 +127,7 @@ celltype BoardConsole::whoWins() const {
     if (blackC > whiteC) {
         return Black;
 
+
     } else if (whiteC > blackC) {
         return White;
     }

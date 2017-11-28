@@ -6,7 +6,7 @@
 #define EX3_BOARD_TEST_H
 
 
-#include <gtest/gtest.h>
+#include "../gtest_src/gtest.h"
 
 class Board_test : public testing::Test {
 public:

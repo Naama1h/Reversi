@@ -1,11 +1,15 @@
-//
-// Created by tchelet on 29/11/17.
-//
+/*
+ * Naama Harshoshanim
+ * 315783217
+ * Tchelet Englman
+ * 208780585
+ */
 
 #ifndef EX3_PRINTCONSOLE_H
 #define EX3_PRINTCONSOLE_H
 
 #include "PrintMassage.h"
+using namespace std;
 
 class PrintConsole :  public PrintMassage {
 public:

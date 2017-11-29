@@ -1,5 +1,3 @@
-# Naama Harshoshanim
-# 315783217
 a.out: PrintConsole.o PrintMassage.h BoardConsole.o Board.h Game.o Logic.h PersonP.o Player.h Point.o StandartLogic.o AIPlayer.o main.o
 	g++ PrintConsole.o PrintMassage.h BoardConsole.o Board.h Game.o Logic.h PersonP.o Player.h Point.o StandartLogic.o AIPlayer.o main.o
 BoardConsole.o: BoardConsole.cpp BoardConsole.h

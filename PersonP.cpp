@@ -29,6 +29,7 @@ Point PersonP::chooseCell(vector<Point>* options, StandartLogic* logic) const {
     }
     cout << endl << endl;
      */
+    printer.enterMove();
     int x, y;
     cin >> x >> y;
     if (cin.fail()) {

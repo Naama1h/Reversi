@@ -1,9 +1,12 @@
-//
-// Created by tchelet on 29/11/17.
-//
+/*
+ * Naama Harshoshanim
+ * 315783217
+ * Tchelet Englman
+ * 208780585
+ */
 
 #include "PrintConsole.h"
-#include <iostream>
+using namespace std;
 
 void PrintConsole::counter(celltype celltype1 ,int counter1) {
     if(celltype1 == White) {
@@ -43,7 +46,7 @@ void PrintConsole::itsYourMove(string playerName) {
 
 void PrintConsole::possibleMoves(vector<Point>* options) {
     cout << "Your possible moves: ";
-    for (int i = 0; i < options->size(); i++) {
+    for(int i = 0; i < options->size(); i++) {
         cout << "(" << options->at(i).getX() << ","
              << options->at(i).getY() << ") ";
     }

@@ -1,7 +1,8 @@
 /*
  * Naama Harshoshanim
  * 315783217
- * 4/11/17
+ * Tchelet Englman
+ * 208780585
  */
 
 #ifndef LOGIC_H

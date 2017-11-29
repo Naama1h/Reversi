@@ -1,6 +1,9 @@
-//
-// Created by naama on 11/23/17.
-//
+/*
+ * Naama Harshoshanim
+ * 315783217
+ * Tchelet Englman
+ * 208780585
+ */
 
 #ifndef ALPLAYER_H
 #define ALPLAYER_H
@@ -9,23 +12,22 @@
 #include "Board.h"
 #include <vector>
 
-
-class ALPlayer : public Player {
+class AIPlayer : public Player {
 public:
     /**
      * constructor.
      */
-    ALPlayer() {};
+    AIPlayer() {};
     /**
      * constructor.
      * @param name
      * @param celltype1
      */
-    ALPlayer(string name, celltype celltype1);
+    AIPlayer(string name, celltype celltype1);
     /**
      * destructor.
      */
-    virtual ~ALPlayer() {};
+    virtual ~AIPlayer() {};
     /**
      * choosing cell from the vector of the optional cells.
      * @param options
@@ -50,4 +52,4 @@ private:
 };
 
 
-#endif //ALPLAYER_H
+#endif //AIPLAYER_H

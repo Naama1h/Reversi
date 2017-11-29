@@ -1,10 +1,13 @@
-#ifndef PLAYER_H
-#define PLAYER_H
 /*
  * Naama Harshoshanim
  * 315783217
- * 4/11/17
+ * Tchelet Englman
+ * 208780585
  */
+
+#ifndef PLAYER_H
+#define PLAYER_H
+
 #include <iostream>
 #include "Point.h"
 #include <string>
@@ -12,6 +15,7 @@
 #include "Board.h"
 #include "Logic.h"
 #include "StandartLogic.h"
+
 using namespace std;
 //enum celltype {Black, White, Empty};
 

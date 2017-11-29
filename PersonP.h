@@ -1,7 +1,8 @@
 /*
  * Naama Harshoshanim
  * 315783217
- * 4/11/17
+ * Tchelet Englman
+ * 208780585
  */
 
 #ifndef PERSONP_H
@@ -11,6 +12,7 @@
 #include "Board.h"
 #include "StandartLogic.h"
 #include <vector>
+#include "PrintMassage.h"
 
 class PersonP : public Player {
 public:

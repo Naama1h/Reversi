@@ -1,7 +1,8 @@
 /*
  * Naama Harshoshanim
  * 315783217
- * 4/11/17
+ * Tchelet Englman
+ * 208780585
  */
 
 #ifndef STANDARTLOGIC_H
@@ -23,7 +24,7 @@ public:
      * @param board1
      */
     StandartLogic(Board* board1);
-    StandartLogic(const StandartLogic &standartLogic);
+    //StandartLogic(const StandartLogic &standartLogic);
     /**
      * destructor.
      */

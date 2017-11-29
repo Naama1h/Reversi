@@ -1,7 +1,8 @@
 /*
  * Naama Harshoshanim
  * 315783217
- * 4/11/17
+ * Tchelet Englman
+ * 208780585
  */
 
 #include "StandartLogic.h"
@@ -15,6 +16,7 @@ StandartLogic::~StandartLogic() {
 //    delete this->optionalCells;
 }
 
+/*
 StandartLogic::StandartLogic(const StandartLogic &standartLogic) {
 //    this->optionalCells = new vector<Point>();
     this->board1 = new BoardConsole(); // pay attention that it isn't generic
@@ -30,6 +32,7 @@ StandartLogic::StandartLogic(const StandartLogic &standartLogic) {
     }
 //    delete &standartLogic;
 }
+ */
 
 vector<Point>* StandartLogic::findCells(celltype c) {
     vector<Point>* vector1 = new vector<Point>();

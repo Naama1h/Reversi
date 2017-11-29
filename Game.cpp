@@ -1,9 +1,11 @@
 /*
  * Naama Harshoshanim
  * 315783217
- * 4/11/17
+ * Tchelet Englman
+ * 208780585
  */
 #include "Game.h"
+#include "PrintConsole.h"
 
 Game::Game(Board* board, Logic* logic, Player* p1, Player* p2) {
     this->logic = logic;
@@ -20,9 +22,10 @@ Game::~Game() {
 }
 
 void Game::run() {
-     int playerTrace = 1, ifHaveMove = 0;
-     bool ifValid;
-     Player* player;
+    int playerTrace = 1, ifHaveMove = 0;
+    PrintConsole printer;
+    bool ifValid;
+    Player* player;
     this->board->printBoard();
     while (!this->board->ifFull() && ifHaveMove != 2) {
         ifValid = false;
@@ -42,16 +45,22 @@ void Game::run() {
                 if (ifValid) {
                     this->logic->updateBoard(celltype(player->getCellType()), p);
                     this->board->printBoard();
-                    cout << player->getName() << " played (" << p.getX() << "," << p.getY() << ")" << endl << endl;
-                    cout << "O has " << this->board->getOCounter() << " points" << endl;
-                    cout << "X has " << this->board->getXCounter() << " points" << endl << endl;
+                    printer.wasMoves(player,p);
+                    printer.counter(White, this->board->getOCounter());
+                    printer.counter(Black, this->board->getXCounter());
+                    //cout << player->getName() << " played (" << p.getX() << "," << p.getY() << ")" << endl << endl;
+                    //cout << "O has " << this->board->getOCounter() << " points" << endl;
+                    //cout << "X has " << this->board->getXCounter() << " points" << endl << endl;
                 } else {
-                    cout << "cant choose this cell" << endl;
+                    printer.cantChooseThisCell();
+                    //cout << "cant choose this cell" << endl;
                 }
             }
         } else {
-            cout << player->getName() << ": its your move." << endl;
-            cout << "No possible moves. Play passes back to the other player. Press any key to continue." << endl;
+            printer.itsYourMove(player->getName());
+            printer.NoPossibleMoves();
+            //cout << player->getName() << ": its your move." << endl;
+            //cout << "No possible moves. Play passes back to the other player. Press any key to continue." << endl;
             ifHaveMove++;
             string in;
             cin >> in;
@@ -59,8 +68,12 @@ void Game::run() {
         delete vec;
     }
     this->board->printBoard();
-    cout << "O has " << this->board->getOCounter() << " points" << endl;
-    cout << "X has " << this->board->getXCounter() << " points" << endl << endl;
+    printer.counter(White, this->board->getOCounter());
+    printer.counter(Black, this->board->getXCounter());
+    //cout << "O has " << this->board->getOCounter() << " points" << endl;
+    //cout << "X has " << this->board->getXCounter() << " points" << endl << endl;
+    printer.winner(board, player1, player2);
+    /**
     if ((this->board->whoWins() == Black && this->player1->getCellType() == Black) ||
         (this->board->whoWins() == White && this->player1->getCellType() == White)) {
         cout << this->player1->getName() << " wins!" << endl;
@@ -70,4 +83,5 @@ void Game::run() {
     } else {
         cout << "its a tie!" << endl;
     }
+     */
 }

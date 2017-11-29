@@ -5,19 +5,18 @@
  * 208780585
  */
 
-#ifndef EX3_BOARD_TEST_H
-#define EX3_BOARD_TEST_H
-
+#ifndef EX3_PERSONP_TESET_H
+#define EX3_PERSONP_TESET_H
 
 #include "../gtest_src/gtest.h"
 
-class Board_test : public testing::Test {
+class PersonP_teset : public testing::Test {
 public:
-    Board_test();
+    PersonP_teset();
     virtual void SetUp();
     virtual void TearDown();
 
 };
 
 
-#endif //EX3_BOARD_TEST_H
+#endif //EX3_PERSONP_TESET_H

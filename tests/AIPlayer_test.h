@@ -5,19 +5,19 @@
  * 208780585
  */
 
-#ifndef EX3_BOARD_TEST_H
-#define EX3_BOARD_TEST_H
+#ifndef EX3_AIPLAYER_TEST_H
+#define EX3_AIPLAYER_TEST_H
 
 
 #include "../gtest_src/gtest.h"
 
-class Board_test : public testing::Test {
+class AIPlayer_test : public testing::Test {
 public:
-    Board_test();
+    AIPlayer_test();
     virtual void SetUp();
     virtual void TearDown();
 
 };
 
 
-#endif //EX3_BOARD_TEST_H
+#endif //EX3_AIPLAYER_TEST_H

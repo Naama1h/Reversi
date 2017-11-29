@@ -5,31 +5,29 @@
  * 208780585
  */
 
-#ifndef PERSONP_H
-#define PERSONP_H
+#ifndef ALPLAYER_H
+#define ALPLAYER_H
 #include "Player.h"
 #include "Point.h"
 #include "Board.h"
-#include "StandartLogic.h"
 #include <vector>
-#include "PrintMassage.h"
 
-class PersonP : public Player {
+class AIPlayer : public Player {
 public:
     /**
      * constructor.
      */
-    PersonP() {};
+    AIPlayer() {};
     /**
      * constructor.
      * @param name
      * @param celltype1
      */
-    PersonP(string name, celltype celltype1);
+    AIPlayer(string name, celltype celltype1);
     /**
      * destructor.
      */
-    virtual ~PersonP() {};
+    virtual ~AIPlayer() {};
     /**
      * choosing cell from the vector of the optional cells.
      * @param options
@@ -54,4 +52,4 @@ private:
 };
 
 
-#endif //PERSONP_H
+#endif //AIPLAYER_H

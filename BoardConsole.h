@@ -1,10 +1,13 @@
-#ifndef BOARD_H_
-#define BOARD_H_
 /*
  * Naama Harshoshanim
  * 315783217
- * 4/11/17
+ * Tchelet Englman
+ * 208780585
  */
+
+#ifndef BOARD_H_
+#define BOARD_H_
+
 #include <string>
 #include "Board.h"
 using namespace std;
@@ -15,16 +18,16 @@ public:
      * constructor.
      * @param size
      */
-    BoardConsole(int size);
+    BoardConsole(int size = 8);
     /**
      * copy constructor
      * @param oldBoardConsole
      */
-    BoardConsole(const BoardConsole &oldBoardConsole);
+    //BoardConsole(const BoardConsole &oldBoardConsole);
     /**
      * constructor.
      */
-    BoardConsole();
+    //BoardConsole();
     /**
      * destructor.
      */
@@ -75,6 +78,12 @@ public:
     * seting the o counter.
     */
     virtual void setSize(int size);
+    /**
+    * implementing ==.
+    * @param b BoardConsole
+    * @return bool
+    */
+    bool operator ==(const BoardConsole &b) const;
 private:
     // the members.
     int size;

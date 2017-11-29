@@ -1,6 +1,9 @@
-//
-// Created by naama on 11/28/17.
-//
+/*
+ * Naama Harshoshanim
+ * 315783217
+ * Tchelet Englman
+ * 208780585
+ */
 
 #include "StandartLogic_test.h"
 #include "../BoardConsole.h"
@@ -24,13 +27,15 @@ TEST_F(StandartLogic_test, findCells_check) {
     vector1->push_back(p4);
     vector<Point>* vector2;
     vector2 = standartLogic.findCells(Black);
-    ASSERT_EQ(vector1, vector2); // implement operator == in Point
+    ASSERT_EQ(*vector1, *vector2); // implement operator == in Point
     delete vector1;
     delete vector2;
 }
 
 TEST_F(StandartLogic_test, updateBoard_check) {
     BoardConsole boardConsole1(4);
+    boardConsole1.setXCounter(4);
+    boardConsole1.setOCounter(1);
     boardConsole1.getBoard()[0][1] = Black;
     boardConsole1.getBoard()[1][1] = Black;
     BoardConsole boardConsole2(4);
@@ -44,6 +49,6 @@ TEST_F(StandartLogic_test, checkCells_check) {
     BoardConsole boardConsole1(4);
     StandartLogic standartLogic(&boardConsole1);
     Point p(1, 2);
-    bool condition = standartLogic.checkCells(p, 1, 1, Black);
+    bool condition = standartLogic.checkCells(p, 1, 0, Black);
     ASSERT_TRUE(condition);
 }

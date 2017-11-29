@@ -1,7 +1,8 @@
 /*
  * Naama Harshoshanim
  * 315783217
- * 4/11/17
+ * Tchelet Englman
+ * 208780585
  */
 
 #ifndef BOARD_H
@@ -52,6 +53,12 @@ public:
     * seturnning the o counter.
     */
     virtual void setOCounter(int o) = 0;
+    /**
+    * implementing ==.
+    * @param b Board
+    * @return bool
+    */
+    //virtual bool operator ==(const Board &b) const = 0;
 private:
     // the members.
     int size;

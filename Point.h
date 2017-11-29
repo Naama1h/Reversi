@@ -1,7 +1,8 @@
 /*
  * Naama Harshoshanim
  * 315783217
- * 4/11/17
+ * Tchelet Englman
+ * 208780585
  */
 
 #ifndef POINT_H
@@ -44,7 +45,12 @@ public:
      * @return int
      */
     int getY() const ;
-
+    /**
+     * implementing ==.
+     * @param p point
+     * @return bool
+     */
+    bool operator ==(const Point &p) const;
 private:
     // members.
     int x;

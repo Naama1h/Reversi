@@ -1,11 +1,13 @@
 /*
  * Naama Harshoshanim
  * 315783217
- * 4/11/17
+ * Tchelet Englman
+ * 208780585
  */
 
 #include <vector>
 #include "PersonP.h"
+#include "PrintConsole.h"
 #include <limits>
 
 PersonP::PersonP(string name, celltype celltype) {
@@ -15,6 +17,10 @@ PersonP::PersonP(string name, celltype celltype) {
 
 
 Point PersonP::chooseCell(vector<Point>* options, StandartLogic* logic) const {
+    PrintConsole printer;
+    printer.itsYourMove(this->getName());
+    printer.possibleMoves(options);
+    /**
     cout << name << ": its your move." << endl;
     cout << "Your possible moves: ";
     for (int i = 0; i < options->size(); i++) {
@@ -22,14 +28,15 @@ Point PersonP::chooseCell(vector<Point>* options, StandartLogic* logic) const {
              << options->at(i).getY() << ") ";
     }
     cout << endl << endl;
-    cout << "Please enter your move row col:" << endl;
+     */
     int x, y;
     cin >> x >> y;
     if (cin.fail()) {
         cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //skip bad input
     }
     // user didn't input a number
-    cout << "Please enter numbers only." << endl;
+    printer.onlyNumbers();
+    //cout << "Please enter numbers only." << endl;
     cin.clear(); // reset failbit
     cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //skip bad input
     Point cell(x, y);

@@ -1,10 +1,15 @@
-#include "BoardConsole.h"
-#include <iostream>
 /*
  * Naama Harshoshanim
  * 315783217
- * 4/11/17
+ * Tchelet Englman
+ * 208780585
  */
+
+#include "BoardConsole.h"
+#include <iostream>
+using namespace std;
+
+/*
 BoardConsole::BoardConsole(const BoardConsole &oldBoardConsole) {
     this->size = oldBoardConsole.size;
     this->board = new celltype*[this->size];
@@ -19,15 +24,16 @@ BoardConsole::BoardConsole(const BoardConsole &oldBoardConsole) {
     this->oCounter = oldBoardConsole.getOCounter();
     this->xCounter = oldBoardConsole.getXCounter();
 }
+ */
 
 BoardConsole::BoardConsole(int size) {
     this->size = size;
     this->board = new celltype*[size];
-    for (int i=0; i<size; i++) {
+    for (int i=0; i < size; i++) {
         this->board[i] = new celltype[size];
     }
-    for (int i=0; i<size; i++) {
-        for (int j=0; j<size; j++) {
+    for (int i=0; i < size; i++) {
+        for (int j=0; j < size; j++) {
             this->board[i][j] = Empty;
         }
     }
@@ -38,7 +44,7 @@ BoardConsole::BoardConsole(int size) {
     this->oCounter = 2;
     this->xCounter = 2;
 }
-
+/*
 BoardConsole::BoardConsole() {
     this->size = 8;
     this->board = new celltype*[this->size];
@@ -57,9 +63,9 @@ BoardConsole::BoardConsole() {
     this->oCounter = 2;
     this->xCounter = 2;
 }
-
+*/
 BoardConsole::~BoardConsole() {
-    for (int i=0; i<this->size; i++) {
+    for (int i=0; i < this->size; i++) {
         delete[] this->board[i];
     }
     delete[] this->board;
@@ -93,7 +99,7 @@ void BoardConsole::printBoard() const {
             cout << " " << var << " |";
         }
         cout << endl;
-        for (int i=0; i<(size*4)+2; i++) {
+        for (int j=0; j<(size*4)+2; j++) {
             cout << "-";
         }
         cout << endl;
@@ -126,8 +132,6 @@ celltype BoardConsole::whoWins() const {
     }
     if (blackC > whiteC) {
         return Black;
-
-
     } else if (whiteC > blackC) {
         return White;
     }
@@ -167,4 +171,22 @@ void BoardConsole::setOCounter(int o) {
 
 void BoardConsole::setSize(int size) {
     this->size = size;
+}
+
+bool BoardConsole:: operator ==(const BoardConsole &b) const {
+    bool check = true;
+    if(this->getSize() == b.getSize() && this->oCounter == b.getOCounter()
+            && this->xCounter == b.getXCounter()) {
+        for(int i = 0; i < this->getSize(); i++) {
+            for(int j = 0; j < this->getSize(); j++) {
+                if(this->board[i][j] != b.getBoard()[i][j]) {
+                    check = false;
+                    break;
+                }
+            }
+        }
+    } else {
+        return false;
+    }
+    return check;
 }

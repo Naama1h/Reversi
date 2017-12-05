@@ -24,7 +24,6 @@ public:
      * @param board1
      */
     StandartLogic(Board* board1);
-    //StandartLogic(const StandartLogic &standartLogic);
     /**
      * destructor.
      */
@@ -49,11 +48,6 @@ public:
      * @return bool
      */
     virtual bool ifCellValid(Point p, vector<Point>* vec);
-    /**
-     * get of the member optionalCells
-     * @return vector<Point>*
-     */
-//    virtual vector<Point>* getOptionalCells() const;
     /**
      * checking the which cells to change according to the cell that the player chose.
      * @param p
@@ -81,11 +75,6 @@ public:
      */
     virtual bool ifCellAnOption(Point p, int rowDelta, int columnDelta, celltype c) const;
     /**
-     * checking if the player has more moves.
-     * @return bool
-     */
-//    virtual bool ifHaveMoreMoves() const;
-    /**
      * return the board.
      * @return Borad*
      */
@@ -94,7 +83,6 @@ public:
 
 private:
     // members.
-//    vector<Point>* optionalCells;
     Board* board1;
 };
 

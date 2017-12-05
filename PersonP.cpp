@@ -20,15 +20,6 @@ Point PersonP::chooseCell(vector<Point>* options, StandartLogic* logic) const {
     PrintConsole printer;
     printer.itsYourMove(this->getName());
     printer.possibleMoves(options);
-    /**
-    cout << name << ": its your move." << endl;
-    cout << "Your possible moves: ";
-    for (int i = 0; i < options->size(); i++) {
-        cout << "(" << options->at(i).getX() << ","
-             << options->at(i).getY() << ") ";
-    }
-    cout << endl << endl;
-     */
     printer.enterMove();
     int x, y;
     cin >> x >> y;
@@ -36,8 +27,7 @@ Point PersonP::chooseCell(vector<Point>* options, StandartLogic* logic) const {
         cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //skip bad input
     }
     // user didn't input a number
-    printer.onlyNumbers();
-    //cout << "Please enter numbers only." << endl;
+    printer.onlyNumbers();;
     cin.clear(); // reset failbit
     cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //skip bad input
     Point cell(x, y);

@@ -9,23 +9,6 @@
 #include <iostream>
 using namespace std;
 
-/*
-BoardConsole::BoardConsole(const BoardConsole &oldBoardConsole) {
-    this->size = oldBoardConsole.size;
-    this->board = new celltype*[this->size];
-    for (int i=0; i<size; i++) {
-        this->board[i] = new celltype[this->size];
-    }
-    for (int i=0; i<this->size; i++) {
-        for (int j=0; j<this->size; j++) {
-            this->board[i][j] = oldBoardConsole.getBoard()[i][j];
-        }
-    }
-    this->oCounter = oldBoardConsole.getOCounter();
-    this->xCounter = oldBoardConsole.getXCounter();
-}
- */
-
 BoardConsole::BoardConsole(int size) {
     this->size = size;
     this->board = new celltype*[size];
@@ -44,26 +27,7 @@ BoardConsole::BoardConsole(int size) {
     this->oCounter = 2;
     this->xCounter = 2;
 }
-/*
-BoardConsole::BoardConsole() {
-    this->size = 8;
-    this->board = new celltype*[this->size];
-    for (int i=0; i<this->size; i++) {
-        this->board[i] = new celltype[this->size];
-    }
-    for (int i=0; i<this->size; i++) {
-        for (int j=0; j<this->size; j++) {
-            this->board[i][j] = Empty;
-        }
-    }
-    this->board[(this->size/2)-1][(this->size/2)-1] = White;
-    this->board[this->size/2][this->size/2] = White;
-    this->board[(this->size/2)-1][this->size/2] = Black;
-    this->board[this->size/2][(this->size/2)-1] = Black;
-    this->oCounter = 2;
-    this->xCounter = 2;
-}
-*/
+
 BoardConsole::~BoardConsole() {
     for (int i=0; i < this->size; i++) {
         delete[] this->board[i];
@@ -119,24 +83,6 @@ bool BoardConsole::ifFull() const {
 }
 
 celltype BoardConsole::whoWins() const {
-    /*
-    int blackC = 0, whiteC = 0;
-    for (int i = 0; i < this->size; i++) {
-        for (int j = 0; j < this->size; j++) {
-            if (this->board[i][j] == White) {
-                whiteC++;
-            } else if (this->board[i][j] == Black) {
-                blackC++;
-            }
-        }
-    }
-    if (blackC > whiteC) {
-        return Black;
-    } else if (whiteC > blackC) {
-        return White;
-    }
-    return Empty;
-     */
     if (this->xCounter > this->oCounter) {
         return Black;
     } else if (this->oCounter > this->xCounter) {
@@ -176,7 +122,7 @@ void BoardConsole::setSize(int size) {
 bool BoardConsole:: operator ==(const BoardConsole &b) const {
     bool check = true;
     if(this->getSize() == b.getSize() && this->oCounter == b.getOCounter()
-            && this->xCounter == b.getXCounter()) {
+       && this->xCounter == b.getXCounter()) {
         for(int i = 0; i < this->getSize(); i++) {
             for(int j = 0; j < this->getSize(); j++) {
                 if(this->board[i][j] != b.getBoard()[i][j]) {

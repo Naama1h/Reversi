@@ -48,19 +48,13 @@ void Game::run() {
                     printer.wasMoves(player,p);
                     printer.counter(White, this->board->getOCounter());
                     printer.counter(Black, this->board->getXCounter());
-                    //cout << player->getName() << " played (" << p.getX() << "," << p.getY() << ")" << endl << endl;
-                    //cout << "O has " << this->board->getOCounter() << " points" << endl;
-                    //cout << "X has " << this->board->getXCounter() << " points" << endl << endl;
                 } else {
                     printer.cantChooseThisCell();
-                    //cout << "cant choose this cell" << endl;
                 }
             }
         } else {
             printer.itsYourMove(player->getName());
             printer.NoPossibleMoves();
-            //cout << player->getName() << ": its your move." << endl;
-            //cout << "No possible moves. Play passes back to the other player. Press any key to continue." << endl;
             ifHaveMove++;
             string in;
             cin >> in;
@@ -70,18 +64,5 @@ void Game::run() {
     this->board->printBoard();
     printer.counter(White, this->board->getOCounter());
     printer.counter(Black, this->board->getXCounter());
-    //cout << "O has " << this->board->getOCounter() << " points" << endl;
-    //cout << "X has " << this->board->getXCounter() << " points" << endl << endl;
     printer.winner(board, player1, player2);
-    /**
-    if ((this->board->whoWins() == Black && this->player1->getCellType() == Black) ||
-        (this->board->whoWins() == White && this->player1->getCellType() == White)) {
-        cout << this->player1->getName() << " wins!" << endl;
-    } else if ((this->board->whoWins() == Black && this->player2->getCellType() == Black) ||
-               (this->board->whoWins() == White && this->player2->getCellType() == White)){
-        cout << this->player2->getName() << " wins!" << endl;
-    } else {
-        cout << "its a tie!" << endl;
-    }
-     */
 }

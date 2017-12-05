@@ -8,10 +8,7 @@
 #include <iostream>
 #include "BoardConsole.h"
 #include "PersonP.h"
-#include "StandartLogic.h"
-#include "Logic.h"
 #include "Game.h"
-#include "Board.h"
 #include "AIPlayer.h"
 
 int main() {
@@ -27,7 +24,8 @@ int main() {
     Board* board = new BoardConsole(4);
     PersonP* personP1 = new PersonP("X" ,Black);
     Logic* standartLogic = new StandartLogic(board);
-    Game game(board, standartLogic, personP1, rival);
-    game.run();
+    Game* game = new Game(board, standartLogic, personP1, rival);
+    game->run();
+    delete game;
     return 0;
 }

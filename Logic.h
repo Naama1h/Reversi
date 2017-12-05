@@ -51,11 +51,6 @@ public:
      */
     virtual bool ifCellValid(Point p, vector<Point>* vec) = 0;
     /**
-     * get of the member optionalCells
-     * @return vector<Point>*
-     */
-//    virtual vector<Point>* getOptionalCells() const = 0;
-    /**
      * checking the which cells to change according to the cell that the player chose.
      * @param p
      * @param rowDelta
@@ -82,18 +77,12 @@ public:
      */
     virtual bool ifCellAnOption(Point p, int rowDelta, int columnDelta, celltype c) const = 0;
     /**
-     * checking if the player has more moves.
-     * @return bool
-     */
-//    virtual bool ifHaveMoreMoves() const = 0;
-    /**
     * return the board.
     * @return Borad*
     */
     virtual Board* getBoard() const = 0;
 private:
     // members.
-//    vector<Point>* optionalCells;
     Board* board;
 };
 

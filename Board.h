@@ -11,6 +11,7 @@ enum celltype {Black, White, Empty};
 
 class Board {
 public:
+    virtual ~Board() {};
     /*
      * printing the board. abstruct.
      */

@@ -20,15 +20,6 @@ public:
      */
     BoardConsole(int size = 8);
     /**
-     * copy constructor
-     * @param oldBoardConsole
-     */
-    //BoardConsole(const BoardConsole &oldBoardConsole);
-    /**
-     * constructor.
-     */
-    //BoardConsole();
-    /**
      * destructor.
      */
     virtual ~BoardConsole();

@@ -7,7 +7,6 @@
 
 #include "AIPlayer.h"
 #include "BoardConsole.h"
-#include "StandartLogic.h"
 
 AIPlayer::AIPlayer(string name, celltype celltype1) {
     this->name = name;

@@ -6,8 +6,6 @@
  */
 
 #include "StandartLogic.h"
-#include "BoardConsole.h"
-#include <iostream>
 StandartLogic::StandartLogic(Board* board) {
     this->board1 = board;
 }
@@ -15,24 +13,6 @@ StandartLogic::StandartLogic(Board* board) {
 StandartLogic::~StandartLogic() {
 //    delete this->optionalCells;
 }
-
-/*
-StandartLogic::StandartLogic(const StandartLogic &standartLogic) {
-//    this->optionalCells = new vector<Point>();
-    this->board1 = new BoardConsole(); // pay attention that it isn't generic
-    this->board1->setOCounter(standartLogic.getBoard()->getOCounter());
-    this->board1->setXCounter(standartLogic.getBoard()->getXCounter());
-    for (int i=0; i<standartLogic.getBoard()->getSize(); i++) {
-        this->board1->getBoard()[i] = new celltype[standartLogic.getBoard()->getSize()];
-    }
-    for (int i=0; i<standartLogic.getBoard()->getSize(); i++) {
-        for (int j=0; j<standartLogic.getBoard()->getSize(); j++) {
-            this->board1->getBoard()[i][j] = standartLogic.getBoard()->getBoard()[i][j];
-        }
-    }
-//    delete &standartLogic;
-}
- */
 
 vector<Point>* StandartLogic::findCells(celltype c) {
     vector<Point>* vector1 = new vector<Point>();
@@ -67,14 +47,14 @@ bool StandartLogic::ifCellAnOption(Point p, int rowDelta, int columnDelta, cellt
     int currentRow = p.getX() - 1 + rowDelta;
     int currentColumn = p.getY() - 1 + columnDelta;
     if ((currentColumn >= 0) && (currentRow >= 0) &&
-            (currentColumn < this->board1->getSize()) &&
-            (currentRow < this->board1->getSize())) {
+        (currentColumn < this->board1->getSize()) &&
+        (currentRow < this->board1->getSize())) {
         while (this->board1->getBoard()[currentRow][currentColumn] != c &&
                this->board1->getBoard()[currentRow][currentColumn] != Empty &&
-                currentColumn < this->board1->getSize() &&
-                currentRow < this->board1->getSize() &&
-                currentColumn >= 0 &&
-                currentRow >= 0) {
+               currentColumn < this->board1->getSize() &&
+               currentRow < this->board1->getSize() &&
+               currentColumn >= 0 &&
+               currentRow >= 0) {
             currentColumn = currentColumn + columnDelta;
             currentRow = currentRow + rowDelta;
             if (currentColumn < this->board1->getSize() &&
@@ -196,21 +176,6 @@ void StandartLogic::makeMove(Point p, int rowDelta, int columnDelta, celltype c)
     }
 }
 
-
-//vector<Point>* StandartLogic::getOptionalCells() const {
-//    return this->optionalCells;
-//}
-
-
-//bool StandartLogic::ifHaveMoreMoves() const {
-//    if (this->optionalCells->size() == 0) {
-//        return false;
-//    }
-//    return true;
-//}
-
-
 Board* StandartLogic::getBoard() const {
     return this->board1;
 }
-

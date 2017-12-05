@@ -11,7 +11,6 @@ StandartLogic::StandartLogic(Board* board) {
 }
 
 StandartLogic::~StandartLogic() {
-//    delete this->optionalCells;
 }
 
 vector<Point>* StandartLogic::findCells(celltype c) {

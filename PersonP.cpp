@@ -22,7 +22,8 @@ Point PersonP::chooseCell(vector<Point>* options, StandartLogic* logic) const {
     printer.possibleMoves(options);
     printer.enterMove();
     int x, y;
-    cin >> x >> y;
+    char tmp;
+    cin >> x >> tmp >> y;
     if (cin.fail()) {
         cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //skip bad input
     }

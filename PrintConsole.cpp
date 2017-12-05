@@ -54,7 +54,7 @@ void PrintConsole::possibleMoves(vector<Point>* options) {
 }
 
 void PrintConsole::enterMove() {
-    cout << "Please enter your move row col:" << endl;
+    cout << "Please enter your move row,col:" << endl;
 }
 
 void PrintConsole::onlyNumbers() {

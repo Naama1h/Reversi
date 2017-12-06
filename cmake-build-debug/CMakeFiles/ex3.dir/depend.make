@@ -38,6 +38,17 @@ CMakeFiles/ex3.dir/PersonP.cpp.o: ../PrintConsole.h
 CMakeFiles/ex3.dir/PersonP.cpp.o: ../PrintMassage.h
 CMakeFiles/ex3.dir/PersonP.cpp.o: ../StandartLogic.h
 
+CMakeFiles/ex3.dir/PersonPServer.cpp.o: ../Board.h
+CMakeFiles/ex3.dir/PersonPServer.cpp.o: ../Client.h
+CMakeFiles/ex3.dir/PersonPServer.cpp.o: ../Logic.h
+CMakeFiles/ex3.dir/PersonPServer.cpp.o: ../PersonP.h
+CMakeFiles/ex3.dir/PersonPServer.cpp.o: ../PersonPServer.cpp
+CMakeFiles/ex3.dir/PersonPServer.cpp.o: ../PersonPServer.h
+CMakeFiles/ex3.dir/PersonPServer.cpp.o: ../Player.h
+CMakeFiles/ex3.dir/PersonPServer.cpp.o: ../Point.h
+CMakeFiles/ex3.dir/PersonPServer.cpp.o: ../PrintMassage.h
+CMakeFiles/ex3.dir/PersonPServer.cpp.o: ../StandartLogic.h
+
 CMakeFiles/ex3.dir/Point.cpp.o: ../Point.cpp
 CMakeFiles/ex3.dir/Point.cpp.o: ../Point.h
 
@@ -50,6 +61,15 @@ CMakeFiles/ex3.dir/PrintConsole.cpp.o: ../PrintConsole.h
 CMakeFiles/ex3.dir/PrintConsole.cpp.o: ../PrintMassage.h
 CMakeFiles/ex3.dir/PrintConsole.cpp.o: ../StandartLogic.h
 
+CMakeFiles/ex3.dir/RemotePlayer.cpp.o: ../Board.h
+CMakeFiles/ex3.dir/RemotePlayer.cpp.o: ../Client.h
+CMakeFiles/ex3.dir/RemotePlayer.cpp.o: ../Logic.h
+CMakeFiles/ex3.dir/RemotePlayer.cpp.o: ../Player.h
+CMakeFiles/ex3.dir/RemotePlayer.cpp.o: ../Point.h
+CMakeFiles/ex3.dir/RemotePlayer.cpp.o: ../RemotePlayer.cpp
+CMakeFiles/ex3.dir/RemotePlayer.cpp.o: ../RemotePlayer.h
+CMakeFiles/ex3.dir/RemotePlayer.cpp.o: ../StandartLogic.h
+
 CMakeFiles/ex3.dir/StandartLogic.cpp.o: ../Board.h
 CMakeFiles/ex3.dir/StandartLogic.cpp.o: ../Logic.h
 CMakeFiles/ex3.dir/StandartLogic.cpp.o: ../Point.h
@@ -59,12 +79,14 @@ CMakeFiles/ex3.dir/StandartLogic.cpp.o: ../StandartLogic.h
 CMakeFiles/ex3.dir/main.cpp.o: ../AIPlayer.h
 CMakeFiles/ex3.dir/main.cpp.o: ../Board.h
 CMakeFiles/ex3.dir/main.cpp.o: ../BoardConsole.h
+CMakeFiles/ex3.dir/main.cpp.o: ../Client.h
 CMakeFiles/ex3.dir/main.cpp.o: ../Game.h
 CMakeFiles/ex3.dir/main.cpp.o: ../Logic.h
 CMakeFiles/ex3.dir/main.cpp.o: ../PersonP.h
 CMakeFiles/ex3.dir/main.cpp.o: ../Player.h
 CMakeFiles/ex3.dir/main.cpp.o: ../Point.h
 CMakeFiles/ex3.dir/main.cpp.o: ../PrintMassage.h
+CMakeFiles/ex3.dir/main.cpp.o: ../RemotePlayer.h
 CMakeFiles/ex3.dir/main.cpp.o: ../StandartLogic.h
 CMakeFiles/ex3.dir/main.cpp.o: ../main.cpp
 

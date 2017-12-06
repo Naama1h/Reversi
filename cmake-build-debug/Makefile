@@ -356,6 +356,33 @@ PersonP.cpp.s:
 	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/PersonP.cpp.s
 .PHONY : PersonP.cpp.s
 
+PersonPServer.o: PersonPServer.cpp.o
+
+.PHONY : PersonPServer.o
+
+# target to build an object file
+PersonPServer.cpp.o:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/PersonPServer.cpp.o
+.PHONY : PersonPServer.cpp.o
+
+PersonPServer.i: PersonPServer.cpp.i
+
+.PHONY : PersonPServer.i
+
+# target to preprocess a source file
+PersonPServer.cpp.i:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/PersonPServer.cpp.i
+.PHONY : PersonPServer.cpp.i
+
+PersonPServer.s: PersonPServer.cpp.s
+
+.PHONY : PersonPServer.s
+
+# target to generate assembly for a file
+PersonPServer.cpp.s:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/PersonPServer.cpp.s
+.PHONY : PersonPServer.cpp.s
+
 Point.o: Point.cpp.o
 
 .PHONY : Point.o
@@ -409,6 +436,33 @@ PrintConsole.s: PrintConsole.cpp.s
 PrintConsole.cpp.s:
 	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/PrintConsole.cpp.s
 .PHONY : PrintConsole.cpp.s
+
+RemotePlayer.o: RemotePlayer.cpp.o
+
+.PHONY : RemotePlayer.o
+
+# target to build an object file
+RemotePlayer.cpp.o:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/RemotePlayer.cpp.o
+.PHONY : RemotePlayer.cpp.o
+
+RemotePlayer.i: RemotePlayer.cpp.i
+
+.PHONY : RemotePlayer.i
+
+# target to preprocess a source file
+RemotePlayer.cpp.i:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/RemotePlayer.cpp.i
+.PHONY : RemotePlayer.cpp.i
+
+RemotePlayer.s: RemotePlayer.cpp.s
+
+.PHONY : RemotePlayer.s
+
+# target to generate assembly for a file
+RemotePlayer.cpp.s:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/RemotePlayer.cpp.s
+.PHONY : RemotePlayer.cpp.s
 
 StandartLogic.o: StandartLogic.cpp.o
 
@@ -604,12 +658,18 @@ help:
 	@echo "... PersonP.o"
 	@echo "... PersonP.i"
 	@echo "... PersonP.s"
+	@echo "... PersonPServer.o"
+	@echo "... PersonPServer.i"
+	@echo "... PersonPServer.s"
 	@echo "... Point.o"
 	@echo "... Point.i"
 	@echo "... Point.s"
 	@echo "... PrintConsole.o"
 	@echo "... PrintConsole.i"
 	@echo "... PrintConsole.s"
+	@echo "... RemotePlayer.o"
+	@echo "... RemotePlayer.i"
+	@echo "... RemotePlayer.s"
 	@echo "... StandartLogic.o"
 	@echo "... StandartLogic.i"
 	@echo "... StandartLogic.s"

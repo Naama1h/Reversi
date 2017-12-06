@@ -369,6 +369,54 @@ CMakeFiles/ex3.dir/Client.cpp.o.provides: CMakeFiles/ex3.dir/Client.cpp.o.requir
 CMakeFiles/ex3.dir/Client.cpp.o.provides.build: CMakeFiles/ex3.dir/Client.cpp.o
 
 
+CMakeFiles/ex3.dir/RemotePlayer.cpp.o: CMakeFiles/ex3.dir/flags.make
+CMakeFiles/ex3.dir/RemotePlayer.cpp.o: ../RemotePlayer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/naama/CLionProjects/ex3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/ex3.dir/RemotePlayer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex3.dir/RemotePlayer.cpp.o -c /home/naama/CLionProjects/ex3/RemotePlayer.cpp
+
+CMakeFiles/ex3.dir/RemotePlayer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex3.dir/RemotePlayer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/naama/CLionProjects/ex3/RemotePlayer.cpp > CMakeFiles/ex3.dir/RemotePlayer.cpp.i
+
+CMakeFiles/ex3.dir/RemotePlayer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex3.dir/RemotePlayer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/naama/CLionProjects/ex3/RemotePlayer.cpp -o CMakeFiles/ex3.dir/RemotePlayer.cpp.s
+
+CMakeFiles/ex3.dir/RemotePlayer.cpp.o.requires:
+
+.PHONY : CMakeFiles/ex3.dir/RemotePlayer.cpp.o.requires
+
+CMakeFiles/ex3.dir/RemotePlayer.cpp.o.provides: CMakeFiles/ex3.dir/RemotePlayer.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/RemotePlayer.cpp.o.provides.build
+.PHONY : CMakeFiles/ex3.dir/RemotePlayer.cpp.o.provides
+
+CMakeFiles/ex3.dir/RemotePlayer.cpp.o.provides.build: CMakeFiles/ex3.dir/RemotePlayer.cpp.o
+
+
+CMakeFiles/ex3.dir/PersonPServer.cpp.o: CMakeFiles/ex3.dir/flags.make
+CMakeFiles/ex3.dir/PersonPServer.cpp.o: ../PersonPServer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/naama/CLionProjects/ex3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/ex3.dir/PersonPServer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex3.dir/PersonPServer.cpp.o -c /home/naama/CLionProjects/ex3/PersonPServer.cpp
+
+CMakeFiles/ex3.dir/PersonPServer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex3.dir/PersonPServer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/naama/CLionProjects/ex3/PersonPServer.cpp > CMakeFiles/ex3.dir/PersonPServer.cpp.i
+
+CMakeFiles/ex3.dir/PersonPServer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex3.dir/PersonPServer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/naama/CLionProjects/ex3/PersonPServer.cpp -o CMakeFiles/ex3.dir/PersonPServer.cpp.s
+
+CMakeFiles/ex3.dir/PersonPServer.cpp.o.requires:
+
+.PHONY : CMakeFiles/ex3.dir/PersonPServer.cpp.o.requires
+
+CMakeFiles/ex3.dir/PersonPServer.cpp.o.provides: CMakeFiles/ex3.dir/PersonPServer.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/PersonPServer.cpp.o.provides.build
+.PHONY : CMakeFiles/ex3.dir/PersonPServer.cpp.o.provides
+
+CMakeFiles/ex3.dir/PersonPServer.cpp.o.provides.build: CMakeFiles/ex3.dir/PersonPServer.cpp.o
+
+
 # Object files for target ex3
 ex3_OBJECTS = \
 "CMakeFiles/ex3.dir/main.cpp.o" \
@@ -383,7 +431,9 @@ ex3_OBJECTS = \
 "CMakeFiles/ex3.dir/tests/AIPlayer_test.cpp.o" \
 "CMakeFiles/ex3.dir/tests/PersonP_teset.cpp.o" \
 "CMakeFiles/ex3.dir/PrintConsole.cpp.o" \
-"CMakeFiles/ex3.dir/Client.cpp.o"
+"CMakeFiles/ex3.dir/Client.cpp.o" \
+"CMakeFiles/ex3.dir/RemotePlayer.cpp.o" \
+"CMakeFiles/ex3.dir/PersonPServer.cpp.o"
 
 # External object files for target ex3
 ex3_EXTERNAL_OBJECTS =
@@ -401,13 +451,15 @@ ex3: CMakeFiles/ex3.dir/tests/AIPlayer_test.cpp.o
 ex3: CMakeFiles/ex3.dir/tests/PersonP_teset.cpp.o
 ex3: CMakeFiles/ex3.dir/PrintConsole.cpp.o
 ex3: CMakeFiles/ex3.dir/Client.cpp.o
+ex3: CMakeFiles/ex3.dir/RemotePlayer.cpp.o
+ex3: CMakeFiles/ex3.dir/PersonPServer.cpp.o
 ex3: CMakeFiles/ex3.dir/build.make
 ex3: lib/googletest-release-1.8.0/googlemock/gtest/libgtest.a
 ex3: lib/googletest-release-1.8.0/googlemock/gtest/libgtest_main.a
 ex3: lib/googletest-release-1.8.0/googlemock/libgmock.a
 ex3: lib/googletest-release-1.8.0/googlemock/gtest/libgtest.a
 ex3: CMakeFiles/ex3.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/naama/CLionProjects/ex3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable ex3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/naama/CLionProjects/ex3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable ex3"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ex3.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -428,6 +480,8 @@ CMakeFiles/ex3.dir/requires: CMakeFiles/ex3.dir/tests/AIPlayer_test.cpp.o.requir
 CMakeFiles/ex3.dir/requires: CMakeFiles/ex3.dir/tests/PersonP_teset.cpp.o.requires
 CMakeFiles/ex3.dir/requires: CMakeFiles/ex3.dir/PrintConsole.cpp.o.requires
 CMakeFiles/ex3.dir/requires: CMakeFiles/ex3.dir/Client.cpp.o.requires
+CMakeFiles/ex3.dir/requires: CMakeFiles/ex3.dir/RemotePlayer.cpp.o.requires
+CMakeFiles/ex3.dir/requires: CMakeFiles/ex3.dir/PersonPServer.cpp.o.requires
 
 .PHONY : CMakeFiles/ex3.dir/requires
 

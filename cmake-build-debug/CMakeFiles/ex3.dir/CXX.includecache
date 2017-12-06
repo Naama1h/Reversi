@@ -354,6 +354,16 @@ vector
 PrintMassage.h
 /home/naama/CLionProjects/ex3/PrintMassage.h
 
+/home/naama/CLionProjects/ex3/PersonPServer.cpp
+PersonPServer.h
+/home/naama/CLionProjects/ex3/PersonPServer.h
+
+/home/naama/CLionProjects/ex3/PersonPServer.h
+PersonP.h
+/home/naama/CLionProjects/ex3/PersonP.h
+Client.h
+/home/naama/CLionProjects/ex3/Client.h
+
 /home/naama/CLionProjects/ex3/Player.h
 iostream
 -
@@ -389,6 +399,18 @@ Board.h
 /home/naama/CLionProjects/ex3/Board.h
 Player.h
 /home/naama/CLionProjects/ex3/Player.h
+
+/home/naama/CLionProjects/ex3/RemotePlayer.cpp
+RemotePlayer.h
+/home/naama/CLionProjects/ex3/RemotePlayer.h
+Board.h
+/home/naama/CLionProjects/ex3/Board.h
+
+/home/naama/CLionProjects/ex3/RemotePlayer.h
+Player.h
+/home/naama/CLionProjects/ex3/Player.h
+Client.h
+/home/naama/CLionProjects/ex3/Client.h
 
 /home/naama/CLionProjects/ex3/StandartLogic.cpp
 StandartLogic.h
@@ -447,6 +469,10 @@ Game.h
 /home/naama/CLionProjects/ex3/Game.h
 AIPlayer.h
 /home/naama/CLionProjects/ex3/AIPlayer.h
+RemotePlayer.h
+/home/naama/CLionProjects/ex3/RemotePlayer.h
+Client.h
+/home/naama/CLionProjects/ex3/Client.h
 
 /home/naama/CLionProjects/ex3/tests/AIPlayer_test.cpp
 AIPlayer_test.h

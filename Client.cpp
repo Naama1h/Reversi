@@ -51,25 +51,27 @@ void Client:: connectToServer() {
 	cout << "Connected to server" << endl;
 }
 
-Point Client:: sendMove(char* move) {
+void Client:: sendMove(char* move) {
 	// Write the exercise arguments to the socket
 	ssize_t n = write(clientSocket, &move, sizeof(move));
 	if(n == -1) {
 		throw "Error writing move to socket";
 	}
+}
+
+Point Client::getRivalMove() {
 	// Read the result from the server
 	char result[7];
-	n = read(clientSocket, &result, sizeof(result));
+	ssize_t n = read(clientSocket, &result, sizeof(result));
 	if(n == -1) {
 		throw "Error reading result from socket";
 	}
 	if(strcmp(result, "NoMove") == 0) {
-        return Point(-1,-1);
-    } else {
-        return Point(result[0] - 48, result[2] - 48);
-    }
-}
-
+		return Point(-1,-1);
+	} else {
+		return Point(result[0] - 48, result[2] - 48);
+	}
+};
 /*
 int main() {
 	Client client("127.0.0.1", 8000);

@@ -7,6 +7,9 @@
 
 #include "PersonP.h"
 #include "Client.h"
+#include <vector>
+#include "PrintConsole.h"
+#include <limits>
 
 class PersonPServer : public PersonP {
 public:

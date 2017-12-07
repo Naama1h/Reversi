@@ -20,5 +20,5 @@ celltype RemotePlayer::getCellType() const {
 }
 
 Point RemotePlayer::chooseCell(vector<Point> *options, StandartLogic *logic) const {
-
+    return this->client->getRivalMove();
 }

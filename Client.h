@@ -14,7 +14,8 @@ class Client {
 public:
 	Client(const char* serverIP, int serverPort);
 	void connectToServer();
-	Point sendMove(char* move);
+	void sendMove(char* move);
+    Point getRivalMove();
 private:
 	const char* serverIP;
 	int serverPort;

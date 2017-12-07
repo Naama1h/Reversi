@@ -41,6 +41,13 @@ void Game::run() {
             ifHaveMove = 0;
             while (!ifValid) {
                 Point p = player->chooseCell(vec, (StandartLogic*)this->logic);
+                if(p == Point(-1,-1)) {
+                    printer.itsYourMove(player->getName());
+                    printer.NoPossibleMoves();
+                    ifHaveMove++;
+                    string in;
+                    cin >> in;
+                }
                 ifValid = this->logic->ifCellValid(p, vec);
                 if (ifValid) {
                     this->logic->updateBoard(celltype(player->getCellType()), p);

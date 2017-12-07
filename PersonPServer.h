@@ -14,11 +14,15 @@
 class PersonPServer : public PersonP {
 public:
     PersonPServer(string name, celltype celltype1, Client* client1);
+    ~PersonPServer();
     Point chooseCell(vector<Point>* options, StandartLogic* logic) const;
+    celltype getCellType() const;
+    string getName() const;
 private:
     Client* client;
     string name;
     celltype celltype1;
+    PersonP* personP;
 };
 
 

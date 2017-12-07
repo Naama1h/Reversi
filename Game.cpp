@@ -10,8 +10,13 @@
 Game::Game(Board* board, Logic* logic, Player* p1, Player* p2) {
     this->logic = logic;
     this->board = board;
-    this->player1 = p1;
-    this->player2 = p2;
+    if (p1->getCellType() == Black) {
+        this->player1 = p1;
+        this->player2 = p2;
+    } else {
+        this->player1 = p2;
+        this->player2 = p1;
+    }
 }
 
 Game::~Game() {
@@ -27,6 +32,7 @@ void Game::run() {
     bool ifValid;
     Player* player;
     this->board->printBoard();
+    cout << endl;
     while (!this->board->ifFull() && ifHaveMove != 2) {
         ifValid = false;
         if (playerTrace%2 == 1) {
@@ -40,6 +46,7 @@ void Game::run() {
         if (vec->size() != 0) {
             ifHaveMove = 0;
             while (!ifValid) {
+                cout << "in the loop" << endl;
                 Point p = player->chooseCell(vec, (StandartLogic*)this->logic);
                 if(p == Point(-1,-1)) {
                     printer.itsYourMove(player->getName());
@@ -47,6 +54,9 @@ void Game::run() {
                     ifHaveMove++;
                     string in;
                     cin >> in;
+                } else if(p == Point(-2,-2)) {
+                    ifHaveMove = 2;
+                    break;
                 }
                 ifValid = this->logic->ifCellValid(p, vec);
                 if (ifValid) {

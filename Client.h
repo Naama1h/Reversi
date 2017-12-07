@@ -9,6 +9,10 @@
 #define CLIENT_H
 
 #include "Point.h"
+#include <string.h>
+#include <iostream>
+
+using namespace std;
 
 class Client {
 public:
@@ -16,6 +20,7 @@ public:
 	void connectToServer();
 	void sendMove(char* move);
     Point getRivalMove();
+    char getCellType();
 private:
 	const char* serverIP;
 	int serverPort;

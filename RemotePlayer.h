@@ -9,7 +9,8 @@
 #include "Client.h"
 
 class RemotePlayer : public Player {
-/**
+public:
+    /**
      * constructor.
      */
     RemotePlayer() {};

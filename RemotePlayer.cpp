@@ -3,7 +3,6 @@
 //
 
 #include "RemotePlayer.h"
-#include "Board.h"
 
 RemotePlayer::RemotePlayer(string name, celltype celltype1, Client* client1) {
     this->name = name;

@@ -5,6 +5,7 @@
  * 208780585
  */
 
+#include <fstream>
 #include <iostream>
 #include "BoardConsole.h"
 #include "PersonP.h"
@@ -31,18 +32,24 @@ int main() {
         myPlayer = new PersonP("X" ,Black);
         rival = new AIPlayer("O", White);
     } else {
-        Client* client = new Client("127.0.0.1",8000);
-        client->connectToServer();
-
+        char ip[10];
+        int port;
+        ifstream inFile;
+        inFile.open("definition.txt");
+        inFile >> port;
+        inFile >> ip;
+        ip[9] = '\n';
+        inFile.close();
+        Client client(ip,port);
+        client.connectToServer();
         char type[1];
-//        strcpy(type, client->getCellType());
-        type[0] = client->getCellType();
-        if (strcmp(type, "1") == 0) {
-            myPlayer = new PersonPServer("X", Black, client);
-            rival = new RemotePlayer("O", White, client);
+        type[0] = client.getCellType();
+        if (type[0] == '1') {
+            myPlayer = new PersonPServer("X", Black, &client);
+            rival = new RemotePlayer("O", White, &client);
         } else {
-            myPlayer = new PersonPServer("O", White, client);
-            rival = new RemotePlayer("X", Black, client);
+            myPlayer = new PersonPServer("O", White, &client);
+            rival = new RemotePlayer("X", Black, &client);
         }
     }
     Board* board = new BoardConsole(4);

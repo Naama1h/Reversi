@@ -46,7 +46,6 @@ void Game::run() {
         if (vec->size() != 0) {
             ifHaveMove = 0;
             while (!ifValid) {
-                cout << "in the loop" << endl;
                 Point p = player->chooseCell(vec, (StandartLogic*)this->logic);
                 if(p == Point(-1,-1)) {
                     printer.itsYourMove(player->getName());

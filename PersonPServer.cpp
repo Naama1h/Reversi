@@ -33,8 +33,9 @@ Point PersonPServer::chooseCell(vector<Point> *options, StandartLogic *logic) co
 //    printer.onlyNumbers();;
     cin.clear(); // reset failbit
     cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //skip bad input
-    Point cell(x, y);
-    char point[7] = {x + 48, ',', y + 48};
+    Point cell(x - 48, y - 48);
+//    char point[7] = {x + 48, ',', y + 48};
+    char point[7] = {x, ',', y};
     this->client->sendMove(point);
     return cell;
 }

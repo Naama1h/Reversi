@@ -28,6 +28,10 @@ CMakeFiles/ex3.dir/Game.cpp.o: ../PrintConsole.h
 CMakeFiles/ex3.dir/Game.cpp.o: ../PrintMassage.h
 CMakeFiles/ex3.dir/Game.cpp.o: ../StandartLogic.h
 
+CMakeFiles/ex3.dir/MenuConsole.cpp.o: ../Menu.h
+CMakeFiles/ex3.dir/MenuConsole.cpp.o: ../MenuConsole.cpp
+CMakeFiles/ex3.dir/MenuConsole.cpp.o: ../MenuConsole.h
+
 CMakeFiles/ex3.dir/PersonP.cpp.o: ../Board.h
 CMakeFiles/ex3.dir/PersonP.cpp.o: ../Logic.h
 CMakeFiles/ex3.dir/PersonP.cpp.o: ../PersonP.cpp
@@ -46,6 +50,7 @@ CMakeFiles/ex3.dir/PersonPServer.cpp.o: ../PersonPServer.cpp
 CMakeFiles/ex3.dir/PersonPServer.cpp.o: ../PersonPServer.h
 CMakeFiles/ex3.dir/PersonPServer.cpp.o: ../Player.h
 CMakeFiles/ex3.dir/PersonPServer.cpp.o: ../Point.h
+CMakeFiles/ex3.dir/PersonPServer.cpp.o: ../PrintConsole.h
 CMakeFiles/ex3.dir/PersonPServer.cpp.o: ../PrintMassage.h
 CMakeFiles/ex3.dir/PersonPServer.cpp.o: ../StandartLogic.h
 
@@ -82,9 +87,13 @@ CMakeFiles/ex3.dir/main.cpp.o: ../BoardConsole.h
 CMakeFiles/ex3.dir/main.cpp.o: ../Client.h
 CMakeFiles/ex3.dir/main.cpp.o: ../Game.h
 CMakeFiles/ex3.dir/main.cpp.o: ../Logic.h
+CMakeFiles/ex3.dir/main.cpp.o: ../Menu.h
+CMakeFiles/ex3.dir/main.cpp.o: ../MenuConsole.h
 CMakeFiles/ex3.dir/main.cpp.o: ../PersonP.h
+CMakeFiles/ex3.dir/main.cpp.o: ../PersonPServer.h
 CMakeFiles/ex3.dir/main.cpp.o: ../Player.h
 CMakeFiles/ex3.dir/main.cpp.o: ../Point.h
+CMakeFiles/ex3.dir/main.cpp.o: ../PrintConsole.h
 CMakeFiles/ex3.dir/main.cpp.o: ../PrintMassage.h
 CMakeFiles/ex3.dir/main.cpp.o: ../RemotePlayer.h
 CMakeFiles/ex3.dir/main.cpp.o: ../StandartLogic.h

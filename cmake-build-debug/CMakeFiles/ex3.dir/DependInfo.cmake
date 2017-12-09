@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/tchelet/CLionProjects/ex3/BoardConsole.cpp" "/home/tchelet/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/BoardConsole.cpp.o"
   "/home/tchelet/CLionProjects/ex3/Client.cpp" "/home/tchelet/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/Client.cpp.o"
   "/home/tchelet/CLionProjects/ex3/Game.cpp" "/home/tchelet/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/Game.cpp.o"
+  "/home/tchelet/CLionProjects/ex3/MenuConsole.cpp" "/home/tchelet/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/MenuConsole.cpp.o"
   "/home/tchelet/CLionProjects/ex3/PersonP.cpp" "/home/tchelet/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/PersonP.cpp.o"
   "/home/tchelet/CLionProjects/ex3/PersonPServer.cpp" "/home/tchelet/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/PersonPServer.cpp.o"
   "/home/tchelet/CLionProjects/ex3/Point.cpp" "/home/tchelet/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/Point.cpp.o"

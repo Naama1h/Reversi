@@ -366,6 +366,15 @@
 		<Unit filename="/home/tchelet/CLionProjects/ex3/Logic.h">
 			<Option target="ex3"/>
 		</Unit>
+		<Unit filename="/home/tchelet/CLionProjects/ex3/Menu.h">
+			<Option target="ex3"/>
+		</Unit>
+		<Unit filename="/home/tchelet/CLionProjects/ex3/MenuConsole.cpp">
+			<Option target="ex3"/>
+		</Unit>
+		<Unit filename="/home/tchelet/CLionProjects/ex3/MenuConsole.h">
+			<Option target="ex3"/>
+		</Unit>
 		<Unit filename="/home/tchelet/CLionProjects/ex3/PersonP.cpp">
 			<Option target="ex3"/>
 		</Unit>

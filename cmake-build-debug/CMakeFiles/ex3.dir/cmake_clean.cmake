@@ -14,6 +14,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ex3.dir/Client.cpp.o"
   "CMakeFiles/ex3.dir/RemotePlayer.cpp.o"
   "CMakeFiles/ex3.dir/PersonPServer.cpp.o"
+  "CMakeFiles/ex3.dir/MenuConsole.cpp.o"
   "ex3.pdb"
   "ex3"
 )

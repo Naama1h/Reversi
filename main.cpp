@@ -14,12 +14,12 @@
 #include "PersonPServer.h"
 #include <unistd.h>
 #include "Client.h"
+#include "Menu.h"
+#include "MenuConsole.h"
 
 int main() {
-    std::cout << "Choose an opponent type:" << endl
-              << "1. a human local player" << endl
-            << "2. an AI player" << endl
-            << "3. a remote player" << endl;
+    MenuConsole menu(3);
+    menu.print();
     int chosen;
     Player* rival;
     Player* myPlayer;
@@ -33,7 +33,8 @@ int main() {
     } else {
         Client* client = new Client("127.0.0.1",8000);
         client->connectToServer();
-        char type[2];
+
+        char type[1];
 //        strcpy(type, client->getCellType());
         type[0] = client->getCellType();
         if (strcmp(type, "1") == 0) {

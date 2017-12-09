@@ -329,6 +329,33 @@ Game.cpp.s:
 	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/Game.cpp.s
 .PHONY : Game.cpp.s
 
+MenuConsole.o: MenuConsole.cpp.o
+
+.PHONY : MenuConsole.o
+
+# target to build an object file
+MenuConsole.cpp.o:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/MenuConsole.cpp.o
+.PHONY : MenuConsole.cpp.o
+
+MenuConsole.i: MenuConsole.cpp.i
+
+.PHONY : MenuConsole.i
+
+# target to preprocess a source file
+MenuConsole.cpp.i:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/MenuConsole.cpp.i
+.PHONY : MenuConsole.cpp.i
+
+MenuConsole.s: MenuConsole.cpp.s
+
+.PHONY : MenuConsole.s
+
+# target to generate assembly for a file
+MenuConsole.cpp.s:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/MenuConsole.cpp.s
+.PHONY : MenuConsole.cpp.s
+
 PersonP.o: PersonP.cpp.o
 
 .PHONY : PersonP.o
@@ -655,6 +682,9 @@ help:
 	@echo "... Game.o"
 	@echo "... Game.i"
 	@echo "... Game.s"
+	@echo "... MenuConsole.o"
+	@echo "... MenuConsole.i"
+	@echo "... MenuConsole.s"
 	@echo "... PersonP.o"
 	@echo "... PersonP.i"
 	@echo "... PersonP.s"

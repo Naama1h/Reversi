@@ -301,6 +301,10 @@ unistd.h
 /home/tchelet/CLionProjects/ex3/Client.h
 Point.h
 /home/tchelet/CLionProjects/ex3/Point.h
+string.h
+-
+iostream
+-
 
 /home/tchelet/CLionProjects/ex3/Game.cpp
 Game.h
@@ -326,6 +330,20 @@ Board.h
 list
 -
 vector
+-
+
+/home/tchelet/CLionProjects/ex3/Menu.h
+
+/home/tchelet/CLionProjects/ex3/MenuConsole.cpp
+MenuConsole.h
+/home/tchelet/CLionProjects/ex3/MenuConsole.h
+
+/home/tchelet/CLionProjects/ex3/MenuConsole.h
+getopt.h
+-
+Menu.h
+/home/tchelet/CLionProjects/ex3/Menu.h
+iostream
 -
 
 /home/tchelet/CLionProjects/ex3/PersonP.cpp
@@ -361,6 +379,12 @@ PersonP.h
 /home/tchelet/CLionProjects/ex3/PersonP.h
 Client.h
 /home/tchelet/CLionProjects/ex3/Client.h
+vector
+-
+PrintConsole.h
+/home/tchelet/CLionProjects/ex3/PrintConsole.h
+limits
+-
 
 /home/tchelet/CLionProjects/ex3/Player.h
 iostream
@@ -401,8 +425,6 @@ Player.h
 /home/tchelet/CLionProjects/ex3/RemotePlayer.cpp
 RemotePlayer.h
 /home/tchelet/CLionProjects/ex3/RemotePlayer.h
-Board.h
-/home/tchelet/CLionProjects/ex3/Board.h
 
 /home/tchelet/CLionProjects/ex3/RemotePlayer.h
 Player.h
@@ -469,8 +491,16 @@ AIPlayer.h
 /home/tchelet/CLionProjects/ex3/AIPlayer.h
 RemotePlayer.h
 /home/tchelet/CLionProjects/ex3/RemotePlayer.h
+PersonPServer.h
+/home/tchelet/CLionProjects/ex3/PersonPServer.h
+unistd.h
+-
 Client.h
 /home/tchelet/CLionProjects/ex3/Client.h
+Menu.h
+/home/tchelet/CLionProjects/ex3/Menu.h
+MenuConsole.h
+/home/tchelet/CLionProjects/ex3/MenuConsole.h
 
 /home/tchelet/CLionProjects/ex3/tests/AIPlayer_test.cpp
 AIPlayer_test.h

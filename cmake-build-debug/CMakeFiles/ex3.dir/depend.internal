@@ -28,6 +28,10 @@ CMakeFiles/ex3.dir/Game.cpp.o
  /home/tchelet/CLionProjects/ex3/PrintConsole.h
  /home/tchelet/CLionProjects/ex3/PrintMassage.h
  /home/tchelet/CLionProjects/ex3/StandartLogic.h
+CMakeFiles/ex3.dir/MenuConsole.cpp.o
+ /home/tchelet/CLionProjects/ex3/Menu.h
+ /home/tchelet/CLionProjects/ex3/MenuConsole.cpp
+ /home/tchelet/CLionProjects/ex3/MenuConsole.h
 CMakeFiles/ex3.dir/PersonP.cpp.o
  /home/tchelet/CLionProjects/ex3/Board.h
  /home/tchelet/CLionProjects/ex3/Logic.h
@@ -47,6 +51,7 @@ CMakeFiles/ex3.dir/PersonPServer.cpp.o
  /home/tchelet/CLionProjects/ex3/PersonPServer.h
  /home/tchelet/CLionProjects/ex3/Player.h
  /home/tchelet/CLionProjects/ex3/Point.h
+ /home/tchelet/CLionProjects/ex3/PrintConsole.h
  /home/tchelet/CLionProjects/ex3/PrintMassage.h
  /home/tchelet/CLionProjects/ex3/StandartLogic.h
 CMakeFiles/ex3.dir/Point.cpp.o
@@ -83,9 +88,13 @@ CMakeFiles/ex3.dir/main.cpp.o
  /home/tchelet/CLionProjects/ex3/Client.h
  /home/tchelet/CLionProjects/ex3/Game.h
  /home/tchelet/CLionProjects/ex3/Logic.h
+ /home/tchelet/CLionProjects/ex3/Menu.h
+ /home/tchelet/CLionProjects/ex3/MenuConsole.h
  /home/tchelet/CLionProjects/ex3/PersonP.h
+ /home/tchelet/CLionProjects/ex3/PersonPServer.h
  /home/tchelet/CLionProjects/ex3/Player.h
  /home/tchelet/CLionProjects/ex3/Point.h
+ /home/tchelet/CLionProjects/ex3/PrintConsole.h
  /home/tchelet/CLionProjects/ex3/PrintMassage.h
  /home/tchelet/CLionProjects/ex3/RemotePlayer.h
  /home/tchelet/CLionProjects/ex3/StandartLogic.h

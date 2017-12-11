@@ -157,6 +157,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named tests
+
+# Build rule for target.
+tests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tests
+.PHONY : tests
+
+# fast build rule for target.
+tests/fast:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
+.PHONY : tests/fast
+
+#=============================================================================
+# Target rules for targets named server
+
+# Build rule for target.
+server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 server
+.PHONY : server
+
+# fast build rule for target.
+server/fast:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
+.PHONY : server/fast
+
+#=============================================================================
 # Target rules for targets named ex3
 
 # Build rule for target.
@@ -179,7 +205,7 @@ gmock_main: cmake_check_build_system
 
 # fast build rule for target.
 gmock_main/fast:
-	$(MAKE) -f lib/googletest-release-1.8.0/googlemock/CMakeFiles/gmock_main.dir/build.make lib/googletest-release-1.8.0/googlemock/CMakeFiles/gmock_main.dir/build
+	$(MAKE) -f src/client/lib/googletest-release-1.8.0/googlemock/CMakeFiles/gmock_main.dir/build.make src/client/lib/googletest-release-1.8.0/googlemock/CMakeFiles/gmock_main.dir/build
 .PHONY : gmock_main/fast
 
 #=============================================================================
@@ -192,7 +218,7 @@ gmock: cmake_check_build_system
 
 # fast build rule for target.
 gmock/fast:
-	$(MAKE) -f lib/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/build.make lib/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/build
+	$(MAKE) -f src/client/lib/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/build.make src/client/lib/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/build
 .PHONY : gmock/fast
 
 #=============================================================================
@@ -205,7 +231,7 @@ gtest_main: cmake_check_build_system
 
 # fast build rule for target.
 gtest_main/fast:
-	$(MAKE) -f lib/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make lib/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest_main.dir/build
+	$(MAKE) -f src/client/lib/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make src/client/lib/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
 #=============================================================================
@@ -218,440 +244,566 @@ gtest: cmake_check_build_system
 
 # fast build rule for target.
 gtest/fast:
-	$(MAKE) -f lib/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/build.make lib/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/build
+	$(MAKE) -f src/client/lib/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/build.make src/client/lib/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
-AIPlayer.o: AIPlayer.cpp.o
+src/client/AIPlayer.o: src/client/AIPlayer.cpp.o
 
-.PHONY : AIPlayer.o
-
-# target to build an object file
-AIPlayer.cpp.o:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/AIPlayer.cpp.o
-.PHONY : AIPlayer.cpp.o
-
-AIPlayer.i: AIPlayer.cpp.i
-
-.PHONY : AIPlayer.i
-
-# target to preprocess a source file
-AIPlayer.cpp.i:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/AIPlayer.cpp.i
-.PHONY : AIPlayer.cpp.i
-
-AIPlayer.s: AIPlayer.cpp.s
-
-.PHONY : AIPlayer.s
-
-# target to generate assembly for a file
-AIPlayer.cpp.s:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/AIPlayer.cpp.s
-.PHONY : AIPlayer.cpp.s
-
-BoardConsole.o: BoardConsole.cpp.o
-
-.PHONY : BoardConsole.o
+.PHONY : src/client/AIPlayer.o
 
 # target to build an object file
-BoardConsole.cpp.o:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/BoardConsole.cpp.o
-.PHONY : BoardConsole.cpp.o
+src/client/AIPlayer.cpp.o:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/AIPlayer.cpp.o
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/AIPlayer.cpp.o
+.PHONY : src/client/AIPlayer.cpp.o
 
-BoardConsole.i: BoardConsole.cpp.i
+src/client/AIPlayer.i: src/client/AIPlayer.cpp.i
 
-.PHONY : BoardConsole.i
+.PHONY : src/client/AIPlayer.i
 
 # target to preprocess a source file
-BoardConsole.cpp.i:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/BoardConsole.cpp.i
-.PHONY : BoardConsole.cpp.i
+src/client/AIPlayer.cpp.i:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/AIPlayer.cpp.i
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/AIPlayer.cpp.i
+.PHONY : src/client/AIPlayer.cpp.i
 
-BoardConsole.s: BoardConsole.cpp.s
+src/client/AIPlayer.s: src/client/AIPlayer.cpp.s
 
-.PHONY : BoardConsole.s
+.PHONY : src/client/AIPlayer.s
 
 # target to generate assembly for a file
-BoardConsole.cpp.s:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/BoardConsole.cpp.s
-.PHONY : BoardConsole.cpp.s
+src/client/AIPlayer.cpp.s:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/AIPlayer.cpp.s
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/AIPlayer.cpp.s
+.PHONY : src/client/AIPlayer.cpp.s
 
-Client.o: Client.cpp.o
+src/client/BoardConsole.o: src/client/BoardConsole.cpp.o
 
-.PHONY : Client.o
+.PHONY : src/client/BoardConsole.o
 
 # target to build an object file
-Client.cpp.o:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/Client.cpp.o
-.PHONY : Client.cpp.o
+src/client/BoardConsole.cpp.o:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/BoardConsole.cpp.o
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/BoardConsole.cpp.o
+.PHONY : src/client/BoardConsole.cpp.o
 
-Client.i: Client.cpp.i
+src/client/BoardConsole.i: src/client/BoardConsole.cpp.i
 
-.PHONY : Client.i
+.PHONY : src/client/BoardConsole.i
 
 # target to preprocess a source file
-Client.cpp.i:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/Client.cpp.i
-.PHONY : Client.cpp.i
+src/client/BoardConsole.cpp.i:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/BoardConsole.cpp.i
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/BoardConsole.cpp.i
+.PHONY : src/client/BoardConsole.cpp.i
 
-Client.s: Client.cpp.s
+src/client/BoardConsole.s: src/client/BoardConsole.cpp.s
 
-.PHONY : Client.s
+.PHONY : src/client/BoardConsole.s
 
 # target to generate assembly for a file
-Client.cpp.s:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/Client.cpp.s
-.PHONY : Client.cpp.s
+src/client/BoardConsole.cpp.s:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/BoardConsole.cpp.s
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/BoardConsole.cpp.s
+.PHONY : src/client/BoardConsole.cpp.s
 
-Game.o: Game.cpp.o
+src/client/Client.o: src/client/Client.cpp.o
 
-.PHONY : Game.o
+.PHONY : src/client/Client.o
 
 # target to build an object file
-Game.cpp.o:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/Game.cpp.o
-.PHONY : Game.cpp.o
+src/client/Client.cpp.o:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/Client.cpp.o
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/Client.cpp.o
+.PHONY : src/client/Client.cpp.o
 
-Game.i: Game.cpp.i
+src/client/Client.i: src/client/Client.cpp.i
 
-.PHONY : Game.i
+.PHONY : src/client/Client.i
 
 # target to preprocess a source file
-Game.cpp.i:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/Game.cpp.i
-.PHONY : Game.cpp.i
+src/client/Client.cpp.i:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/Client.cpp.i
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/Client.cpp.i
+.PHONY : src/client/Client.cpp.i
 
-Game.s: Game.cpp.s
+src/client/Client.s: src/client/Client.cpp.s
 
-.PHONY : Game.s
+.PHONY : src/client/Client.s
 
 # target to generate assembly for a file
-Game.cpp.s:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/Game.cpp.s
-.PHONY : Game.cpp.s
+src/client/Client.cpp.s:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/Client.cpp.s
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/Client.cpp.s
+.PHONY : src/client/Client.cpp.s
 
-MenuConsole.o: MenuConsole.cpp.o
+src/client/Game.o: src/client/Game.cpp.o
 
-.PHONY : MenuConsole.o
+.PHONY : src/client/Game.o
 
 # target to build an object file
-MenuConsole.cpp.o:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/MenuConsole.cpp.o
-.PHONY : MenuConsole.cpp.o
+src/client/Game.cpp.o:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/Game.cpp.o
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/Game.cpp.o
+.PHONY : src/client/Game.cpp.o
 
-MenuConsole.i: MenuConsole.cpp.i
+src/client/Game.i: src/client/Game.cpp.i
 
-.PHONY : MenuConsole.i
+.PHONY : src/client/Game.i
 
 # target to preprocess a source file
-MenuConsole.cpp.i:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/MenuConsole.cpp.i
-.PHONY : MenuConsole.cpp.i
+src/client/Game.cpp.i:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/Game.cpp.i
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/Game.cpp.i
+.PHONY : src/client/Game.cpp.i
 
-MenuConsole.s: MenuConsole.cpp.s
+src/client/Game.s: src/client/Game.cpp.s
 
-.PHONY : MenuConsole.s
+.PHONY : src/client/Game.s
 
 # target to generate assembly for a file
-MenuConsole.cpp.s:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/MenuConsole.cpp.s
-.PHONY : MenuConsole.cpp.s
+src/client/Game.cpp.s:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/Game.cpp.s
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/Game.cpp.s
+.PHONY : src/client/Game.cpp.s
 
-PersonP.o: PersonP.cpp.o
+src/client/MenuConsole.o: src/client/MenuConsole.cpp.o
 
-.PHONY : PersonP.o
+.PHONY : src/client/MenuConsole.o
 
 # target to build an object file
-PersonP.cpp.o:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/PersonP.cpp.o
-.PHONY : PersonP.cpp.o
+src/client/MenuConsole.cpp.o:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/MenuConsole.cpp.o
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/MenuConsole.cpp.o
+.PHONY : src/client/MenuConsole.cpp.o
 
-PersonP.i: PersonP.cpp.i
+src/client/MenuConsole.i: src/client/MenuConsole.cpp.i
 
-.PHONY : PersonP.i
+.PHONY : src/client/MenuConsole.i
 
 # target to preprocess a source file
-PersonP.cpp.i:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/PersonP.cpp.i
-.PHONY : PersonP.cpp.i
+src/client/MenuConsole.cpp.i:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/MenuConsole.cpp.i
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/MenuConsole.cpp.i
+.PHONY : src/client/MenuConsole.cpp.i
 
-PersonP.s: PersonP.cpp.s
+src/client/MenuConsole.s: src/client/MenuConsole.cpp.s
 
-.PHONY : PersonP.s
+.PHONY : src/client/MenuConsole.s
 
 # target to generate assembly for a file
-PersonP.cpp.s:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/PersonP.cpp.s
-.PHONY : PersonP.cpp.s
+src/client/MenuConsole.cpp.s:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/MenuConsole.cpp.s
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/MenuConsole.cpp.s
+.PHONY : src/client/MenuConsole.cpp.s
 
-PersonPServer.o: PersonPServer.cpp.o
+src/client/PersonP.o: src/client/PersonP.cpp.o
 
-.PHONY : PersonPServer.o
+.PHONY : src/client/PersonP.o
 
 # target to build an object file
-PersonPServer.cpp.o:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/PersonPServer.cpp.o
-.PHONY : PersonPServer.cpp.o
+src/client/PersonP.cpp.o:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/PersonP.cpp.o
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/PersonP.cpp.o
+.PHONY : src/client/PersonP.cpp.o
 
-PersonPServer.i: PersonPServer.cpp.i
+src/client/PersonP.i: src/client/PersonP.cpp.i
 
-.PHONY : PersonPServer.i
+.PHONY : src/client/PersonP.i
 
 # target to preprocess a source file
-PersonPServer.cpp.i:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/PersonPServer.cpp.i
-.PHONY : PersonPServer.cpp.i
+src/client/PersonP.cpp.i:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/PersonP.cpp.i
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/PersonP.cpp.i
+.PHONY : src/client/PersonP.cpp.i
 
-PersonPServer.s: PersonPServer.cpp.s
+src/client/PersonP.s: src/client/PersonP.cpp.s
 
-.PHONY : PersonPServer.s
+.PHONY : src/client/PersonP.s
 
 # target to generate assembly for a file
-PersonPServer.cpp.s:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/PersonPServer.cpp.s
-.PHONY : PersonPServer.cpp.s
+src/client/PersonP.cpp.s:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/PersonP.cpp.s
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/PersonP.cpp.s
+.PHONY : src/client/PersonP.cpp.s
 
-Point.o: Point.cpp.o
+src/client/PersonPServer.o: src/client/PersonPServer.cpp.o
 
-.PHONY : Point.o
+.PHONY : src/client/PersonPServer.o
 
 # target to build an object file
-Point.cpp.o:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/Point.cpp.o
-.PHONY : Point.cpp.o
+src/client/PersonPServer.cpp.o:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/PersonPServer.cpp.o
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/PersonPServer.cpp.o
+.PHONY : src/client/PersonPServer.cpp.o
 
-Point.i: Point.cpp.i
+src/client/PersonPServer.i: src/client/PersonPServer.cpp.i
 
-.PHONY : Point.i
+.PHONY : src/client/PersonPServer.i
 
 # target to preprocess a source file
-Point.cpp.i:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/Point.cpp.i
-.PHONY : Point.cpp.i
+src/client/PersonPServer.cpp.i:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/PersonPServer.cpp.i
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/PersonPServer.cpp.i
+.PHONY : src/client/PersonPServer.cpp.i
 
-Point.s: Point.cpp.s
+src/client/PersonPServer.s: src/client/PersonPServer.cpp.s
 
-.PHONY : Point.s
+.PHONY : src/client/PersonPServer.s
 
 # target to generate assembly for a file
-Point.cpp.s:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/Point.cpp.s
-.PHONY : Point.cpp.s
+src/client/PersonPServer.cpp.s:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/PersonPServer.cpp.s
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/PersonPServer.cpp.s
+.PHONY : src/client/PersonPServer.cpp.s
 
-PrintConsole.o: PrintConsole.cpp.o
+src/client/Point.o: src/client/Point.cpp.o
 
-.PHONY : PrintConsole.o
+.PHONY : src/client/Point.o
 
 # target to build an object file
-PrintConsole.cpp.o:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/PrintConsole.cpp.o
-.PHONY : PrintConsole.cpp.o
+src/client/Point.cpp.o:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/Point.cpp.o
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/Point.cpp.o
+.PHONY : src/client/Point.cpp.o
 
-PrintConsole.i: PrintConsole.cpp.i
+src/client/Point.i: src/client/Point.cpp.i
 
-.PHONY : PrintConsole.i
+.PHONY : src/client/Point.i
 
 # target to preprocess a source file
-PrintConsole.cpp.i:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/PrintConsole.cpp.i
-.PHONY : PrintConsole.cpp.i
+src/client/Point.cpp.i:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/Point.cpp.i
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/Point.cpp.i
+.PHONY : src/client/Point.cpp.i
 
-PrintConsole.s: PrintConsole.cpp.s
+src/client/Point.s: src/client/Point.cpp.s
 
-.PHONY : PrintConsole.s
+.PHONY : src/client/Point.s
 
 # target to generate assembly for a file
-PrintConsole.cpp.s:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/PrintConsole.cpp.s
-.PHONY : PrintConsole.cpp.s
+src/client/Point.cpp.s:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/Point.cpp.s
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/Point.cpp.s
+.PHONY : src/client/Point.cpp.s
 
-RemotePlayer.o: RemotePlayer.cpp.o
+src/client/PrintConsole.o: src/client/PrintConsole.cpp.o
 
-.PHONY : RemotePlayer.o
+.PHONY : src/client/PrintConsole.o
 
 # target to build an object file
-RemotePlayer.cpp.o:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/RemotePlayer.cpp.o
-.PHONY : RemotePlayer.cpp.o
+src/client/PrintConsole.cpp.o:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/PrintConsole.cpp.o
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/PrintConsole.cpp.o
+.PHONY : src/client/PrintConsole.cpp.o
 
-RemotePlayer.i: RemotePlayer.cpp.i
+src/client/PrintConsole.i: src/client/PrintConsole.cpp.i
 
-.PHONY : RemotePlayer.i
+.PHONY : src/client/PrintConsole.i
 
 # target to preprocess a source file
-RemotePlayer.cpp.i:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/RemotePlayer.cpp.i
-.PHONY : RemotePlayer.cpp.i
+src/client/PrintConsole.cpp.i:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/PrintConsole.cpp.i
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/PrintConsole.cpp.i
+.PHONY : src/client/PrintConsole.cpp.i
 
-RemotePlayer.s: RemotePlayer.cpp.s
+src/client/PrintConsole.s: src/client/PrintConsole.cpp.s
 
-.PHONY : RemotePlayer.s
+.PHONY : src/client/PrintConsole.s
 
 # target to generate assembly for a file
-RemotePlayer.cpp.s:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/RemotePlayer.cpp.s
-.PHONY : RemotePlayer.cpp.s
+src/client/PrintConsole.cpp.s:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/PrintConsole.cpp.s
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/PrintConsole.cpp.s
+.PHONY : src/client/PrintConsole.cpp.s
 
-StandartLogic.o: StandartLogic.cpp.o
+src/client/RemotePlayer.o: src/client/RemotePlayer.cpp.o
 
-.PHONY : StandartLogic.o
+.PHONY : src/client/RemotePlayer.o
 
 # target to build an object file
-StandartLogic.cpp.o:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/StandartLogic.cpp.o
-.PHONY : StandartLogic.cpp.o
+src/client/RemotePlayer.cpp.o:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/RemotePlayer.cpp.o
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/RemotePlayer.cpp.o
+.PHONY : src/client/RemotePlayer.cpp.o
 
-StandartLogic.i: StandartLogic.cpp.i
+src/client/RemotePlayer.i: src/client/RemotePlayer.cpp.i
 
-.PHONY : StandartLogic.i
+.PHONY : src/client/RemotePlayer.i
 
 # target to preprocess a source file
-StandartLogic.cpp.i:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/StandartLogic.cpp.i
-.PHONY : StandartLogic.cpp.i
+src/client/RemotePlayer.cpp.i:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/RemotePlayer.cpp.i
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/RemotePlayer.cpp.i
+.PHONY : src/client/RemotePlayer.cpp.i
 
-StandartLogic.s: StandartLogic.cpp.s
+src/client/RemotePlayer.s: src/client/RemotePlayer.cpp.s
 
-.PHONY : StandartLogic.s
+.PHONY : src/client/RemotePlayer.s
 
 # target to generate assembly for a file
-StandartLogic.cpp.s:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/StandartLogic.cpp.s
-.PHONY : StandartLogic.cpp.s
+src/client/RemotePlayer.cpp.s:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/RemotePlayer.cpp.s
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/RemotePlayer.cpp.s
+.PHONY : src/client/RemotePlayer.cpp.s
 
-main.o: main.cpp.o
+src/client/StandartLogic.o: src/client/StandartLogic.cpp.o
 
-.PHONY : main.o
+.PHONY : src/client/StandartLogic.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/client/StandartLogic.cpp.o:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/StandartLogic.cpp.o
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/StandartLogic.cpp.o
+.PHONY : src/client/StandartLogic.cpp.o
 
-main.i: main.cpp.i
+src/client/StandartLogic.i: src/client/StandartLogic.cpp.i
 
-.PHONY : main.i
+.PHONY : src/client/StandartLogic.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/client/StandartLogic.cpp.i:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/StandartLogic.cpp.i
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/StandartLogic.cpp.i
+.PHONY : src/client/StandartLogic.cpp.i
 
-main.s: main.cpp.s
+src/client/StandartLogic.s: src/client/StandartLogic.cpp.s
 
-.PHONY : main.s
+.PHONY : src/client/StandartLogic.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/client/StandartLogic.cpp.s:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/StandartLogic.cpp.s
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/StandartLogic.cpp.s
+.PHONY : src/client/StandartLogic.cpp.s
 
-tests/AIPlayer_test.o: tests/AIPlayer_test.cpp.o
+src/client/main.o: src/client/main.cpp.o
 
-.PHONY : tests/AIPlayer_test.o
+.PHONY : src/client/main.o
 
 # target to build an object file
-tests/AIPlayer_test.cpp.o:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/tests/AIPlayer_test.cpp.o
-.PHONY : tests/AIPlayer_test.cpp.o
+src/client/main.cpp.o:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/main.cpp.o
+.PHONY : src/client/main.cpp.o
 
-tests/AIPlayer_test.i: tests/AIPlayer_test.cpp.i
+src/client/main.i: src/client/main.cpp.i
 
-.PHONY : tests/AIPlayer_test.i
+.PHONY : src/client/main.i
 
 # target to preprocess a source file
-tests/AIPlayer_test.cpp.i:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/tests/AIPlayer_test.cpp.i
-.PHONY : tests/AIPlayer_test.cpp.i
+src/client/main.cpp.i:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/main.cpp.i
+.PHONY : src/client/main.cpp.i
 
-tests/AIPlayer_test.s: tests/AIPlayer_test.cpp.s
+src/client/main.s: src/client/main.cpp.s
 
-.PHONY : tests/AIPlayer_test.s
+.PHONY : src/client/main.s
 
 # target to generate assembly for a file
-tests/AIPlayer_test.cpp.s:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/tests/AIPlayer_test.cpp.s
-.PHONY : tests/AIPlayer_test.cpp.s
+src/client/main.cpp.s:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/main.cpp.s
+.PHONY : src/client/main.cpp.s
 
-tests/Board_test.o: tests/Board_test.cpp.o
+src/client/tests/AIPlayer_test.o: src/client/tests/AIPlayer_test.cpp.o
 
-.PHONY : tests/Board_test.o
+.PHONY : src/client/tests/AIPlayer_test.o
 
 # target to build an object file
-tests/Board_test.cpp.o:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/tests/Board_test.cpp.o
-.PHONY : tests/Board_test.cpp.o
+src/client/tests/AIPlayer_test.cpp.o:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/tests/AIPlayer_test.cpp.o
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/tests/AIPlayer_test.cpp.o
+.PHONY : src/client/tests/AIPlayer_test.cpp.o
 
-tests/Board_test.i: tests/Board_test.cpp.i
+src/client/tests/AIPlayer_test.i: src/client/tests/AIPlayer_test.cpp.i
 
-.PHONY : tests/Board_test.i
+.PHONY : src/client/tests/AIPlayer_test.i
 
 # target to preprocess a source file
-tests/Board_test.cpp.i:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/tests/Board_test.cpp.i
-.PHONY : tests/Board_test.cpp.i
+src/client/tests/AIPlayer_test.cpp.i:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/tests/AIPlayer_test.cpp.i
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/tests/AIPlayer_test.cpp.i
+.PHONY : src/client/tests/AIPlayer_test.cpp.i
 
-tests/Board_test.s: tests/Board_test.cpp.s
+src/client/tests/AIPlayer_test.s: src/client/tests/AIPlayer_test.cpp.s
 
-.PHONY : tests/Board_test.s
+.PHONY : src/client/tests/AIPlayer_test.s
 
 # target to generate assembly for a file
-tests/Board_test.cpp.s:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/tests/Board_test.cpp.s
-.PHONY : tests/Board_test.cpp.s
+src/client/tests/AIPlayer_test.cpp.s:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/tests/AIPlayer_test.cpp.s
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/tests/AIPlayer_test.cpp.s
+.PHONY : src/client/tests/AIPlayer_test.cpp.s
 
-tests/PersonP_teset.o: tests/PersonP_teset.cpp.o
+src/client/tests/Board_test.o: src/client/tests/Board_test.cpp.o
 
-.PHONY : tests/PersonP_teset.o
+.PHONY : src/client/tests/Board_test.o
 
 # target to build an object file
-tests/PersonP_teset.cpp.o:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/tests/PersonP_teset.cpp.o
-.PHONY : tests/PersonP_teset.cpp.o
+src/client/tests/Board_test.cpp.o:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/tests/Board_test.cpp.o
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/tests/Board_test.cpp.o
+.PHONY : src/client/tests/Board_test.cpp.o
 
-tests/PersonP_teset.i: tests/PersonP_teset.cpp.i
+src/client/tests/Board_test.i: src/client/tests/Board_test.cpp.i
 
-.PHONY : tests/PersonP_teset.i
+.PHONY : src/client/tests/Board_test.i
 
 # target to preprocess a source file
-tests/PersonP_teset.cpp.i:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/tests/PersonP_teset.cpp.i
-.PHONY : tests/PersonP_teset.cpp.i
+src/client/tests/Board_test.cpp.i:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/tests/Board_test.cpp.i
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/tests/Board_test.cpp.i
+.PHONY : src/client/tests/Board_test.cpp.i
 
-tests/PersonP_teset.s: tests/PersonP_teset.cpp.s
+src/client/tests/Board_test.s: src/client/tests/Board_test.cpp.s
 
-.PHONY : tests/PersonP_teset.s
+.PHONY : src/client/tests/Board_test.s
 
 # target to generate assembly for a file
-tests/PersonP_teset.cpp.s:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/tests/PersonP_teset.cpp.s
-.PHONY : tests/PersonP_teset.cpp.s
+src/client/tests/Board_test.cpp.s:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/tests/Board_test.cpp.s
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/tests/Board_test.cpp.s
+.PHONY : src/client/tests/Board_test.cpp.s
 
-tests/StandartLogic_test.o: tests/StandartLogic_test.cpp.o
+src/client/tests/PersonP_teset.o: src/client/tests/PersonP_teset.cpp.o
 
-.PHONY : tests/StandartLogic_test.o
+.PHONY : src/client/tests/PersonP_teset.o
 
 # target to build an object file
-tests/StandartLogic_test.cpp.o:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/tests/StandartLogic_test.cpp.o
-.PHONY : tests/StandartLogic_test.cpp.o
+src/client/tests/PersonP_teset.cpp.o:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/tests/PersonP_teset.cpp.o
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/tests/PersonP_teset.cpp.o
+.PHONY : src/client/tests/PersonP_teset.cpp.o
 
-tests/StandartLogic_test.i: tests/StandartLogic_test.cpp.i
+src/client/tests/PersonP_teset.i: src/client/tests/PersonP_teset.cpp.i
 
-.PHONY : tests/StandartLogic_test.i
+.PHONY : src/client/tests/PersonP_teset.i
 
 # target to preprocess a source file
-tests/StandartLogic_test.cpp.i:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/tests/StandartLogic_test.cpp.i
-.PHONY : tests/StandartLogic_test.cpp.i
+src/client/tests/PersonP_teset.cpp.i:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/tests/PersonP_teset.cpp.i
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/tests/PersonP_teset.cpp.i
+.PHONY : src/client/tests/PersonP_teset.cpp.i
 
-tests/StandartLogic_test.s: tests/StandartLogic_test.cpp.s
+src/client/tests/PersonP_teset.s: src/client/tests/PersonP_teset.cpp.s
 
-.PHONY : tests/StandartLogic_test.s
+.PHONY : src/client/tests/PersonP_teset.s
 
 # target to generate assembly for a file
-tests/StandartLogic_test.cpp.s:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/tests/StandartLogic_test.cpp.s
-.PHONY : tests/StandartLogic_test.cpp.s
+src/client/tests/PersonP_teset.cpp.s:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/tests/PersonP_teset.cpp.s
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/tests/PersonP_teset.cpp.s
+.PHONY : src/client/tests/PersonP_teset.cpp.s
+
+src/client/tests/StandartLogic_test.o: src/client/tests/StandartLogic_test.cpp.o
+
+.PHONY : src/client/tests/StandartLogic_test.o
+
+# target to build an object file
+src/client/tests/StandartLogic_test.cpp.o:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/tests/StandartLogic_test.cpp.o
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/tests/StandartLogic_test.cpp.o
+.PHONY : src/client/tests/StandartLogic_test.cpp.o
+
+src/client/tests/StandartLogic_test.i: src/client/tests/StandartLogic_test.cpp.i
+
+.PHONY : src/client/tests/StandartLogic_test.i
+
+# target to preprocess a source file
+src/client/tests/StandartLogic_test.cpp.i:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/tests/StandartLogic_test.cpp.i
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/tests/StandartLogic_test.cpp.i
+.PHONY : src/client/tests/StandartLogic_test.cpp.i
+
+src/client/tests/StandartLogic_test.s: src/client/tests/StandartLogic_test.cpp.s
+
+.PHONY : src/client/tests/StandartLogic_test.s
+
+# target to generate assembly for a file
+src/client/tests/StandartLogic_test.cpp.s:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/tests/StandartLogic_test.cpp.s
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/tests/StandartLogic_test.cpp.s
+.PHONY : src/client/tests/StandartLogic_test.cpp.s
+
+src/client/tests/gtest_main.o: src/client/tests/gtest_main.cpp.o
+
+.PHONY : src/client/tests/gtest_main.o
+
+# target to build an object file
+src/client/tests/gtest_main.cpp.o:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/tests/gtest_main.cpp.o
+.PHONY : src/client/tests/gtest_main.cpp.o
+
+src/client/tests/gtest_main.i: src/client/tests/gtest_main.cpp.i
+
+.PHONY : src/client/tests/gtest_main.i
+
+# target to preprocess a source file
+src/client/tests/gtest_main.cpp.i:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/tests/gtest_main.cpp.i
+.PHONY : src/client/tests/gtest_main.cpp.i
+
+src/client/tests/gtest_main.s: src/client/tests/gtest_main.cpp.s
+
+.PHONY : src/client/tests/gtest_main.s
+
+# target to generate assembly for a file
+src/client/tests/gtest_main.cpp.s:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/tests/gtest_main.cpp.s
+.PHONY : src/client/tests/gtest_main.cpp.s
+
+src/server/Server.o: src/server/Server.cpp.o
+
+.PHONY : src/server/Server.o
+
+# target to build an object file
+src/server/Server.cpp.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/Server.cpp.o
+.PHONY : src/server/Server.cpp.o
+
+src/server/Server.i: src/server/Server.cpp.i
+
+.PHONY : src/server/Server.i
+
+# target to preprocess a source file
+src/server/Server.cpp.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/Server.cpp.i
+.PHONY : src/server/Server.cpp.i
+
+src/server/Server.s: src/server/Server.cpp.s
+
+.PHONY : src/server/Server.s
+
+# target to generate assembly for a file
+src/server/Server.cpp.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/Server.cpp.s
+.PHONY : src/server/Server.cpp.s
+
+src/server/main.o: src/server/main.cpp.o
+
+.PHONY : src/server/main.o
+
+# target to build an object file
+src/server/main.cpp.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/main.cpp.o
+.PHONY : src/server/main.cpp.o
+
+src/server/main.i: src/server/main.cpp.i
+
+.PHONY : src/server/main.i
+
+# target to preprocess a source file
+src/server/main.cpp.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/main.cpp.i
+.PHONY : src/server/main.cpp.i
+
+src/server/main.s: src/server/main.cpp.s
+
+.PHONY : src/server/main.s
+
+# target to generate assembly for a file
+src/server/main.cpp.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/main.cpp.s
+.PHONY : src/server/main.cpp.s
 
 # Help Target
 help:
@@ -665,59 +817,70 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... tests"
+	@echo "... server"
 	@echo "... ex3"
 	@echo "... gmock_main"
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
-	@echo "... AIPlayer.o"
-	@echo "... AIPlayer.i"
-	@echo "... AIPlayer.s"
-	@echo "... BoardConsole.o"
-	@echo "... BoardConsole.i"
-	@echo "... BoardConsole.s"
-	@echo "... Client.o"
-	@echo "... Client.i"
-	@echo "... Client.s"
-	@echo "... Game.o"
-	@echo "... Game.i"
-	@echo "... Game.s"
-	@echo "... MenuConsole.o"
-	@echo "... MenuConsole.i"
-	@echo "... MenuConsole.s"
-	@echo "... PersonP.o"
-	@echo "... PersonP.i"
-	@echo "... PersonP.s"
-	@echo "... PersonPServer.o"
-	@echo "... PersonPServer.i"
-	@echo "... PersonPServer.s"
-	@echo "... Point.o"
-	@echo "... Point.i"
-	@echo "... Point.s"
-	@echo "... PrintConsole.o"
-	@echo "... PrintConsole.i"
-	@echo "... PrintConsole.s"
-	@echo "... RemotePlayer.o"
-	@echo "... RemotePlayer.i"
-	@echo "... RemotePlayer.s"
-	@echo "... StandartLogic.o"
-	@echo "... StandartLogic.i"
-	@echo "... StandartLogic.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... tests/AIPlayer_test.o"
-	@echo "... tests/AIPlayer_test.i"
-	@echo "... tests/AIPlayer_test.s"
-	@echo "... tests/Board_test.o"
-	@echo "... tests/Board_test.i"
-	@echo "... tests/Board_test.s"
-	@echo "... tests/PersonP_teset.o"
-	@echo "... tests/PersonP_teset.i"
-	@echo "... tests/PersonP_teset.s"
-	@echo "... tests/StandartLogic_test.o"
-	@echo "... tests/StandartLogic_test.i"
-	@echo "... tests/StandartLogic_test.s"
+	@echo "... src/client/AIPlayer.o"
+	@echo "... src/client/AIPlayer.i"
+	@echo "... src/client/AIPlayer.s"
+	@echo "... src/client/BoardConsole.o"
+	@echo "... src/client/BoardConsole.i"
+	@echo "... src/client/BoardConsole.s"
+	@echo "... src/client/Client.o"
+	@echo "... src/client/Client.i"
+	@echo "... src/client/Client.s"
+	@echo "... src/client/Game.o"
+	@echo "... src/client/Game.i"
+	@echo "... src/client/Game.s"
+	@echo "... src/client/MenuConsole.o"
+	@echo "... src/client/MenuConsole.i"
+	@echo "... src/client/MenuConsole.s"
+	@echo "... src/client/PersonP.o"
+	@echo "... src/client/PersonP.i"
+	@echo "... src/client/PersonP.s"
+	@echo "... src/client/PersonPServer.o"
+	@echo "... src/client/PersonPServer.i"
+	@echo "... src/client/PersonPServer.s"
+	@echo "... src/client/Point.o"
+	@echo "... src/client/Point.i"
+	@echo "... src/client/Point.s"
+	@echo "... src/client/PrintConsole.o"
+	@echo "... src/client/PrintConsole.i"
+	@echo "... src/client/PrintConsole.s"
+	@echo "... src/client/RemotePlayer.o"
+	@echo "... src/client/RemotePlayer.i"
+	@echo "... src/client/RemotePlayer.s"
+	@echo "... src/client/StandartLogic.o"
+	@echo "... src/client/StandartLogic.i"
+	@echo "... src/client/StandartLogic.s"
+	@echo "... src/client/main.o"
+	@echo "... src/client/main.i"
+	@echo "... src/client/main.s"
+	@echo "... src/client/tests/AIPlayer_test.o"
+	@echo "... src/client/tests/AIPlayer_test.i"
+	@echo "... src/client/tests/AIPlayer_test.s"
+	@echo "... src/client/tests/Board_test.o"
+	@echo "... src/client/tests/Board_test.i"
+	@echo "... src/client/tests/Board_test.s"
+	@echo "... src/client/tests/PersonP_teset.o"
+	@echo "... src/client/tests/PersonP_teset.i"
+	@echo "... src/client/tests/PersonP_teset.s"
+	@echo "... src/client/tests/StandartLogic_test.o"
+	@echo "... src/client/tests/StandartLogic_test.i"
+	@echo "... src/client/tests/StandartLogic_test.s"
+	@echo "... src/client/tests/gtest_main.o"
+	@echo "... src/client/tests/gtest_main.i"
+	@echo "... src/client/tests/gtest_main.s"
+	@echo "... src/server/Server.o"
+	@echo "... src/server/Server.i"
+	@echo "... src/server/Server.s"
+	@echo "... src/server/main.o"
+	@echo "... src/server/main.i"
+	@echo "... src/server/main.s"
 .PHONY : help
 
 

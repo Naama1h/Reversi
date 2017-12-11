@@ -6,29 +6,29 @@
 
 #IncludeRegexTransform: 
 
-../lib/googletest-release-1.8.0/googletest/include/gtest/gtest-death-test.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/gtest-death-test.h
 gtest/internal/gtest-death-test-internal.h
-../lib/googletest-release-1.8.0/googletest/include/gtest/gtest/internal/gtest-death-test-internal.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/gtest/internal/gtest-death-test-internal.h
 
-../lib/googletest-release-1.8.0/googletest/include/gtest/gtest-message.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/gtest-message.h
 limits
 -
 gtest/internal/gtest-port.h
-../lib/googletest-release-1.8.0/googletest/include/gtest/gtest/internal/gtest-port.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/gtest/internal/gtest-port.h
 
-../lib/googletest-release-1.8.0/googletest/include/gtest/gtest-param-test.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/gtest-param-test.h
 gtest/internal/gtest-port.h
-../lib/googletest-release-1.8.0/googletest/include/gtest/gtest/internal/gtest-port.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/gtest/internal/gtest-port.h
 utility
 -
 gtest/internal/gtest-internal.h
-../lib/googletest-release-1.8.0/googletest/include/gtest/gtest/internal/gtest-internal.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/gtest/internal/gtest-internal.h
 gtest/internal/gtest-param-util.h
-../lib/googletest-release-1.8.0/googletest/include/gtest/gtest/internal/gtest-param-util.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/gtest/internal/gtest-param-util.h
 gtest/internal/gtest-param-util-generated.h
-../lib/googletest-release-1.8.0/googletest/include/gtest/gtest/internal/gtest-param-util-generated.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/gtest/internal/gtest-param-util-generated.h
 
-../lib/googletest-release-1.8.0/googletest/include/gtest/gtest-printers.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/gtest-printers.h
 ostream
 -
 sstream
@@ -40,51 +40,51 @@ utility
 vector
 -
 gtest/internal/gtest-port.h
-../lib/googletest-release-1.8.0/googletest/include/gtest/gtest/internal/gtest-port.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/gtest/internal/gtest-port.h
 gtest/internal/gtest-internal.h
-../lib/googletest-release-1.8.0/googletest/include/gtest/gtest/internal/gtest-internal.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/gtest/internal/gtest-internal.h
 tuple
 -
 gtest/internal/custom/gtest-printers.h
-../lib/googletest-release-1.8.0/googletest/include/gtest/gtest/internal/custom/gtest-printers.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/gtest/internal/custom/gtest-printers.h
 
-../lib/googletest-release-1.8.0/googletest/include/gtest/gtest-test-part.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/gtest-test-part.h
 iosfwd
 -
 vector
 -
 gtest/internal/gtest-internal.h
-../lib/googletest-release-1.8.0/googletest/include/gtest/gtest/internal/gtest-internal.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/gtest/internal/gtest-internal.h
 gtest/internal/gtest-string.h
-../lib/googletest-release-1.8.0/googletest/include/gtest/gtest/internal/gtest-string.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/gtest/internal/gtest-string.h
 
-../lib/googletest-release-1.8.0/googletest/include/gtest/gtest-typed-test.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/gtest-typed-test.h
 gtest/internal/gtest-port.h
-../lib/googletest-release-1.8.0/googletest/include/gtest/gtest/internal/gtest-port.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/gtest/internal/gtest-port.h
 gtest/internal/gtest-type-util.h
-../lib/googletest-release-1.8.0/googletest/include/gtest/gtest/internal/gtest-type-util.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/gtest/internal/gtest-type-util.h
 
-../lib/googletest-release-1.8.0/googletest/include/gtest/gtest_pred_impl.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/gtest_pred_impl.h
 
-../lib/googletest-release-1.8.0/googletest/include/gtest/gtest_prod.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/gtest_prod.h
 
-../lib/googletest-release-1.8.0/googletest/include/gtest/internal/custom/gtest-port.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/internal/custom/gtest-port.h
 
-../lib/googletest-release-1.8.0/googletest/include/gtest/internal/custom/gtest-printers.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/internal/custom/gtest-printers.h
 
-../lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-death-test-internal.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-death-test-internal.h
 gtest/internal/gtest-internal.h
-../lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest/internal/gtest-internal.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest/internal/gtest-internal.h
 stdio.h
 -
 
-../lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-filepath.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-filepath.h
 gtest/internal/gtest-string.h
-../lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest/internal/gtest-string.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest/internal/gtest-string.h
 
-../lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-internal.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-internal.h
 gtest/internal/gtest-port.h
-../lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest/internal/gtest-port.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest/internal/gtest-port.h
 stdlib.h
 -
 sys/types.h
@@ -114,29 +114,29 @@ string
 vector
 -
 gtest/gtest-message.h
-../lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest/gtest-message.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest/gtest-message.h
 gtest/internal/gtest-string.h
-../lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest/internal/gtest-string.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest/internal/gtest-string.h
 gtest/internal/gtest-filepath.h
-../lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest/internal/gtest-filepath.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest/internal/gtest-filepath.h
 gtest/internal/gtest-type-util.h
-../lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest/internal/gtest-type-util.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest/internal/gtest-type-util.h
 
-../lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-linked_ptr.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-linked_ptr.h
 stdlib.h
 -
 assert.h
 -
 gtest/internal/gtest-port.h
-../lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest/internal/gtest-port.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest/internal/gtest-port.h
 
-../lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-param-util-generated.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-param-util-generated.h
 gtest/internal/gtest-param-util.h
-../lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest/internal/gtest-param-util.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest/internal/gtest-param-util.h
 gtest/internal/gtest-port.h
-../lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest/internal/gtest-port.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest/internal/gtest-port.h
 
-../lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-param-util.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-param-util.h
 ctype.h
 -
 iterator
@@ -148,19 +148,19 @@ utility
 vector
 -
 gtest/internal/gtest-internal.h
-../lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest/internal/gtest-internal.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest/internal/gtest-internal.h
 gtest/internal/gtest-linked_ptr.h
-../lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest/internal/gtest-linked_ptr.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest/internal/gtest-linked_ptr.h
 gtest/internal/gtest-port.h
-../lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest/internal/gtest-port.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest/internal/gtest-port.h
 gtest/gtest-printers.h
-../lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest/gtest-printers.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest/gtest-printers.h
 
-../lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-port-arch.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-port-arch.h
 winapifamily.h
 -
 
-../lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-port.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-port.h
 ctype.h
 -
 stddef.h
@@ -192,9 +192,9 @@ utility
 vector
 -
 gtest/internal/gtest-port-arch.h
-../lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest/internal/gtest-port-arch.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest/internal/gtest-port-arch.h
 gtest/internal/custom/gtest-port.h
-../lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest/internal/custom/gtest-port.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest/internal/custom/gtest-port.h
 direct.h
 -
 io.h
@@ -216,7 +216,7 @@ time.h
 tuple
 -
 gtest/internal/gtest-tuple.h
-../lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest/internal/gtest-tuple.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest/internal/gtest-tuple.h
 tuple
 -
 tuple
@@ -228,7 +228,7 @@ tr1/tuple
 tuple
 -
 
-../lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-string.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-string.h
 mem.h
 -
 string.h
@@ -236,53 +236,57 @@ string.h
 string
 -
 gtest/internal/gtest-port.h
-../lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest/internal/gtest-port.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest/internal/gtest-port.h
 
-../lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-tuple.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-tuple.h
 utility
 -
 
-../lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-type-util.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-type-util.h
 gtest/internal/gtest-port.h
-../lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest/internal/gtest-port.h
+../src/client/lib/googletest-release-1.8.0/googletest/include/gtest/internal/gtest/internal/gtest-port.h
 cxxabi.h
 -
 acxx_demangle.h
 -
 
-/home/tchelet/CLionProjects/ex3/AIPlayer.cpp
+/home/tchelet/CLionProjects/ex3/src/client/AIPlayer.cpp
 AIPlayer.h
-/home/tchelet/CLionProjects/ex3/AIPlayer.h
+/home/tchelet/CLionProjects/ex3/src/client/AIPlayer.h
 BoardConsole.h
-/home/tchelet/CLionProjects/ex3/BoardConsole.h
+/home/tchelet/CLionProjects/ex3/src/client/BoardConsole.h
+PrintConsole.h
+/home/tchelet/CLionProjects/ex3/src/client/PrintConsole.h
 
-/home/tchelet/CLionProjects/ex3/AIPlayer.h
+/home/tchelet/CLionProjects/ex3/src/client/AIPlayer.h
 Player.h
-/home/tchelet/CLionProjects/ex3/Player.h
+/home/tchelet/CLionProjects/ex3/src/client/Player.h
 Point.h
-/home/tchelet/CLionProjects/ex3/Point.h
+/home/tchelet/CLionProjects/ex3/src/client/Point.h
 Board.h
-/home/tchelet/CLionProjects/ex3/Board.h
+/home/tchelet/CLionProjects/ex3/src/client/Board.h
 vector
 -
+PrintConsole.h
+/home/tchelet/CLionProjects/ex3/src/client/PrintConsole.h
 
-/home/tchelet/CLionProjects/ex3/Board.h
+/home/tchelet/CLionProjects/ex3/src/client/Board.h
 
-/home/tchelet/CLionProjects/ex3/BoardConsole.cpp
+/home/tchelet/CLionProjects/ex3/src/client/BoardConsole.cpp
 BoardConsole.h
-/home/tchelet/CLionProjects/ex3/BoardConsole.h
+/home/tchelet/CLionProjects/ex3/src/client/BoardConsole.h
 iostream
 -
 
-/home/tchelet/CLionProjects/ex3/BoardConsole.h
+/home/tchelet/CLionProjects/ex3/src/client/BoardConsole.h
 string
 -
 Board.h
-/home/tchelet/CLionProjects/ex3/Board.h
+/home/tchelet/CLionProjects/ex3/src/client/Board.h
 
-/home/tchelet/CLionProjects/ex3/Client.cpp
+/home/tchelet/CLionProjects/ex3/src/client/Client.cpp
 Client.h
-/home/tchelet/CLionProjects/ex3/Client.h
+/home/tchelet/CLionProjects/ex3/src/client/Client.h
 iostream
 -
 sys/socket.h
@@ -298,159 +302,165 @@ string.h
 unistd.h
 -
 
-/home/tchelet/CLionProjects/ex3/Client.h
+/home/tchelet/CLionProjects/ex3/src/client/Client.h
 Point.h
-/home/tchelet/CLionProjects/ex3/Point.h
+/home/tchelet/CLionProjects/ex3/src/client/Point.h
 string.h
 -
 iostream
 -
 
-/home/tchelet/CLionProjects/ex3/Game.cpp
+/home/tchelet/CLionProjects/ex3/src/client/Game.cpp
+cstring
+-
 Game.h
-/home/tchelet/CLionProjects/ex3/Game.h
+/home/tchelet/CLionProjects/ex3/src/client/Game.h
 PrintConsole.h
-/home/tchelet/CLionProjects/ex3/PrintConsole.h
+/home/tchelet/CLionProjects/ex3/src/client/PrintConsole.h
 
-/home/tchelet/CLionProjects/ex3/Game.h
+/home/tchelet/CLionProjects/ex3/src/client/Game.h
 Board.h
-/home/tchelet/CLionProjects/ex3/Board.h
+/home/tchelet/CLionProjects/ex3/src/client/Board.h
 Logic.h
-/home/tchelet/CLionProjects/ex3/Logic.h
+/home/tchelet/CLionProjects/ex3/src/client/Logic.h
 Player.h
-/home/tchelet/CLionProjects/ex3/Player.h
+/home/tchelet/CLionProjects/ex3/src/client/Player.h
 
-/home/tchelet/CLionProjects/ex3/Logic.h
+/home/tchelet/CLionProjects/ex3/src/client/Logic.h
 Point.h
-/home/tchelet/CLionProjects/ex3/Point.h
+/home/tchelet/CLionProjects/ex3/src/client/Point.h
 string
-/home/tchelet/CLionProjects/ex3/string
+/home/tchelet/CLionProjects/ex3/src/client/string
 Board.h
-/home/tchelet/CLionProjects/ex3/Board.h
+/home/tchelet/CLionProjects/ex3/src/client/Board.h
 list
 -
 vector
 -
 
-/home/tchelet/CLionProjects/ex3/Menu.h
+/home/tchelet/CLionProjects/ex3/src/client/Menu.h
 
-/home/tchelet/CLionProjects/ex3/MenuConsole.cpp
+/home/tchelet/CLionProjects/ex3/src/client/MenuConsole.cpp
 MenuConsole.h
-/home/tchelet/CLionProjects/ex3/MenuConsole.h
+/home/tchelet/CLionProjects/ex3/src/client/MenuConsole.h
 
-/home/tchelet/CLionProjects/ex3/MenuConsole.h
+/home/tchelet/CLionProjects/ex3/src/client/MenuConsole.h
 getopt.h
 -
 Menu.h
-/home/tchelet/CLionProjects/ex3/Menu.h
+/home/tchelet/CLionProjects/ex3/src/client/Menu.h
 iostream
 -
 
-/home/tchelet/CLionProjects/ex3/PersonP.cpp
+/home/tchelet/CLionProjects/ex3/src/client/PersonP.cpp
 vector
 -
 PersonP.h
-/home/tchelet/CLionProjects/ex3/PersonP.h
+/home/tchelet/CLionProjects/ex3/src/client/PersonP.h
 PrintConsole.h
-/home/tchelet/CLionProjects/ex3/PrintConsole.h
+/home/tchelet/CLionProjects/ex3/src/client/PrintConsole.h
 limits
 -
 
-/home/tchelet/CLionProjects/ex3/PersonP.h
+/home/tchelet/CLionProjects/ex3/src/client/PersonP.h
 Player.h
-/home/tchelet/CLionProjects/ex3/Player.h
+/home/tchelet/CLionProjects/ex3/src/client/Player.h
 Point.h
-/home/tchelet/CLionProjects/ex3/Point.h
+/home/tchelet/CLionProjects/ex3/src/client/Point.h
 Board.h
-/home/tchelet/CLionProjects/ex3/Board.h
+/home/tchelet/CLionProjects/ex3/src/client/Board.h
 StandartLogic.h
-/home/tchelet/CLionProjects/ex3/StandartLogic.h
+/home/tchelet/CLionProjects/ex3/src/client/StandartLogic.h
 vector
 -
-PrintMassage.h
-/home/tchelet/CLionProjects/ex3/PrintMassage.h
+PrintConsole.h
+/home/tchelet/CLionProjects/ex3/src/client/PrintConsole.h
 
-/home/tchelet/CLionProjects/ex3/PersonPServer.cpp
+/home/tchelet/CLionProjects/ex3/src/client/PersonPServer.cpp
 PersonPServer.h
-/home/tchelet/CLionProjects/ex3/PersonPServer.h
+/home/tchelet/CLionProjects/ex3/src/client/PersonPServer.h
 
-/home/tchelet/CLionProjects/ex3/PersonPServer.h
+/home/tchelet/CLionProjects/ex3/src/client/PersonPServer.h
 PersonP.h
-/home/tchelet/CLionProjects/ex3/PersonP.h
+/home/tchelet/CLionProjects/ex3/src/client/PersonP.h
 Client.h
-/home/tchelet/CLionProjects/ex3/Client.h
+/home/tchelet/CLionProjects/ex3/src/client/Client.h
 vector
 -
 PrintConsole.h
-/home/tchelet/CLionProjects/ex3/PrintConsole.h
+/home/tchelet/CLionProjects/ex3/src/client/PrintConsole.h
 limits
 -
 
-/home/tchelet/CLionProjects/ex3/Player.h
+/home/tchelet/CLionProjects/ex3/src/client/Player.h
 iostream
 -
 Point.h
-/home/tchelet/CLionProjects/ex3/Point.h
+/home/tchelet/CLionProjects/ex3/src/client/Point.h
 string
 -
 vector
 -
+cstring
+-
 Board.h
-/home/tchelet/CLionProjects/ex3/Board.h
+/home/tchelet/CLionProjects/ex3/src/client/Board.h
 Logic.h
-/home/tchelet/CLionProjects/ex3/Logic.h
+/home/tchelet/CLionProjects/ex3/src/client/Logic.h
 StandartLogic.h
-/home/tchelet/CLionProjects/ex3/StandartLogic.h
+/home/tchelet/CLionProjects/ex3/src/client/StandartLogic.h
 
-/home/tchelet/CLionProjects/ex3/Point.cpp
+/home/tchelet/CLionProjects/ex3/src/client/Point.cpp
 Point.h
-/home/tchelet/CLionProjects/ex3/Point.h
+/home/tchelet/CLionProjects/ex3/src/client/Point.h
 
-/home/tchelet/CLionProjects/ex3/Point.h
+/home/tchelet/CLionProjects/ex3/src/client/Point.h
 
-/home/tchelet/CLionProjects/ex3/PrintConsole.cpp
+/home/tchelet/CLionProjects/ex3/src/client/PrintConsole.cpp
 PrintConsole.h
-/home/tchelet/CLionProjects/ex3/PrintConsole.h
+/home/tchelet/CLionProjects/ex3/src/client/PrintConsole.h
 
-/home/tchelet/CLionProjects/ex3/PrintConsole.h
+/home/tchelet/CLionProjects/ex3/src/client/PrintConsole.h
 PrintMassage.h
-/home/tchelet/CLionProjects/ex3/PrintMassage.h
+/home/tchelet/CLionProjects/ex3/src/client/PrintMassage.h
 
-/home/tchelet/CLionProjects/ex3/PrintMassage.h
+/home/tchelet/CLionProjects/ex3/src/client/PrintMassage.h
 Board.h
-/home/tchelet/CLionProjects/ex3/Board.h
+/home/tchelet/CLionProjects/ex3/src/client/Board.h
 Player.h
-/home/tchelet/CLionProjects/ex3/Player.h
+/home/tchelet/CLionProjects/ex3/src/client/Player.h
 
-/home/tchelet/CLionProjects/ex3/RemotePlayer.cpp
+/home/tchelet/CLionProjects/ex3/src/client/RemotePlayer.cpp
 RemotePlayer.h
-/home/tchelet/CLionProjects/ex3/RemotePlayer.h
+/home/tchelet/CLionProjects/ex3/src/client/RemotePlayer.h
+PrintConsole.h
+/home/tchelet/CLionProjects/ex3/src/client/PrintConsole.h
 
-/home/tchelet/CLionProjects/ex3/RemotePlayer.h
+/home/tchelet/CLionProjects/ex3/src/client/RemotePlayer.h
 Player.h
-/home/tchelet/CLionProjects/ex3/Player.h
+/home/tchelet/CLionProjects/ex3/src/client/Player.h
 Client.h
-/home/tchelet/CLionProjects/ex3/Client.h
+/home/tchelet/CLionProjects/ex3/src/client/Client.h
 
-/home/tchelet/CLionProjects/ex3/StandartLogic.cpp
+/home/tchelet/CLionProjects/ex3/src/client/StandartLogic.cpp
 StandartLogic.h
-/home/tchelet/CLionProjects/ex3/StandartLogic.h
+/home/tchelet/CLionProjects/ex3/src/client/StandartLogic.h
 
-/home/tchelet/CLionProjects/ex3/StandartLogic.h
+/home/tchelet/CLionProjects/ex3/src/client/StandartLogic.h
 Logic.h
-/home/tchelet/CLionProjects/ex3/Logic.h
+/home/tchelet/CLionProjects/ex3/src/client/Logic.h
 Point.h
-/home/tchelet/CLionProjects/ex3/Point.h
+/home/tchelet/CLionProjects/ex3/src/client/Point.h
 Board.h
-/home/tchelet/CLionProjects/ex3/Board.h
+/home/tchelet/CLionProjects/ex3/src/client/Board.h
 string
-/home/tchelet/CLionProjects/ex3/string
+/home/tchelet/CLionProjects/ex3/src/client/string
 list
 -
 vector
 -
 
-/home/tchelet/CLionProjects/ex3/gtest_src/gtest.h
+/home/tchelet/CLionProjects/ex3/src/client/gtest_src/gtest.h
 limits
 -
 ostream
@@ -458,89 +468,93 @@ ostream
 vector
 -
 gtest/internal/gtest-internal.h
-/home/tchelet/CLionProjects/ex3/gtest_src/gtest/internal/gtest-internal.h
+/home/tchelet/CLionProjects/ex3/src/client/gtest_src/gtest/internal/gtest-internal.h
 gtest/internal/gtest-string.h
-/home/tchelet/CLionProjects/ex3/gtest_src/gtest/internal/gtest-string.h
+/home/tchelet/CLionProjects/ex3/src/client/gtest_src/gtest/internal/gtest-string.h
 gtest/gtest-death-test.h
-/home/tchelet/CLionProjects/ex3/gtest_src/gtest/gtest-death-test.h
+/home/tchelet/CLionProjects/ex3/src/client/gtest_src/gtest/gtest-death-test.h
 gtest/gtest-message.h
-/home/tchelet/CLionProjects/ex3/gtest_src/gtest/gtest-message.h
+/home/tchelet/CLionProjects/ex3/src/client/gtest_src/gtest/gtest-message.h
 gtest/gtest-param-test.h
-/home/tchelet/CLionProjects/ex3/gtest_src/gtest/gtest-param-test.h
+/home/tchelet/CLionProjects/ex3/src/client/gtest_src/gtest/gtest-param-test.h
 gtest/gtest-printers.h
-/home/tchelet/CLionProjects/ex3/gtest_src/gtest/gtest-printers.h
+/home/tchelet/CLionProjects/ex3/src/client/gtest_src/gtest/gtest-printers.h
 gtest/gtest_prod.h
-/home/tchelet/CLionProjects/ex3/gtest_src/gtest/gtest_prod.h
+/home/tchelet/CLionProjects/ex3/src/client/gtest_src/gtest/gtest_prod.h
 gtest/gtest-test-part.h
-/home/tchelet/CLionProjects/ex3/gtest_src/gtest/gtest-test-part.h
+/home/tchelet/CLionProjects/ex3/src/client/gtest_src/gtest/gtest-test-part.h
 gtest/gtest-typed-test.h
-/home/tchelet/CLionProjects/ex3/gtest_src/gtest/gtest-typed-test.h
+/home/tchelet/CLionProjects/ex3/src/client/gtest_src/gtest/gtest-typed-test.h
 gtest/gtest_pred_impl.h
-/home/tchelet/CLionProjects/ex3/gtest_src/gtest/gtest_pred_impl.h
+/home/tchelet/CLionProjects/ex3/src/client/gtest_src/gtest/gtest_pred_impl.h
 
-/home/tchelet/CLionProjects/ex3/main.cpp
+/home/tchelet/CLionProjects/ex3/src/client/main.cpp
+fstream
+-
 iostream
 -
 BoardConsole.h
-/home/tchelet/CLionProjects/ex3/BoardConsole.h
+/home/tchelet/CLionProjects/ex3/src/client/BoardConsole.h
 PersonP.h
-/home/tchelet/CLionProjects/ex3/PersonP.h
+/home/tchelet/CLionProjects/ex3/src/client/PersonP.h
 Game.h
-/home/tchelet/CLionProjects/ex3/Game.h
+/home/tchelet/CLionProjects/ex3/src/client/Game.h
 AIPlayer.h
-/home/tchelet/CLionProjects/ex3/AIPlayer.h
+/home/tchelet/CLionProjects/ex3/src/client/AIPlayer.h
 RemotePlayer.h
-/home/tchelet/CLionProjects/ex3/RemotePlayer.h
+/home/tchelet/CLionProjects/ex3/src/client/RemotePlayer.h
 PersonPServer.h
-/home/tchelet/CLionProjects/ex3/PersonPServer.h
+/home/tchelet/CLionProjects/ex3/src/client/PersonPServer.h
 unistd.h
 -
 Client.h
-/home/tchelet/CLionProjects/ex3/Client.h
+/home/tchelet/CLionProjects/ex3/src/client/Client.h
 Menu.h
-/home/tchelet/CLionProjects/ex3/Menu.h
+/home/tchelet/CLionProjects/ex3/src/client/Menu.h
 MenuConsole.h
-/home/tchelet/CLionProjects/ex3/MenuConsole.h
+/home/tchelet/CLionProjects/ex3/src/client/MenuConsole.h
+PrintConsole.h
+/home/tchelet/CLionProjects/ex3/src/client/PrintConsole.h
 
-/home/tchelet/CLionProjects/ex3/tests/AIPlayer_test.cpp
+/home/tchelet/CLionProjects/ex3/src/client/tests/AIPlayer_test.cpp
 AIPlayer_test.h
-/home/tchelet/CLionProjects/ex3/tests/AIPlayer_test.h
+/home/tchelet/CLionProjects/ex3/src/client/tests/AIPlayer_test.h
 ../AIPlayer.h
-/home/tchelet/CLionProjects/ex3/AIPlayer.h
+/home/tchelet/CLionProjects/ex3/src/client/AIPlayer.h
 
-/home/tchelet/CLionProjects/ex3/tests/AIPlayer_test.h
+/home/tchelet/CLionProjects/ex3/src/client/tests/AIPlayer_test.h
 ../gtest_src/gtest.h
-/home/tchelet/CLionProjects/ex3/gtest_src/gtest.h
+/home/tchelet/CLionProjects/ex3/src/client/gtest_src/gtest.h
 
-/home/tchelet/CLionProjects/ex3/tests/Board_test.cpp
+/home/tchelet/CLionProjects/ex3/src/client/tests/Board_test.cpp
 Board_test.h
-/home/tchelet/CLionProjects/ex3/tests/Board_test.h
+/home/tchelet/CLionProjects/ex3/src/client/tests/Board_test.h
 ../BoardConsole.h
-/home/tchelet/CLionProjects/ex3/BoardConsole.h
+/home/tchelet/CLionProjects/ex3/src/client/BoardConsole.h
 
-/home/tchelet/CLionProjects/ex3/tests/Board_test.h
+/home/tchelet/CLionProjects/ex3/src/client/tests/Board_test.h
 ../gtest_src/gtest.h
-/home/tchelet/CLionProjects/ex3/gtest_src/gtest.h
+/home/tchelet/CLionProjects/ex3/src/client/gtest_src/gtest.h
 
-/home/tchelet/CLionProjects/ex3/tests/PersonP_teset.cpp
+/home/tchelet/CLionProjects/ex3/src/client/tests/PersonP_teset.cpp
 PersonP_teset.h
-/home/tchelet/CLionProjects/ex3/tests/PersonP_teset.h
+/home/tchelet/CLionProjects/ex3/src/client/tests/PersonP_teset.h
 ../PersonP.h
-/home/tchelet/CLionProjects/ex3/PersonP.h
+/home/tchelet/CLionProjects/ex3/src/client/PersonP.h
 
-/home/tchelet/CLionProjects/ex3/tests/PersonP_teset.h
+/home/tchelet/CLionProjects/ex3/src/client/tests/PersonP_teset.h
 ../gtest_src/gtest.h
-/home/tchelet/CLionProjects/ex3/gtest_src/gtest.h
+/home/tchelet/CLionProjects/ex3/src/client/gtest_src/gtest.h
 
-/home/tchelet/CLionProjects/ex3/tests/StandartLogic_test.cpp
+/home/tchelet/CLionProjects/ex3/src/client/tests/StandartLogic_test.cpp
 StandartLogic_test.h
-/home/tchelet/CLionProjects/ex3/tests/StandartLogic_test.h
+/home/tchelet/CLionProjects/ex3/src/client/tests/StandartLogic_test.h
 ../BoardConsole.h
-/home/tchelet/CLionProjects/ex3/BoardConsole.h
+/home/tchelet/CLionProjects/ex3/src/client/BoardConsole.h
 ../StandartLogic.h
-/home/tchelet/CLionProjects/ex3/StandartLogic.h
+/home/tchelet/CLionProjects/ex3/src/client/StandartLogic.h
 
-/home/tchelet/CLionProjects/ex3/tests/StandartLogic_test.h
+/home/tchelet/CLionProjects/ex3/src/client/tests/StandartLogic_test.h
 ../gtest_src/gtest.h
-/home/tchelet/CLionProjects/ex3/gtest_src/gtest.h
+/home/tchelet/CLionProjects/ex3/src/client/gtest_src/gtest.h
 

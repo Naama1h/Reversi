@@ -5,7 +5,7 @@
 		<Option title="ex3"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\lib\;CMake Files\lib\googletest-release-1.8.0\;CMake Files\lib\googletest-release-1.8.0\googlemock\;CMake Files\lib\googletest-release-1.8.0\googletest\;CMake Files\lib\googletest-release-1.8.0\googletest\cmake\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\src\client\;CMake Files\src\client\lib\;CMake Files\src\client\lib\googletest-release-1.8.0\;CMake Files\src\client\lib\googletest-release-1.8.0\googlemock\;CMake Files\src\client\lib\googletest-release-1.8.0\googletest\;CMake Files\src\client\lib\googletest-release-1.8.0\googletest\cmake\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/tchelet/CLionProjects/ex3/cmake-build-debug"/>
@@ -77,6 +77,106 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="tests">
+				<Option output="/home/tchelet/CLionProjects/ex3/cmake-build-debug/tests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/tchelet/CLionProjects/ex3/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googletest/include"/>
+					<Add directory="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googlemock/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 tests"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tests/fast">
+				<Option output="/home/tchelet/CLionProjects/ex3/cmake-build-debug/tests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/tchelet/CLionProjects/ex3/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googletest/include"/>
+					<Add directory="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googlemock/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 tests/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="server">
+				<Option output="/home/tchelet/CLionProjects/ex3/cmake-build-debug/server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/tchelet/CLionProjects/ex3/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googletest/include"/>
+					<Add directory="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googlemock/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 server"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="server/fast">
+				<Option output="/home/tchelet/CLionProjects/ex3/cmake-build-debug/server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/tchelet/CLionProjects/ex3/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googletest/include"/>
+					<Add directory="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googlemock/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 server/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="ex3">
 				<Option output="/home/tchelet/CLionProjects/ex3/cmake-build-debug/ex3" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/tchelet/CLionProjects/ex3/cmake-build-debug"/>
@@ -84,8 +184,8 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googletest/include"/>
-					<Add directory="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googlemock/include"/>
+					<Add directory="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googletest/include"/>
+					<Add directory="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googlemock/include"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -109,8 +209,8 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googletest/include"/>
-					<Add directory="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googlemock/include"/>
+					<Add directory="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googletest/include"/>
+					<Add directory="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googlemock/include"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -128,16 +228,16 @@
 				</MakeCommands>
 			</Target>
 			<Target title="gmock_main">
-				<Option output="/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/libgmock_main.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock"/>
+				<Option output="/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/libgmock_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googlemock/include"/>
-					<Add directory="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googlemock"/>
-					<Add directory="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googletest/include"/>
-					<Add directory="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googletest"/>
+					<Add directory="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googlemock/include"/>
+					<Add directory="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googlemock"/>
+					<Add directory="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googletest/include"/>
+					<Add directory="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googletest"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -148,23 +248,23 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 gmock_main"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 gmock_main"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gmock_main/fast">
-				<Option output="/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/libgmock_main.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock"/>
+				<Option output="/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/libgmock_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googlemock/include"/>
-					<Add directory="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googlemock"/>
-					<Add directory="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googletest/include"/>
-					<Add directory="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googletest"/>
+					<Add directory="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googlemock/include"/>
+					<Add directory="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googlemock"/>
+					<Add directory="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googletest/include"/>
+					<Add directory="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googletest"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -175,23 +275,23 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 gmock_main/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 gmock_main/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gmock">
-				<Option output="/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/libgmock.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock"/>
+				<Option output="/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/libgmock.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googlemock/include"/>
-					<Add directory="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googlemock"/>
-					<Add directory="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googletest/include"/>
-					<Add directory="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googletest"/>
+					<Add directory="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googlemock/include"/>
+					<Add directory="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googlemock"/>
+					<Add directory="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googletest/include"/>
+					<Add directory="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googletest"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -202,23 +302,23 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 gmock"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 gmock"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gmock/fast">
-				<Option output="/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/libgmock.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock"/>
+				<Option output="/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/libgmock.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googlemock/include"/>
-					<Add directory="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googlemock"/>
-					<Add directory="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googletest/include"/>
-					<Add directory="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googletest"/>
+					<Add directory="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googlemock/include"/>
+					<Add directory="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googlemock"/>
+					<Add directory="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googletest/include"/>
+					<Add directory="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googletest"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -229,21 +329,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 gmock/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 gmock/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest_main">
-				<Option output="/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/gtest/libgtest_main.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/gtest"/>
+				<Option output="/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/gtest/libgtest_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/gtest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googletest/include"/>
-					<Add directory="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googletest"/>
+					<Add directory="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googletest/include"/>
+					<Add directory="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googletest"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -254,21 +354,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest_main"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest_main"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest_main/fast">
-				<Option output="/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/gtest/libgtest_main.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/gtest"/>
+				<Option output="/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/gtest/libgtest_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/gtest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googletest/include"/>
-					<Add directory="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googletest"/>
+					<Add directory="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googletest/include"/>
+					<Add directory="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googletest"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -279,21 +379,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest">
-				<Option output="/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/gtest/libgtest.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/gtest"/>
+				<Option output="/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/gtest/libgtest.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/gtest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googletest/include"/>
-					<Add directory="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googletest"/>
+					<Add directory="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googletest/include"/>
+					<Add directory="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googletest"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -304,21 +404,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest/fast">
-				<Option output="/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/gtest/libgtest.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/gtest"/>
+				<Option output="/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/gtest/libgtest.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/gtest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googletest/include"/>
-					<Add directory="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googletest"/>
+					<Add directory="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googletest/include"/>
+					<Add directory="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googletest"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -329,177 +429,224 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tchelet/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/AIPlayer.cpp">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/AIPlayer.cpp">
+			<Option target="tests"/>
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/AIPlayer.h">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/AIPlayer.h">
+			<Option target="tests"/>
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/Board.h">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/Board.h">
+			<Option target="tests"/>
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/BoardConsole.cpp">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/BoardConsole.cpp">
+			<Option target="tests"/>
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/BoardConsole.h">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/BoardConsole.h">
+			<Option target="tests"/>
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/Client.cpp">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/Client.cpp">
+			<Option target="tests"/>
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/Client.h">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/Client.h">
+			<Option target="tests"/>
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/Game.cpp">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/Game.cpp">
+			<Option target="tests"/>
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/Game.h">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/Game.h">
+			<Option target="tests"/>
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/Logic.h">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/Logic.h">
+			<Option target="tests"/>
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/Menu.h">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/Menu.h">
+			<Option target="tests"/>
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/MenuConsole.cpp">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/MenuConsole.cpp">
+			<Option target="tests"/>
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/MenuConsole.h">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/MenuConsole.h">
+			<Option target="tests"/>
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/PersonP.cpp">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/PersonP.cpp">
+			<Option target="tests"/>
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/PersonP.h">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/PersonP.h">
+			<Option target="tests"/>
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/PersonPServer.cpp">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/PersonPServer.cpp">
+			<Option target="tests"/>
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/PersonPServer.h">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/PersonPServer.h">
+			<Option target="tests"/>
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/Player.h">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/Player.h">
+			<Option target="tests"/>
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/Point.cpp">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/Point.cpp">
+			<Option target="tests"/>
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/Point.h">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/Point.h">
+			<Option target="tests"/>
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/PrintConsole.cpp">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/PrintConsole.cpp">
+			<Option target="tests"/>
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/PrintConsole.h">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/PrintConsole.h">
+			<Option target="tests"/>
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/PrintMassage.h">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/PrintMassage.h">
+			<Option target="tests"/>
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/RemotePlayer.cpp">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/RemotePlayer.cpp">
+			<Option target="tests"/>
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/RemotePlayer.h">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/RemotePlayer.h">
+			<Option target="tests"/>
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/StandartLogic.cpp">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/StandartLogic.cpp">
+			<Option target="tests"/>
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/StandartLogic.h">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/StandartLogic.h">
+			<Option target="tests"/>
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googlemock/src/gmock-all.cc">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googlemock/src/gmock-all.cc">
 			<Option target="gmock_main"/>
 			<Option target="gmock"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googlemock/src/gmock_main.cc">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googlemock/src/gmock_main.cc">
 			<Option target="gmock_main"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googletest/src/gtest-all.cc">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googletest/src/gtest-all.cc">
 			<Option target="gmock_main"/>
 			<Option target="gmock"/>
 			<Option target="gtest"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googletest/src/gtest_main.cc">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googletest/src/gtest_main.cc">
 			<Option target="gtest_main"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/main.cpp">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/main.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/tests/AIPlayer_test.cpp">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/tests/AIPlayer_test.cpp">
+			<Option target="tests"/>
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/tests/AIPlayer_test.h">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/tests/AIPlayer_test.h">
+			<Option target="tests"/>
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/tests/Board_test.cpp">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/tests/Board_test.cpp">
+			<Option target="tests"/>
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/tests/Board_test.h">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/tests/Board_test.h">
+			<Option target="tests"/>
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/tests/PersonP_teset.cpp">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/tests/PersonP_teset.cpp">
+			<Option target="tests"/>
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/tests/PersonP_teset.h">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/tests/PersonP_teset.h">
+			<Option target="tests"/>
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/tests/StandartLogic_test.cpp">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/tests/StandartLogic_test.cpp">
+			<Option target="tests"/>
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/tests/StandartLogic_test.h">
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/tests/StandartLogic_test.h">
+			<Option target="tests"/>
 			<Option target="ex3"/>
+		</Unit>
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/tests/gtest_main.cpp">
+			<Option target="tests"/>
+		</Unit>
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/server/Server.cpp">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/server/Server.h">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/server/main.cpp">
+			<Option target="server"/>
 		</Unit>
 		<Unit filename="/home/tchelet/CLionProjects/ex3/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\lib\googletest-release-1.8.0\"/>
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\client\lib\googletest-release-1.8.0\"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\lib\googletest-release-1.8.0\"/>
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\client\lib\googletest-release-1.8.0\"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googlemock/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\lib\googletest-release-1.8.0\googlemock\"/>
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googlemock/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\client\lib\googletest-release-1.8.0\googlemock\"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googlemock/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\lib\googletest-release-1.8.0\googlemock\"/>
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googlemock/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\client\lib\googletest-release-1.8.0\googlemock\"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googlemock/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\lib\googletest-release-1.8.0\googlemock\"/>
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googlemock/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\client\lib\googletest-release-1.8.0\googlemock\"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googletest/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\lib\googletest-release-1.8.0\googletest\"/>
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googletest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\client\lib\googletest-release-1.8.0\googletest\"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googletest/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\lib\googletest-release-1.8.0\googletest\"/>
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googletest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\client\lib\googletest-release-1.8.0\googletest\"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googletest/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\lib\googletest-release-1.8.0\googletest\"/>
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googletest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\client\lib\googletest-release-1.8.0\googletest\"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googletest/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\lib\googletest-release-1.8.0\googletest\"/>
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googletest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\client\lib\googletest-release-1.8.0\googletest\"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googletest/cmake/internal_utils.cmake">
-			<Option virtualFolder="CMake Files\lib\googletest-release-1.8.0\googletest\cmake\"/>
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googletest/cmake/internal_utils.cmake">
+			<Option virtualFolder="CMake Files\src\client\lib\googletest-release-1.8.0\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googletest/cmake/internal_utils.cmake">
-			<Option virtualFolder="CMake Files\lib\googletest-release-1.8.0\googletest\cmake\"/>
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googletest/cmake/internal_utils.cmake">
+			<Option virtualFolder="CMake Files\src\client\lib\googletest-release-1.8.0\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googletest/cmake/internal_utils.cmake">
-			<Option virtualFolder="CMake Files\lib\googletest-release-1.8.0\googletest\cmake\"/>
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googletest/cmake/internal_utils.cmake">
+			<Option virtualFolder="CMake Files\src\client\lib\googletest-release-1.8.0\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/home/tchelet/CLionProjects/ex3/lib/googletest-release-1.8.0/googletest/cmake/internal_utils.cmake">
-			<Option virtualFolder="CMake Files\lib\googletest-release-1.8.0\googletest\cmake\"/>
+		<Unit filename="/home/tchelet/CLionProjects/ex3/src/client/lib/googletest-release-1.8.0/googletest/cmake/internal_utils.cmake">
+			<Option virtualFolder="CMake Files\src\client\lib\googletest-release-1.8.0\googletest\cmake\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

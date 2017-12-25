@@ -8,6 +8,8 @@
 #ifndef SERVER_H
 #define SERVER_H
 
+#include "ClientManager.h"
+
 
 class Server {
 public:
@@ -29,12 +31,14 @@ private:
     // members
     int port;
     int serverSocket;
+    ClientManager* clientManager;
     /**
      * handle client.
      * @param clientSocket
      * @param clientSocket2
      */
-    void handleClient(int clientSocket, int clientSocket2);
+//    void handleClient(int clientSocket, int clientSocket2);
+    void *handleClient(void* clientSocket);
 };
 
 

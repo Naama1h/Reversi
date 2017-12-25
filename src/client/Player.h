@@ -46,11 +46,19 @@ public:
      * @param p Point
      */
     virtual void sendMove(Point p) {};
+    /**
+     * no move.
+     */
     virtual void noMove() {};
+    /**
+     * returning true if it is remote player.
+     * @return bool
+     */
     virtual bool trueIfRemote() {
         return false;
     };
 private:
+    // members
     string name;
     celltype celltype1;
 };

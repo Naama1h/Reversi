@@ -11,12 +11,10 @@
 #include <unistd.h>
 #include <string.h>
 #include <iostream>
-#include <stdio.h>
 using namespace std;
 #define MAX_CONNECTED_CLIENT 2
 
 Server::Server(int port) : port(port), serverSocket(0) {
-    cout << "Server" << endl;
 }
 
 void Server::start() {

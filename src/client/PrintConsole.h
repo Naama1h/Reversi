@@ -5,8 +5,8 @@
  * 208780585
  */
 
-#ifndef EX3_PRINTCONSOLE_H
-#define EX3_PRINTCONSOLE_H
+#ifndef PRINTCONSOLE_H
+#define PRINTCONSOLE_H
 
 #include "PrintMassage.h"
 using namespace std;
@@ -77,4 +77,4 @@ public:
 };
 
 
-#endif //EX3_PRINTCONSOLE_H
+#endif //PRINTCONSOLE_H

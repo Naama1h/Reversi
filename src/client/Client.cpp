@@ -6,12 +6,10 @@
  */
 
 #include "Client.h"
-#include <iostream>
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <netdb.h>
-#include <string.h>
 #include <unistd.h>
 
 using namespace std;
@@ -60,7 +58,7 @@ void Client:: sendMove(char* move) {
 
 Point Client::getRivalMove() {
     // Read the result from the server
-    char result[6];
+    char result[7];
     ssize_t n = read(clientSocket, &result, sizeof(result));
     if (n == -1) {
         throw "Error reading result from socket";

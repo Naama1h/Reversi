@@ -5,8 +5,8 @@
  * 208780585
  */
 
-#ifndef EX3_MENU_H
-#define EX3_MENU_H
+#ifndef MENU_H
+#define MENU_H
 
 
 class Menu {
@@ -18,4 +18,4 @@ public:
 };
 
 
-#endif //EX3_MENU_H
+#endif //MENU_H

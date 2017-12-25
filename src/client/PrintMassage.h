@@ -5,8 +5,8 @@
  * 208780585
  */
 
-#ifndef EX3_PRINTMASSAGE_H
-#define EX3_PRINTMASSAGE_H
+#ifndef PRINTMASSAGE_H
+#define PRINTMASSAGE_H
 
 #include "Board.h"
 #include "Player.h"
@@ -77,4 +77,4 @@ public:
 };
 
 
-#endif //EX3_PRINTMASSAGE_H
+#endif //PRINTMASSAGE_H

@@ -16,13 +16,37 @@ using namespace std;
 
 class Client {
 public:
+	/**
+	 * constructor.
+	 * @param serverIP
+	 * @param serverPort
+	 */
 	Client(const char* serverIP, int serverPort);
+	/**
+	 * connecting to server.
+	 */
 	void connectToServer();
+	/**
+	 * send move.
+	 * @param move
+	 */
 	void sendMove(char* move);
-    Point getRivalMove();
-    char getCellType();
+    /**
+     * get rival move.
+     * @return move
+     */
+	Point getRivalMove();
+    /**
+     * get CellType member.
+     * @return cellType
+     */
+	char getCellType();
+	/**
+	 * waiting to other player.
+	 */
 	void waitOtherPlayer();
 private:
+	//members
 	const char* serverIP;
 	int serverPort;
 	int clientSocket;

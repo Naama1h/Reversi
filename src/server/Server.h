@@ -5,21 +5,37 @@
  * 208780585
  */
 
-#ifndef EX3_SERVER_H
-#define EX3_SERVER_H
+#ifndef SERVER_H
+#define SERVER_H
 
 
 class Server {
 public:
+    /**
+     * constructor.
+     * @param port
+     */
     Server(int port);
+    /**
+     * start.
+     */
     void start();
+    /**
+     * stop.
+     */
     void stop();
 
 private:
+    // members
     int port;
     int serverSocket;
+    /**
+     * handle client.
+     * @param clientSocket
+     * @param clientSocket2
+     */
     void handleClient(int clientSocket, int clientSocket2);
 };
 
 
-#endif //EX3_SERVER_H
+#endif //SERVER_H

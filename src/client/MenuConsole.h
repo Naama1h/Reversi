@@ -5,8 +5,8 @@
  * 208780585
  */
 
-#ifndef EX3_MENUCONSOLE_H
-#define EX3_MENUCONSOLE_H
+#ifndef MENUCONSOLE_H
+#define MENUCONSOLE_H
 
 #include <getopt.h>
 #include "Menu.h"
@@ -29,4 +29,4 @@ private:
 };
 
 
-#endif //EX3_MENUCONSOLE_H
+#endif //MENUCONSOLE_H

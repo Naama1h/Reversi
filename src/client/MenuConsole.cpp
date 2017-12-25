@@ -9,7 +9,7 @@
 
 using namespace std;
 
-MenuConsole :: MenuConsole(int options1) {
+MenuConsole::MenuConsole(int options1) {
     this->options = options1;
 }
 

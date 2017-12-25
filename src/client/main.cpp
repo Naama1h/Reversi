@@ -13,11 +13,7 @@
 #include "AIPlayer.h"
 #include "RemotePlayer.h"
 #include "PersonPServer.h"
-#include <unistd.h>
-#include "Client.h"
-#include "Menu.h"
 #include "MenuConsole.h"
-#include "PrintConsole.h"
 
 int main() {
     MenuConsole menu(3);

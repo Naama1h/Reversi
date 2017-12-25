@@ -7,7 +7,6 @@
 
 #include <vector>
 #include "PersonP.h"
-#include "PrintConsole.h"
 #include <limits>
 
 PersonP::PersonP(string name, celltype celltype) {

@@ -43,7 +43,14 @@ public:
      * @return string
      */
     virtual string getName() const;
+    /**
+     * no move.
+     */
     virtual void noMove();
+    /**
+     * returning true if it is remote player.
+     * @return
+     */
     virtual bool trueIfRemote();
 private:
     // members

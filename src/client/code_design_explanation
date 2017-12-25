@@ -1,9 +1,0 @@
-In order to work together, we discussed how to combinate owr designs from the previous exercise.
-Finally we decided to choose the code of Naama as is.
-The reasons are:
-1) We chose it because this code is orgenized in more arranged way.
-i.e. Naama used OOP, so in the future, when we will be asked to use gui or write special logic, this will be much more
-easy to implement, by using the "Logic" abstruct class. In addition, if we will be asked to implement another kind of player,
-like the AIPlayer, we will use the "Player" abstruct class.
-2) Beyond that, owr codes are very alike. We both used the same ideas to write the logic of owr functions, so it wasn't
-necessary to change the function that Naama implemented to function that Tchelet implemented.

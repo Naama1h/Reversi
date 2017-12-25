@@ -23,17 +23,6 @@ Point PersonPServer::chooseCell(vector<Point> *options, StandartLogic *logic) co
     printer.itsYourMove(this->personP->getName());
     printer.possibleMoves(options);
     printer.enterMove();
-/*
-    char x, y, tmp;
-    cin >> x >> tmp >> y;
-    if (cin.fail()) {
-        cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //skip bad input
-    }
-    // user didn't input a number
-//    printer.onlyNumbers();;
-    cin.clear(); // reset failbit
-    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //skip bad input
- */
     char input[7];
     cin >> input;
     if (strcmp(input,"End") == 0) {
@@ -62,7 +51,7 @@ void PersonPServer::sendMove(Point p){
         char message[6] = {'N','o','M','o','v','e'};
         this->client->sendMove(message);
     } else {
-        char move[6] = {p.getX() + 48, ',', p.getY() + 48};
+        char move[3] = {(char)(p.getX() + 48), ',', (char)(p.getY() + 48)};
         this->client->sendMove(move);
     }
 }
@@ -70,7 +59,7 @@ void PersonPServer::sendMove(Point p){
 void PersonPServer::noMove() {
     PrintConsole printer;
     printer.itsYourMove(this->getName());
-    char in[6];
+    char in[7];
     do {
         printer.NoPossibleMoves();
         cin >> in;

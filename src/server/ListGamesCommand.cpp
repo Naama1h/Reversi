@@ -7,15 +7,18 @@
 
 #include "ListGamesCommand.h"
 
-ListGamesCommand::ListGamesCommand(vector<char*> games) {
+ListGamesCommand::ListGamesCommand(int socket, vector<GameMembers*>* games) {
     this->games = games;
+    this->socket = socket;
 }
 
 void ListGamesCommand::execute(char* arg) {
-    if (!this->games.empty()) {
-        cout << "the games are:" << endl;
-        for (int i = 0; i < this->games.size(); i++) {
-            cout << this->games.at(i) << endl;
+    if (!this->games->empty()) {
+        for (int i = 0; i < this->games->size(); i++) {
+            if(this->games->at(i)->getSocket1() != 0 && this->games->at(i)->getSocket2() == 0
+                    || this->games->at(i)->getSocket2() != 0 && this->games->at(i)->getSocket1() == 0) {
+                write(this->socket, this->games->at(i)->getName(), sizeof(this->games->at(i)->getName()));
+            }
         }
     }
 }

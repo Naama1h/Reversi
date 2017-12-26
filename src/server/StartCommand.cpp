@@ -7,17 +7,20 @@
 
 #include "StartCommand.h"
 
-StartCommand::StartCommand(vector<char*>* games) {
+StartCommand::StartCommand(int socket, vector<GameMembers*>* games) {
     this->games = games;
+    this->socket = socket;
 }
 
 void StartCommand::execute(char* arg) {
     if (!this->games->empty()) {
         for (int i = 0; i < this->games->size(); i++) {
-            if (strcmp(arg,this->games->at(i)) == 0) {
-                return (void)-1;
+            if (strcmp(arg,this->games->at(i)->getName()) == 0) {
+                write(this->socket, "-1", sizeof("-1"));
+                return;
             }
         }
-        this->games->push_back(arg);
+        GameMembers* game1 = new GameMembers(arg, this->socket, 0);
+        this->games->push_back(game1);
     }
 }

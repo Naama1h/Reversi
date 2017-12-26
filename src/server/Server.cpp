@@ -82,6 +82,7 @@ void Server::start() {
     // define the client socket's structures
     struct sockaddr_in clientAddress1;
     socklen_t clientAddressLen1 = sizeof((struct sockaddr*) &clientAddress1);
+    vector<pthread_t>* threads = new vector<pthread_t>();
     while (true) {
         cout << "Waiting for client connections..." << endl;
         // accept a new client connection
@@ -90,17 +91,20 @@ void Server::start() {
         if (clientSocket1 == -1) {
             throw "Error on accept";
         }
-        pthread_t pthread;
-        int rc = pthread_create(&pthread, NULL, handleClient, (void*)clientSocket1);
+        this->clientSocket = clientSocket1;
+        pthread_t thread;
+        int rc = pthread_create(&thread, NULL, forThread, (void*)this);
         if (rc) {
             cout << "Error: unable to create thread " << rc << endl;
             return;
         }
+        threads->push_back(thread);
         cout << "Clients connected" << endl;
         //close communication with the client
         close(clientSocket1);
     }
     pthread_exit(NULL);
+    delete threads;
 }
 
 //void Server::handleClient(int clientSocket1, int clientSocket2) {
@@ -138,10 +142,10 @@ void Server::start() {
 //        write(clientSocket1, &input2, n);
 //    }
 //}
-
-void *Server::handleClient(void* clientSocket) {
+/*
+void *Server::handleClient(int clientSocket) {
     char input[20] = "";  // magic number!!!!!!
-    ssize_t n = read((int)clientSocket, &input, sizeof(input));
+    ssize_t n = read(clientSocket, &input, sizeof(input));
     char command[10];
     char arg[10] = ""; // magic number!!!!!
     char space = ' ';
@@ -155,6 +159,12 @@ void *Server::handleClient(void* clientSocket) {
         arg[i] = input[i];
     }
     this->clientManager->executeCommand(command, arg);
+}
+**/
+void* Server::forThread(void* clientThread1) {
+    Server* clientThread2 = (Server*)clientThread1;
+    clientThread2->clientManager->setClientSocket(clientThread2->clientSocket);
+    clientThread2->clientManager->readCommand();
 }
 
 void Server::stop() {

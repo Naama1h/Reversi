@@ -9,8 +9,12 @@
 #define SERVER_H
 
 #include "ClientManager.h"
-
-
+/*
+struct clientThread {
+    Server server;
+    int clientSocket;
+};
+**/
 class Server {
 public:
     /**
@@ -38,7 +42,9 @@ private:
      * @param clientSocket2
      */
 //    void handleClient(int clientSocket, int clientSocket2);
-    void *handleClient(void* clientSocket);
+    void *handleClient(int clientSocket);
+    static void* forThread(void* clientThread1);
+    int clientSocket;
 };
 
 

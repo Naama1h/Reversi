@@ -9,11 +9,11 @@
 
 ClientManager::ClientManager() {
     this->commandsMap["play"] = new PlayCommand(this->clientSocket);
-    this->commandsMap["list_games"] = new ListGamesCommand(this->gamesNames);
-    this->commandsMap["join"] = new JoinCommand();
-    this->commandsMap["start"] = new StartCommand(this->gamesNames);
-    this->commandsMap["close"] = new CloseCommand();
-    this->gamesNames = new vector<char*>();
+    this->commandsMap["list_games"] = new ListGamesCommand(this->clientSocket,this->games);
+    this->commandsMap["join"] = new JoinCommand(this->clientSocket, this->games);
+    this->commandsMap["start"] = new StartCommand(this->clientSocket,this->games);
+    this->commandsMap["close"] = new CloseCommand(this->clientSocket, this->games);
+    this->games = new vector<GameMembers*>();
 }
 
 ClientManager::~ClientManager() {
@@ -21,7 +21,7 @@ ClientManager::~ClientManager() {
     for (it = this->commandsMap.begin(); it != this->commandsMap.end(); it++) {
         delete it->second;
     }
-    delete this->gamesNames;
+    delete this->games;
 }
 
 void ClientManager::executeCommand(string command, char* arg) {
@@ -31,4 +31,22 @@ void ClientManager::executeCommand(string command, char* arg) {
 
 void ClientManager::setClientSocket(int socket) {
     this->clientSocket = socket;
+}
+
+void ClientManager::readCommand() {
+    char input[200] = "";  // magic number!!!!!!
+    ssize_t n = read(this->clientSocket, &input, sizeof(input));
+    char command[10] = "";
+    char arg[190] = ""; // magic number!!!!!
+    char space = ' ';
+    int i = 0;
+    while ((input[i] != space) && (input[i] != '\0')) {
+        command[i] = input[i];
+        i++;
+    }
+    i++;
+    while (input[i] != '\0') {
+        arg[i] = input[i];
+    }
+    this->executeCommand(command, arg);
 }

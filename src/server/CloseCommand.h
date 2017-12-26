@@ -12,8 +12,11 @@
 
 class CloseCommand : public Command {
 public:
-    CloseCommand();
+    CloseCommand(int socket, vector<GameMembers*>* games);
     void execute(char* arg);
+private:
+    int socket;
+    vector<GameMembers*>* games;
 };
 
 

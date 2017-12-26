@@ -12,10 +12,11 @@
 using namespace std;
 
 #include "vector"
+#include "GameMembers.h"
+#include <unistd.h>
 
 class Command {
 public:
-    virtual Command() {};
     virtual void execute(char* arg) = 0;
 };
 

@@ -45,6 +45,10 @@ public:
 	 * waiting to other player.
 	 */
 	void waitOtherPlayer();
+
+	char** getCommand();
+
+    void sendCommand(char** command);
 private:
 	//members
 	const char* serverIP;

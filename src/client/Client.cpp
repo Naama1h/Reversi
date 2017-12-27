@@ -50,7 +50,23 @@ void Client:: connectToServer() {
 
 void Client:: sendMove(char* move) {
 	// Write the exercise arguments to the socket
-	ssize_t n = write(clientSocket, move, sizeof(move));
+	char play[6] = "play ";
+	ssize_t m = write(clientSocket, play, sizeof(play));
+	if(m == -1) {
+		throw "Error writing move to socket";
+	}
+	char moveX[3], moveY[3];
+	moveX[0] = '<';
+	moveX[1] = move[0];
+	moveX[2] = '>';
+    moveY[0] = '<';
+    moveY[1] = move[2];
+    moveY[2] = '>';
+	ssize_t n = write(clientSocket, moveX, sizeof(moveX));
+	if(n == -1) {
+		throw "Error writing move to socket";
+	}
+	n = write(clientSocket, moveY, sizeof(moveY));
 	if(n == -1) {
 		throw "Error writing move to socket";
 	}
@@ -87,4 +103,34 @@ void Client::waitOtherPlayer() {
 	if(n == -1) {
 		throw "Error reading result from socket";
 	}
+}
+
+char** Client::getCommand() {
+    char result[10];
+    char arg[10];
+    cin >> result >> arg;
+    char* command[2];
+    command[0] = result;
+    command[1] = arg;
+//    if (strcmp(result,"list_games") == 0) {
+//        return 1;
+//    } else if (strcmp(result,"join") == 0) {
+//        return 2;
+//    } else if (strcmp(result,"start") == 0) {
+//        return 3;
+//    } else if (strcmp(result,"close") == 0) {
+//        return 4;
+//    }
+    return command;
+}
+
+void Client::sendCommand(char** command) {
+    ssize_t m = write(clientSocket, command[0], sizeof(command[0]));
+    if(m == -1) {
+        throw "Error writing move to socket";
+    }
+    m = write(clientSocket, command[1], sizeof(command[1]));
+    if(m == -1) {
+        throw "Error writing move to socket";
+    }
 }

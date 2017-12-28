@@ -11,7 +11,7 @@
 
 class GameMembers {
 public:
-    GameMembers(char* name, int socket1, int sockt2);
+    GameMembers(char* name, int socket1, int socekt2);
     void setSocket2(int socket2);
     char* getName();
     int getSocket1();
@@ -19,7 +19,7 @@ public:
 private:
     char* name;
     int socket1;
-    int sockt2;
+    int socket2;
 };
 
 

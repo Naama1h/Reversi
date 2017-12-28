@@ -12,10 +12,10 @@
 
 class CloseCommand : public Command {
 public:
-    CloseCommand(int socket, vector<GameMembers*>* games);
-    void execute(char* arg);
+    CloseCommand();
+    void execute(char* arg, int* socket, vector<GameMembers*>* games);
 private:
-    int socket;
+    int* socket;
     vector<GameMembers*>* games;
 };
 

@@ -13,12 +13,12 @@
 
 class ListGamesCommand : public Command {
 public:
-    ListGamesCommand(int socket1, vector<GameMembers*>* games1);
-    void execute(char* arg);
+    ListGamesCommand();
+    void execute(char* arg, int* socket, vector<GameMembers*>* games);
 
 private:
     vector<GameMembers*>* games;
-    int socket;
+    int* socket;
 };
 
 

@@ -105,18 +105,6 @@ void Client::waitOtherPlayer() {
 	}
 }
 
-char* Client::getCommand() {
-    char result[10] = "";
-    cin >> result;
-    return result;
-}
-
-char* Client::getArg() {
-    char arg[10] = "";
-    cin >> arg;
-    return arg;
-}
-
 void Client::sendCommand(char** command) {
     ssize_t m = write(clientSocket, command[0], sizeof(command[0]));
     if(m == -1) {

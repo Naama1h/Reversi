@@ -93,7 +93,9 @@ void Server::start() {
         }
         this->clientSocket = clientSocket1;
         pthread_t thread;
-        int rc = pthread_create(&thread, NULL, forThread, (void*)this);
+        Server* ser = new Server(this->port);
+        ser->clientSocket = clientSocket1;
+        int rc = pthread_create(&thread, NULL, forThread, (void*)ser);
         if (rc) {
             cout << "Error: unable to create thread " << rc << endl;
             return;
@@ -101,7 +103,7 @@ void Server::start() {
         threads->push_back(thread);
         cout << "Clients connected" << endl;
         //close communication with the client
-        close(clientSocket1);
+        //close(clientSocket1);
     }
     pthread_exit(NULL);
     delete threads;

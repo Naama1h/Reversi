@@ -14,11 +14,11 @@
 
 class PlayCommand : public Command {
 public:
-    PlayCommand(int clientSocket);
-    void execute(char* arg);
+    PlayCommand();
+    void execute(char* arg, int* socket, vector<GameMembers*>* games);
 
 private:
-    int clientSocket;
+    int* clientSocket;
 };
 
 

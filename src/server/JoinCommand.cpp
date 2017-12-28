@@ -9,19 +9,19 @@
 #include <iostream>
 using namespace std;
 
-JoinCommand::JoinCommand(int socket, vector<GameMembers*>* games) {
-    this->games = games;
-    this->socket = socket;
+JoinCommand::JoinCommand() {
 }
 
-void JoinCommand::execute(char* arg) {
+void JoinCommand::execute(char* arg, int* socket, vector<GameMembers*>* games) {
+    this->games = games;
+    this->socket = socket;
     if (!this->games->empty()) {
-        for (int i = 0; i < this->games->size(); i++) {
-            if (strcmp(arg,this->games->at(i)->getName()) == 0 && this->games->at(i)->getSocket2() == 0) {
-                this->games->at(i)->setSocket2(this->socket);
-                write(this->games->at(i)->getSocket1(), "1", sizeof("1"));
-                write(this->games->at(i)->getSocket2(), "2", sizeof("2"));
-                handleClient(this->games->at(i));
+        for (int i = 0; i < games->size(); i++) {
+            if (strcmp(arg,games->at(i)->getName()) == 0 && games->at(i)->getSocket2() == 0) {
+                games->at(i)->setSocket2(*this->socket);
+                write(games->at(i)->getSocket1(), "1", sizeof("1"));
+                write(games->at(i)->getSocket2(), "2", sizeof("2"));
+                handleClient(games->at(i));
                 return;
             }
         }

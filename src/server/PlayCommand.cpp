@@ -7,12 +7,12 @@
 
 #include "PlayCommand.h"
 
-PlayCommand::PlayCommand(int clientSocket) {
-    this->clientSocket = clientSocket;
+PlayCommand::PlayCommand() {
 }
 
-void PlayCommand::execute(char *arg) {
-    ssize_t n = write(this->clientSocket, &arg, sizeof(arg));
+void PlayCommand::execute(char *arg, int* socket, vector<GameMembers*>* games) {
+    this->clientSocket = socket;
+    ssize_t n = write(*this->clientSocket, &arg, sizeof(arg));
     if (n == -1) {
             cout << "Error reading move" << endl;
             return;

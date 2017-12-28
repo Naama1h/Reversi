@@ -6,14 +6,14 @@
  */
 
 #include "GameMembers.h"
-GameMembers::GameMembers(char *name, int socket1, int sockt2) {
+GameMembers::GameMembers(char *name, int socket1, int socket2) {
     this->name = name;
     this->socket1 = socket1;
-    this->sockt2 = sockt2;
+    this->socket2 = socket2;
 }
 
 void GameMembers::setSocket2(int socket2) {
-    this->sockt2 = socket2;
+    this->socket2 = socket2;
 }
 
 char* GameMembers::getName() {
@@ -25,5 +25,5 @@ int GameMembers::getSocket1() {
 }
 
 int GameMembers::getSocket2() {
-    return this->sockt2;
+    return this->socket2;
 }

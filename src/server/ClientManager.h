@@ -35,7 +35,7 @@ public:
     void setClientSocket(int socket);
     void readCommand();
 private:
-    int clientSocket;
+    int* clientSocket;
     map<string, Command*> commandsMap;
     vector<GameMembers*>* games;
 };

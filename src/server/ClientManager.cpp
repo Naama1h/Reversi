@@ -34,8 +34,26 @@ void ClientManager::setClientSocket(int socket) {
 }
 
 void ClientManager::readCommand() {
+    char dummy[2] = "";
     char input[200] = "";  // magic number!!!!!!
-    ssize_t n = read(this->clientSocket, &input, sizeof(input));
+    ssize_t n = read(this->clientSocket, &dummy, sizeof(dummy));
+    if (n == -1) {
+        cout << "Error reading move" << endl;
+        return;
+    }
+    if (n == 0) {
+        cout << "Client disconnected" << endl;
+        return;
+    }
+    n = read(this->clientSocket, &input, sizeof(input));
+    if (n == -1) {
+        cout << "Error reading move" << endl;
+        return;
+    }
+    if (n == 0) {
+        cout << "Client disconnected" << endl;
+        return;
+    }
     char command[10] = "";
     char arg[190] = ""; // magic number!!!!!
     char space = ' ';
@@ -44,9 +62,23 @@ void ClientManager::readCommand() {
         command[i] = input[i];
         i++;
     }
+    command[i] = '\0';
     i++;
+    int j = 0;
     while (input[i] != '\0') {
-        arg[i] = input[i];
+        arg[j] = input[i];
+        j++;
+        i++;
+    }
+    i++;
+    j++;
+    if (strcmp(command,"play") == 0) {
+        while (input[i] != '\0') {
+            arg[j] = input[i];
+            j++;
+            i++;
+        }
+        arg[j] = '\0';
     }
     this->executeCommand(command, arg);
 }

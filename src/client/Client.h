@@ -46,7 +46,9 @@ public:
 	 */
 	void waitOtherPlayer();
 
-	char** getCommand();
+	char* getCommand();
+
+    char* getArg();
 
     void sendCommand(char** command);
 private:

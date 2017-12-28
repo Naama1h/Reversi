@@ -27,9 +27,19 @@ int main() {
     if (chosen == 1) {
         rival = new PersonP("O" ,White);
         myPlayer = new PersonP("X" ,Black);
+        Board* board = new BoardConsole();
+        Logic* standartLogic = new StandartLogic(board);
+        Game* game = new Game(board, standartLogic, myPlayer, rival);
+        game->run();
+        delete game;
     } else if (chosen == 2) {
         myPlayer = new PersonP("X" ,Black);
         rival = new AIPlayer("O", White);
+        Board* board = new BoardConsole();
+        Logic* standartLogic = new StandartLogic(board);
+        Game* game = new Game(board, standartLogic, myPlayer, rival);
+        game->run();
+        delete game;
     } else {
         char ip[10];
         int port;
@@ -54,17 +64,24 @@ int main() {
 //        }
         char tmp1[10] = "";
         char tmp2[10] = "";
-        char* command[10];
+        char* command[3];
         command[0] = tmp1;
         command[1] = tmp2;
         while (strcmp(command[0],"close") != 0) {
-            char* tmp = *client.getCommand();
+            //char* tmp = *client.getCommand();
 //            command[0] = *client.getCommand();
-            command[0] = tmp;
+            cin >> command[0] >> command[1];
+//            command[0] = client.getCommand();
+//            command[1] = client.getArg();
+            if (strcmp(command[0],"play") == 0) {
+                cin >> command[2];
+            } else {
+                command[2] = "";
+            }
             client.sendCommand((char**)command);
             if (strcmp(command[0],"list_games") == 0) { // list_games
 
-            } else if (strcmp(command[0],"join") == 0) { // join
+            } else if (strcmp(command[0],"join") == 0 || strcmp(command[0],"start") == 0) { // join
                 char type[1];
                 type[0] = client.getCellType();
                 if (type[0] == '1') {

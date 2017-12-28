@@ -105,23 +105,16 @@ void Client::waitOtherPlayer() {
 	}
 }
 
-char** Client::getCommand() {
-    char result[10];
-    char arg[10];
-    cin >> result >> arg;
-    char* command[2];
-    command[0] = result;
-    command[1] = arg;
-//    if (strcmp(result,"list_games") == 0) {
-//        return 1;
-//    } else if (strcmp(result,"join") == 0) {
-//        return 2;
-//    } else if (strcmp(result,"start") == 0) {
-//        return 3;
-//    } else if (strcmp(result,"close") == 0) {
-//        return 4;
-//    }
-    return command;
+char* Client::getCommand() {
+    char result[10] = "";
+    cin >> result;
+    return result;
+}
+
+char* Client::getArg() {
+    char arg[10] = "";
+    cin >> arg;
+    return arg;
 }
 
 void Client::sendCommand(char** command) {

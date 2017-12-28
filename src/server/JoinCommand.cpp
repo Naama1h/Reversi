@@ -21,6 +21,12 @@ void JoinCommand::execute(char* arg, int* socket, vector<GameMembers*>& games) {
                 games.at(i)->setSocket2(*this->socket);
                 write(games.at(i)->getSocket1(), "1", sizeof(char));
                 write(games.at(i)->getSocket2(), "2", sizeof(char));
+//                char tmp1[190] = "";
+//                char tmp2[190] = "";
+                this->gameIndex = i;
+//                read(games.at(i)->getSocket1(), &tmp1, sizeof(tmp1));
+//                read(games.at(i)->getSocket2(), &tmp2, sizeof(tmp2));
+//                read(*this->socket, &tmp2, sizeof(tmp2));
                 handleClient(games.at(i));
                 return;
             }
@@ -41,7 +47,10 @@ void JoinCommand::handleClient(GameMembers* game) {
     char string2[7] = "";
     char string2char2[3] = "";
     char dummy[1];
+    char tmp1[190] = "";
+    char tmp2[190] = "";
     while (strcmp(input1, "close") != 0 && strcmp(input2, "close") != 0) {
+        read(games.at(this->gameIndex)->getSocket1(), &tmp1, sizeof(tmp1));
         ssize_t n = read(game->getSocket1(), &input, sizeof(input));
         int i = 0;
         while (input[i] != '\0') {
@@ -52,7 +61,7 @@ void JoinCommand::handleClient(GameMembers* game) {
             i++;
         }
         int j = 0;
-        while (input[i+1] != '\0') {
+        while (input[i+1] != '\0' && input[i] != '\0') {
             input2[j] = input[i];
             i++;
             j++;
@@ -80,7 +89,7 @@ void JoinCommand::handleClient(GameMembers* game) {
             }
              */
             int k = 0;
-            while (input2[k] != '\0') {
+            while (input2[k] != '\0' && input2[k + 1] != '\0') {
                 string1char2[k] = input2[k];
                 k++;
             }
@@ -118,6 +127,7 @@ void JoinCommand::handleClient(GameMembers* game) {
             write(game->getSocket2(), "End", sizeof("End"));
             break;
         }
+        read(games.at(this->gameIndex)->getSocket2(), &tmp2, sizeof(tmp2));
         n = read(game->getSocket2(), &inputx, sizeof(inputx));
         i = 0;
         while (inputx[i] != '\0') {

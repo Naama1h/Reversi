@@ -50,7 +50,7 @@ void Client:: connectToServer() {
 
 void Client:: sendMove(char* move) {
 	// Write the exercise arguments to the socket
-	char play[6] = "play ";
+	char play[6] = "play";
 	ssize_t m = write(clientSocket, play, sizeof(play));
 	if(m == -1) {
 		throw "Error writing move to socket";

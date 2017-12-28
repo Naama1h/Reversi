@@ -18,6 +18,7 @@ public:
 private:
     vector<GameMembers*> games;
     int* socket;
+    int gameIndex;
 };
 
 

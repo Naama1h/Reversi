@@ -9,12 +9,7 @@
 #define SERVER_H
 
 #include "ClientManager.h"
-/*
-struct clientThread {
-    Server server;
-    int clientSocket;
-};
-**/
+
 class Server {
 public:
     /**

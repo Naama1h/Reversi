@@ -493,7 +493,6 @@ src/client/PrintConsole.o: src/client/PrintConsole.cpp.o
 
 # target to build an object file
 src/client/PrintConsole.cpp.o:
-	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/PrintConsole.cpp.o
 	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/PrintConsole.cpp.o
 .PHONY : src/client/PrintConsole.cpp.o
 
@@ -503,7 +502,6 @@ src/client/PrintConsole.i: src/client/PrintConsole.cpp.i
 
 # target to preprocess a source file
 src/client/PrintConsole.cpp.i:
-	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/PrintConsole.cpp.i
 	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/PrintConsole.cpp.i
 .PHONY : src/client/PrintConsole.cpp.i
 
@@ -513,7 +511,6 @@ src/client/PrintConsole.s: src/client/PrintConsole.cpp.s
 
 # target to generate assembly for a file
 src/client/PrintConsole.cpp.s:
-	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/PrintConsole.cpp.s
 	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/src/client/PrintConsole.cpp.s
 .PHONY : src/client/PrintConsole.cpp.s
 
@@ -751,6 +748,168 @@ src/client/tests/gtest_main.cpp.s:
 	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/client/tests/gtest_main.cpp.s
 .PHONY : src/client/tests/gtest_main.cpp.s
 
+src/server/ClientManager.o: src/server/ClientManager.cpp.o
+
+.PHONY : src/server/ClientManager.o
+
+# target to build an object file
+src/server/ClientManager.cpp.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/ClientManager.cpp.o
+.PHONY : src/server/ClientManager.cpp.o
+
+src/server/ClientManager.i: src/server/ClientManager.cpp.i
+
+.PHONY : src/server/ClientManager.i
+
+# target to preprocess a source file
+src/server/ClientManager.cpp.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/ClientManager.cpp.i
+.PHONY : src/server/ClientManager.cpp.i
+
+src/server/ClientManager.s: src/server/ClientManager.cpp.s
+
+.PHONY : src/server/ClientManager.s
+
+# target to generate assembly for a file
+src/server/ClientManager.cpp.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/ClientManager.cpp.s
+.PHONY : src/server/ClientManager.cpp.s
+
+src/server/CloseCommand.o: src/server/CloseCommand.cpp.o
+
+.PHONY : src/server/CloseCommand.o
+
+# target to build an object file
+src/server/CloseCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/CloseCommand.cpp.o
+.PHONY : src/server/CloseCommand.cpp.o
+
+src/server/CloseCommand.i: src/server/CloseCommand.cpp.i
+
+.PHONY : src/server/CloseCommand.i
+
+# target to preprocess a source file
+src/server/CloseCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/CloseCommand.cpp.i
+.PHONY : src/server/CloseCommand.cpp.i
+
+src/server/CloseCommand.s: src/server/CloseCommand.cpp.s
+
+.PHONY : src/server/CloseCommand.s
+
+# target to generate assembly for a file
+src/server/CloseCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/CloseCommand.cpp.s
+.PHONY : src/server/CloseCommand.cpp.s
+
+src/server/GameMembers.o: src/server/GameMembers.cpp.o
+
+.PHONY : src/server/GameMembers.o
+
+# target to build an object file
+src/server/GameMembers.cpp.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/GameMembers.cpp.o
+.PHONY : src/server/GameMembers.cpp.o
+
+src/server/GameMembers.i: src/server/GameMembers.cpp.i
+
+.PHONY : src/server/GameMembers.i
+
+# target to preprocess a source file
+src/server/GameMembers.cpp.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/GameMembers.cpp.i
+.PHONY : src/server/GameMembers.cpp.i
+
+src/server/GameMembers.s: src/server/GameMembers.cpp.s
+
+.PHONY : src/server/GameMembers.s
+
+# target to generate assembly for a file
+src/server/GameMembers.cpp.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/GameMembers.cpp.s
+.PHONY : src/server/GameMembers.cpp.s
+
+src/server/JoinCommand.o: src/server/JoinCommand.cpp.o
+
+.PHONY : src/server/JoinCommand.o
+
+# target to build an object file
+src/server/JoinCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/JoinCommand.cpp.o
+.PHONY : src/server/JoinCommand.cpp.o
+
+src/server/JoinCommand.i: src/server/JoinCommand.cpp.i
+
+.PHONY : src/server/JoinCommand.i
+
+# target to preprocess a source file
+src/server/JoinCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/JoinCommand.cpp.i
+.PHONY : src/server/JoinCommand.cpp.i
+
+src/server/JoinCommand.s: src/server/JoinCommand.cpp.s
+
+.PHONY : src/server/JoinCommand.s
+
+# target to generate assembly for a file
+src/server/JoinCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/JoinCommand.cpp.s
+.PHONY : src/server/JoinCommand.cpp.s
+
+src/server/ListGamesCommand.o: src/server/ListGamesCommand.cpp.o
+
+.PHONY : src/server/ListGamesCommand.o
+
+# target to build an object file
+src/server/ListGamesCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/ListGamesCommand.cpp.o
+.PHONY : src/server/ListGamesCommand.cpp.o
+
+src/server/ListGamesCommand.i: src/server/ListGamesCommand.cpp.i
+
+.PHONY : src/server/ListGamesCommand.i
+
+# target to preprocess a source file
+src/server/ListGamesCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/ListGamesCommand.cpp.i
+.PHONY : src/server/ListGamesCommand.cpp.i
+
+src/server/ListGamesCommand.s: src/server/ListGamesCommand.cpp.s
+
+.PHONY : src/server/ListGamesCommand.s
+
+# target to generate assembly for a file
+src/server/ListGamesCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/ListGamesCommand.cpp.s
+.PHONY : src/server/ListGamesCommand.cpp.s
+
+src/server/PlayCommand.o: src/server/PlayCommand.cpp.o
+
+.PHONY : src/server/PlayCommand.o
+
+# target to build an object file
+src/server/PlayCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/PlayCommand.cpp.o
+.PHONY : src/server/PlayCommand.cpp.o
+
+src/server/PlayCommand.i: src/server/PlayCommand.cpp.i
+
+.PHONY : src/server/PlayCommand.i
+
+# target to preprocess a source file
+src/server/PlayCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/PlayCommand.cpp.i
+.PHONY : src/server/PlayCommand.cpp.i
+
+src/server/PlayCommand.s: src/server/PlayCommand.cpp.s
+
+.PHONY : src/server/PlayCommand.s
+
+# target to generate assembly for a file
+src/server/PlayCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/PlayCommand.cpp.s
+.PHONY : src/server/PlayCommand.cpp.s
+
 src/server/Server.o: src/server/Server.cpp.o
 
 .PHONY : src/server/Server.o
@@ -777,6 +936,33 @@ src/server/Server.s: src/server/Server.cpp.s
 src/server/Server.cpp.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/Server.cpp.s
 .PHONY : src/server/Server.cpp.s
+
+src/server/StartCommand.o: src/server/StartCommand.cpp.o
+
+.PHONY : src/server/StartCommand.o
+
+# target to build an object file
+src/server/StartCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/StartCommand.cpp.o
+.PHONY : src/server/StartCommand.cpp.o
+
+src/server/StartCommand.i: src/server/StartCommand.cpp.i
+
+.PHONY : src/server/StartCommand.i
+
+# target to preprocess a source file
+src/server/StartCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/StartCommand.cpp.i
+.PHONY : src/server/StartCommand.cpp.i
+
+src/server/StartCommand.s: src/server/StartCommand.cpp.s
+
+.PHONY : src/server/StartCommand.s
+
+# target to generate assembly for a file
+src/server/StartCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/StartCommand.cpp.s
+.PHONY : src/server/StartCommand.cpp.s
 
 src/server/main.o: src/server/main.cpp.o
 
@@ -875,9 +1061,30 @@ help:
 	@echo "... src/client/tests/gtest_main.o"
 	@echo "... src/client/tests/gtest_main.i"
 	@echo "... src/client/tests/gtest_main.s"
+	@echo "... src/server/ClientManager.o"
+	@echo "... src/server/ClientManager.i"
+	@echo "... src/server/ClientManager.s"
+	@echo "... src/server/CloseCommand.o"
+	@echo "... src/server/CloseCommand.i"
+	@echo "... src/server/CloseCommand.s"
+	@echo "... src/server/GameMembers.o"
+	@echo "... src/server/GameMembers.i"
+	@echo "... src/server/GameMembers.s"
+	@echo "... src/server/JoinCommand.o"
+	@echo "... src/server/JoinCommand.i"
+	@echo "... src/server/JoinCommand.s"
+	@echo "... src/server/ListGamesCommand.o"
+	@echo "... src/server/ListGamesCommand.i"
+	@echo "... src/server/ListGamesCommand.s"
+	@echo "... src/server/PlayCommand.o"
+	@echo "... src/server/PlayCommand.i"
+	@echo "... src/server/PlayCommand.s"
 	@echo "... src/server/Server.o"
 	@echo "... src/server/Server.i"
 	@echo "... src/server/Server.s"
+	@echo "... src/server/StartCommand.o"
+	@echo "... src/server/StartCommand.i"
+	@echo "... src/server/StartCommand.s"
 	@echo "... src/server/main.o"
 	@echo "... src/server/main.i"
 	@echo "... src/server/main.s"

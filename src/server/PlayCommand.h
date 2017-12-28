@@ -15,7 +15,7 @@
 class PlayCommand : public Command {
 public:
     PlayCommand();
-    void execute(char* arg, int* socket, vector<GameMembers*>* games);
+    void execute(char* arg, int* socket, vector<GameMembers*> &games);
 
 private:
     int* clientSocket;

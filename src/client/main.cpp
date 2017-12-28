@@ -81,7 +81,7 @@ int main() {
             client.sendCommand((char**)command);
             if (strcmp(command[0],"list_games") == 0) { // list_games
 
-            } else if (strcmp(command[0],"join") == 0 || strcmp(command[0],"start") == 0) { // join
+            } else if (strcmp(command[0],"join") == 0) { // join
                 char type[1];
                 type[0] = client.getCellType();
                 if (type[0] == '1') {
@@ -102,6 +102,8 @@ int main() {
 
             } else if (strcmp(command[0],"close") == 0) { // close
                 break;
+            } else if (strcmp(command[0],"start") == 0) {
+                
             }
         }
     }

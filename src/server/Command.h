@@ -17,7 +17,7 @@ using namespace std;
 
 class Command {
 public:
-    virtual void execute(char* arg, int* socket, vector<GameMembers*>* games) = 0;
+    virtual void execute(char* arg, int* socket, vector<GameMembers*> &games) = 0;
 };
 
 

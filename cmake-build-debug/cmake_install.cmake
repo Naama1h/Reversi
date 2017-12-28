@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/naama/CLionProjects/ex3/cmake-build-debug/lib/googletest-release-1.8.0/cmake_install.cmake")
+  include("/home/naama/CLionProjects/ex3/cmake-build-debug/src/client/lib/googletest-release-1.8.0/cmake_install.cmake")
 
 endif()
 

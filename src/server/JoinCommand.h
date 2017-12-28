@@ -13,10 +13,10 @@
 class JoinCommand : public Command {
 public:
     JoinCommand();
-    void execute(char* arg, int* socket, vector<GameMembers*>* games);
+    void execute(char* arg, int* socket, vector<GameMembers*> &games);
     void handleClient(GameMembers* gameMembers);
 private:
-    vector<GameMembers*>* games;
+    vector<GameMembers*> games;
     int* socket;
 };
 

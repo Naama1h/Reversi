@@ -8,6 +8,7 @@
 #include "ClientManager.h"
 
 ClientManager::ClientManager() {
+//    this->games = new vector<GameMembers*>();
     this->games = new vector<GameMembers*>();
     int i = 0;
     this->clientSocket = &i;
@@ -28,7 +29,7 @@ ClientManager::~ClientManager() {
 
 void ClientManager::executeCommand(string command, char* arg) {
     Command* commandObj = this->commandsMap[command];
-    commandObj->execute(arg, this->clientSocket, this->games);
+    commandObj->execute(arg, this->clientSocket, *games);
 }
 
 void ClientManager::setClientSocket(int socket) {
@@ -36,9 +37,10 @@ void ClientManager::setClientSocket(int socket) {
 }
 
 void ClientManager::readCommand() {
+    char input[200] = "";
     char command[10] = "";
     char arg[190] = ""; // magic number!!!!!
-    ssize_t n = read(*this->clientSocket, &command, sizeof(command));
+    ssize_t n = read(*this->clientSocket, &input, sizeof(input));
     if (n == -1) {
         cout << "Error reading" << endl;
         return;
@@ -47,14 +49,19 @@ void ClientManager::readCommand() {
         cout << "Client disconnected" << endl;
         return;
     }
-    n = read(*this->clientSocket, &arg, sizeof(arg));
-    if (n == -1) {
-        cout << "Error reading" << endl;
-        return;
+    int i = 0;
+    while (input[i] != '\0') {
+        command[i] = input[i];
+        i++;
     }
-    if (n == 0) {
-        cout << "Client disconnected" << endl;
-        return;
+    while (input[i] == '\0') {
+        i++;
+    }
+    int j = 0;
+    while (input[i] != '\0') {
+        arg[j] = input[i];
+        i++;
+        j++;
     }
     this->executeCommand(command, arg);
 }

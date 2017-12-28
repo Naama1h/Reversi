@@ -250,45 +250,41 @@ cxxabi.h
 acxx_demangle.h
 -
 
-/home/tchelet/CLionProjects/ex3/src/client/AIPlayer.cpp
+/home/naama/CLionProjects/ex3/src/client/AIPlayer.cpp
 AIPlayer.h
-/home/tchelet/CLionProjects/ex3/src/client/AIPlayer.h
+/home/naama/CLionProjects/ex3/src/client/AIPlayer.h
 BoardConsole.h
-/home/tchelet/CLionProjects/ex3/src/client/BoardConsole.h
-PrintConsole.h
-/home/tchelet/CLionProjects/ex3/src/client/PrintConsole.h
+/home/naama/CLionProjects/ex3/src/client/BoardConsole.h
 
-/home/tchelet/CLionProjects/ex3/src/client/AIPlayer.h
+/home/naama/CLionProjects/ex3/src/client/AIPlayer.h
 Player.h
-/home/tchelet/CLionProjects/ex3/src/client/Player.h
+/home/naama/CLionProjects/ex3/src/client/Player.h
 Point.h
-/home/tchelet/CLionProjects/ex3/src/client/Point.h
+/home/naama/CLionProjects/ex3/src/client/Point.h
 Board.h
-/home/tchelet/CLionProjects/ex3/src/client/Board.h
+/home/naama/CLionProjects/ex3/src/client/Board.h
 vector
 -
 PrintConsole.h
-/home/tchelet/CLionProjects/ex3/src/client/PrintConsole.h
+/home/naama/CLionProjects/ex3/src/client/PrintConsole.h
 
-/home/tchelet/CLionProjects/ex3/src/client/Board.h
+/home/naama/CLionProjects/ex3/src/client/Board.h
 
-/home/tchelet/CLionProjects/ex3/src/client/BoardConsole.cpp
+/home/naama/CLionProjects/ex3/src/client/BoardConsole.cpp
 BoardConsole.h
-/home/tchelet/CLionProjects/ex3/src/client/BoardConsole.h
+/home/naama/CLionProjects/ex3/src/client/BoardConsole.h
 iostream
 -
 
-/home/tchelet/CLionProjects/ex3/src/client/BoardConsole.h
+/home/naama/CLionProjects/ex3/src/client/BoardConsole.h
 string
 -
 Board.h
-/home/tchelet/CLionProjects/ex3/src/client/Board.h
+/home/naama/CLionProjects/ex3/src/client/Board.h
 
-/home/tchelet/CLionProjects/ex3/src/client/Client.cpp
+/home/naama/CLionProjects/ex3/src/client/Client.cpp
 Client.h
-/home/tchelet/CLionProjects/ex3/src/client/Client.h
-iostream
--
+/home/naama/CLionProjects/ex3/src/client/Client.h
 sys/socket.h
 -
 netinet/in.h
@@ -297,106 +293,102 @@ arpa/inet.h
 -
 netdb.h
 -
-string.h
--
 unistd.h
 -
 
-/home/tchelet/CLionProjects/ex3/src/client/Client.h
+/home/naama/CLionProjects/ex3/src/client/Client.h
 Point.h
-/home/tchelet/CLionProjects/ex3/src/client/Point.h
+/home/naama/CLionProjects/ex3/src/client/Point.h
 string.h
 -
 iostream
 -
 
-/home/tchelet/CLionProjects/ex3/src/client/Game.cpp
+/home/naama/CLionProjects/ex3/src/client/Game.cpp
 cstring
 -
 Game.h
-/home/tchelet/CLionProjects/ex3/src/client/Game.h
+/home/naama/CLionProjects/ex3/src/client/Game.h
 PrintConsole.h
-/home/tchelet/CLionProjects/ex3/src/client/PrintConsole.h
+/home/naama/CLionProjects/ex3/src/client/PrintConsole.h
 
-/home/tchelet/CLionProjects/ex3/src/client/Game.h
+/home/naama/CLionProjects/ex3/src/client/Game.h
 Board.h
-/home/tchelet/CLionProjects/ex3/src/client/Board.h
+/home/naama/CLionProjects/ex3/src/client/Board.h
 Logic.h
-/home/tchelet/CLionProjects/ex3/src/client/Logic.h
+/home/naama/CLionProjects/ex3/src/client/Logic.h
 Player.h
-/home/tchelet/CLionProjects/ex3/src/client/Player.h
+/home/naama/CLionProjects/ex3/src/client/Player.h
 
-/home/tchelet/CLionProjects/ex3/src/client/Logic.h
+/home/naama/CLionProjects/ex3/src/client/Logic.h
 Point.h
-/home/tchelet/CLionProjects/ex3/src/client/Point.h
+/home/naama/CLionProjects/ex3/src/client/Point.h
 string
-/home/tchelet/CLionProjects/ex3/src/client/string
+/home/naama/CLionProjects/ex3/src/client/string
 Board.h
-/home/tchelet/CLionProjects/ex3/src/client/Board.h
+/home/naama/CLionProjects/ex3/src/client/Board.h
 list
 -
 vector
 -
 
-/home/tchelet/CLionProjects/ex3/src/client/Menu.h
+/home/naama/CLionProjects/ex3/src/client/Menu.h
 
-/home/tchelet/CLionProjects/ex3/src/client/MenuConsole.cpp
+/home/naama/CLionProjects/ex3/src/client/MenuConsole.cpp
 MenuConsole.h
-/home/tchelet/CLionProjects/ex3/src/client/MenuConsole.h
+/home/naama/CLionProjects/ex3/src/client/MenuConsole.h
 
-/home/tchelet/CLionProjects/ex3/src/client/MenuConsole.h
+/home/naama/CLionProjects/ex3/src/client/MenuConsole.h
 getopt.h
 -
 Menu.h
-/home/tchelet/CLionProjects/ex3/src/client/Menu.h
+/home/naama/CLionProjects/ex3/src/client/Menu.h
 iostream
 -
 
-/home/tchelet/CLionProjects/ex3/src/client/PersonP.cpp
+/home/naama/CLionProjects/ex3/src/client/PersonP.cpp
 vector
 -
 PersonP.h
-/home/tchelet/CLionProjects/ex3/src/client/PersonP.h
-PrintConsole.h
-/home/tchelet/CLionProjects/ex3/src/client/PrintConsole.h
+/home/naama/CLionProjects/ex3/src/client/PersonP.h
 limits
 -
 
-/home/tchelet/CLionProjects/ex3/src/client/PersonP.h
+/home/naama/CLionProjects/ex3/src/client/PersonP.h
 Player.h
-/home/tchelet/CLionProjects/ex3/src/client/Player.h
+/home/naama/CLionProjects/ex3/src/client/Player.h
 Point.h
-/home/tchelet/CLionProjects/ex3/src/client/Point.h
+/home/naama/CLionProjects/ex3/src/client/Point.h
 Board.h
-/home/tchelet/CLionProjects/ex3/src/client/Board.h
+/home/naama/CLionProjects/ex3/src/client/Board.h
 StandartLogic.h
-/home/tchelet/CLionProjects/ex3/src/client/StandartLogic.h
+/home/naama/CLionProjects/ex3/src/client/StandartLogic.h
 vector
 -
 PrintConsole.h
-/home/tchelet/CLionProjects/ex3/src/client/PrintConsole.h
+/home/naama/CLionProjects/ex3/src/client/PrintConsole.h
 
-/home/tchelet/CLionProjects/ex3/src/client/PersonPServer.cpp
+/home/naama/CLionProjects/ex3/src/client/PersonPServer.cpp
 PersonPServer.h
-/home/tchelet/CLionProjects/ex3/src/client/PersonPServer.h
+/home/naama/CLionProjects/ex3/src/client/PersonPServer.h
 
-/home/tchelet/CLionProjects/ex3/src/client/PersonPServer.h
+/home/naama/CLionProjects/ex3/src/client/PersonPServer.h
 PersonP.h
-/home/tchelet/CLionProjects/ex3/src/client/PersonP.h
+/home/naama/CLionProjects/ex3/src/client/PersonP.h
 Client.h
-/home/tchelet/CLionProjects/ex3/src/client/Client.h
+/home/naama/CLionProjects/ex3/src/client/Client.h
 vector
 -
 PrintConsole.h
-/home/tchelet/CLionProjects/ex3/src/client/PrintConsole.h
+/home/naama/CLionProjects/ex3/src/client/PrintConsole.h
 limits
 -
 
-/home/tchelet/CLionProjects/ex3/src/client/Player.h
+/home/naama/CLionProjects/ex3/src/client/Player.h
 iostream
 -
 Point.h
-/home/tchelet/CLionProjects/ex3/src/client/Point.h
+/home/naama/CLionProjects/ex3/src/client/Point.h
 string
 -
 vector
@@ -404,63 +396,63 @@ vector
 cstring
 -
 Board.h
-/home/tchelet/CLionProjects/ex3/src/client/Board.h
+/home/naama/CLionProjects/ex3/src/client/Board.h
 Logic.h
-/home/tchelet/CLionProjects/ex3/src/client/Logic.h
+/home/naama/CLionProjects/ex3/src/client/Logic.h
 StandartLogic.h
-/home/tchelet/CLionProjects/ex3/src/client/StandartLogic.h
+/home/naama/CLionProjects/ex3/src/client/StandartLogic.h
 
-/home/tchelet/CLionProjects/ex3/src/client/Point.cpp
+/home/naama/CLionProjects/ex3/src/client/Point.cpp
 Point.h
-/home/tchelet/CLionProjects/ex3/src/client/Point.h
+/home/naama/CLionProjects/ex3/src/client/Point.h
 
-/home/tchelet/CLionProjects/ex3/src/client/Point.h
+/home/naama/CLionProjects/ex3/src/client/Point.h
 
-/home/tchelet/CLionProjects/ex3/src/client/PrintConsole.cpp
+/home/naama/CLionProjects/ex3/src/client/PrintConsole.cpp
 PrintConsole.h
-/home/tchelet/CLionProjects/ex3/src/client/PrintConsole.h
+/home/naama/CLionProjects/ex3/src/client/PrintConsole.h
 
-/home/tchelet/CLionProjects/ex3/src/client/PrintConsole.h
+/home/naama/CLionProjects/ex3/src/client/PrintConsole.h
 PrintMassage.h
-/home/tchelet/CLionProjects/ex3/src/client/PrintMassage.h
+/home/naama/CLionProjects/ex3/src/client/PrintMassage.h
 
-/home/tchelet/CLionProjects/ex3/src/client/PrintMassage.h
+/home/naama/CLionProjects/ex3/src/client/PrintMassage.h
 Board.h
-/home/tchelet/CLionProjects/ex3/src/client/Board.h
+/home/naama/CLionProjects/ex3/src/client/Board.h
 Player.h
-/home/tchelet/CLionProjects/ex3/src/client/Player.h
+/home/naama/CLionProjects/ex3/src/client/Player.h
 
-/home/tchelet/CLionProjects/ex3/src/client/RemotePlayer.cpp
+/home/naama/CLionProjects/ex3/src/client/RemotePlayer.cpp
 RemotePlayer.h
-/home/tchelet/CLionProjects/ex3/src/client/RemotePlayer.h
+/home/naama/CLionProjects/ex3/src/client/RemotePlayer.h
 PrintConsole.h
-/home/tchelet/CLionProjects/ex3/src/client/PrintConsole.h
+/home/naama/CLionProjects/ex3/src/client/PrintConsole.h
 
-/home/tchelet/CLionProjects/ex3/src/client/RemotePlayer.h
+/home/naama/CLionProjects/ex3/src/client/RemotePlayer.h
 Player.h
-/home/tchelet/CLionProjects/ex3/src/client/Player.h
+/home/naama/CLionProjects/ex3/src/client/Player.h
 Client.h
-/home/tchelet/CLionProjects/ex3/src/client/Client.h
+/home/naama/CLionProjects/ex3/src/client/Client.h
 
-/home/tchelet/CLionProjects/ex3/src/client/StandartLogic.cpp
+/home/naama/CLionProjects/ex3/src/client/StandartLogic.cpp
 StandartLogic.h
-/home/tchelet/CLionProjects/ex3/src/client/StandartLogic.h
+/home/naama/CLionProjects/ex3/src/client/StandartLogic.h
 
-/home/tchelet/CLionProjects/ex3/src/client/StandartLogic.h
+/home/naama/CLionProjects/ex3/src/client/StandartLogic.h
 Logic.h
-/home/tchelet/CLionProjects/ex3/src/client/Logic.h
+/home/naama/CLionProjects/ex3/src/client/Logic.h
 Point.h
-/home/tchelet/CLionProjects/ex3/src/client/Point.h
+/home/naama/CLionProjects/ex3/src/client/Point.h
 Board.h
-/home/tchelet/CLionProjects/ex3/src/client/Board.h
+/home/naama/CLionProjects/ex3/src/client/Board.h
 string
-/home/tchelet/CLionProjects/ex3/src/client/string
+/home/naama/CLionProjects/ex3/src/client/string
 list
 -
 vector
 -
 
-/home/tchelet/CLionProjects/ex3/src/client/gtest_src/gtest.h
+/home/naama/CLionProjects/ex3/src/client/gtest_src/gtest.h
 limits
 -
 ostream
@@ -468,93 +460,87 @@ ostream
 vector
 -
 gtest/internal/gtest-internal.h
-/home/tchelet/CLionProjects/ex3/src/client/gtest_src/gtest/internal/gtest-internal.h
+/home/naama/CLionProjects/ex3/src/client/gtest_src/gtest/internal/gtest-internal.h
 gtest/internal/gtest-string.h
-/home/tchelet/CLionProjects/ex3/src/client/gtest_src/gtest/internal/gtest-string.h
+/home/naama/CLionProjects/ex3/src/client/gtest_src/gtest/internal/gtest-string.h
 gtest/gtest-death-test.h
-/home/tchelet/CLionProjects/ex3/src/client/gtest_src/gtest/gtest-death-test.h
+/home/naama/CLionProjects/ex3/src/client/gtest_src/gtest/gtest-death-test.h
 gtest/gtest-message.h
-/home/tchelet/CLionProjects/ex3/src/client/gtest_src/gtest/gtest-message.h
+/home/naama/CLionProjects/ex3/src/client/gtest_src/gtest/gtest-message.h
 gtest/gtest-param-test.h
-/home/tchelet/CLionProjects/ex3/src/client/gtest_src/gtest/gtest-param-test.h
+/home/naama/CLionProjects/ex3/src/client/gtest_src/gtest/gtest-param-test.h
 gtest/gtest-printers.h
-/home/tchelet/CLionProjects/ex3/src/client/gtest_src/gtest/gtest-printers.h
+/home/naama/CLionProjects/ex3/src/client/gtest_src/gtest/gtest-printers.h
 gtest/gtest_prod.h
-/home/tchelet/CLionProjects/ex3/src/client/gtest_src/gtest/gtest_prod.h
+/home/naama/CLionProjects/ex3/src/client/gtest_src/gtest/gtest_prod.h
 gtest/gtest-test-part.h
-/home/tchelet/CLionProjects/ex3/src/client/gtest_src/gtest/gtest-test-part.h
+/home/naama/CLionProjects/ex3/src/client/gtest_src/gtest/gtest-test-part.h
 gtest/gtest-typed-test.h
-/home/tchelet/CLionProjects/ex3/src/client/gtest_src/gtest/gtest-typed-test.h
+/home/naama/CLionProjects/ex3/src/client/gtest_src/gtest/gtest-typed-test.h
 gtest/gtest_pred_impl.h
-/home/tchelet/CLionProjects/ex3/src/client/gtest_src/gtest/gtest_pred_impl.h
+/home/naama/CLionProjects/ex3/src/client/gtest_src/gtest/gtest_pred_impl.h
 
-/home/tchelet/CLionProjects/ex3/src/client/main.cpp
+/home/naama/CLionProjects/ex3/src/client/main.cpp
 fstream
 -
 iostream
 -
 BoardConsole.h
-/home/tchelet/CLionProjects/ex3/src/client/BoardConsole.h
+/home/naama/CLionProjects/ex3/src/client/BoardConsole.h
 PersonP.h
-/home/tchelet/CLionProjects/ex3/src/client/PersonP.h
+/home/naama/CLionProjects/ex3/src/client/PersonP.h
 Game.h
-/home/tchelet/CLionProjects/ex3/src/client/Game.h
+/home/naama/CLionProjects/ex3/src/client/Game.h
 AIPlayer.h
-/home/tchelet/CLionProjects/ex3/src/client/AIPlayer.h
+/home/naama/CLionProjects/ex3/src/client/AIPlayer.h
 RemotePlayer.h
-/home/tchelet/CLionProjects/ex3/src/client/RemotePlayer.h
+/home/naama/CLionProjects/ex3/src/client/RemotePlayer.h
 PersonPServer.h
-/home/tchelet/CLionProjects/ex3/src/client/PersonPServer.h
+/home/naama/CLionProjects/ex3/src/client/PersonPServer.h
+MenuConsole.h
+/home/naama/CLionProjects/ex3/src/client/MenuConsole.h
 unistd.h
 -
-Client.h
-/home/tchelet/CLionProjects/ex3/src/client/Client.h
-Menu.h
-/home/tchelet/CLionProjects/ex3/src/client/Menu.h
-MenuConsole.h
-/home/tchelet/CLionProjects/ex3/src/client/MenuConsole.h
-PrintConsole.h
-/home/tchelet/CLionProjects/ex3/src/client/PrintConsole.h
 
-/home/tchelet/CLionProjects/ex3/src/client/tests/AIPlayer_test.cpp
+/home/naama/CLionProjects/ex3/src/client/tests/AIPlayer_test.cpp
 AIPlayer_test.h
-/home/tchelet/CLionProjects/ex3/src/client/tests/AIPlayer_test.h
+/home/naama/CLionProjects/ex3/src/client/tests/AIPlayer_test.h
 ../AIPlayer.h
-/home/tchelet/CLionProjects/ex3/src/client/AIPlayer.h
+/home/naama/CLionProjects/ex3/src/client/AIPlayer.h
 
-/home/tchelet/CLionProjects/ex3/src/client/tests/AIPlayer_test.h
+/home/naama/CLionProjects/ex3/src/client/tests/AIPlayer_test.h
 ../gtest_src/gtest.h
-/home/tchelet/CLionProjects/ex3/src/client/gtest_src/gtest.h
+/home/naama/CLionProjects/ex3/src/client/gtest_src/gtest.h
 
-/home/tchelet/CLionProjects/ex3/src/client/tests/Board_test.cpp
+/home/naama/CLionProjects/ex3/src/client/tests/Board_test.cpp
 Board_test.h
-/home/tchelet/CLionProjects/ex3/src/client/tests/Board_test.h
+/home/naama/CLionProjects/ex3/src/client/tests/Board_test.h
 ../BoardConsole.h
-/home/tchelet/CLionProjects/ex3/src/client/BoardConsole.h
+/home/naama/CLionProjects/ex3/src/client/BoardConsole.h
 
-/home/tchelet/CLionProjects/ex3/src/client/tests/Board_test.h
+/home/naama/CLionProjects/ex3/src/client/tests/Board_test.h
 ../gtest_src/gtest.h
-/home/tchelet/CLionProjects/ex3/src/client/gtest_src/gtest.h
+/home/naama/CLionProjects/ex3/src/client/gtest_src/gtest.h
 
-/home/tchelet/CLionProjects/ex3/src/client/tests/PersonP_teset.cpp
+/home/naama/CLionProjects/ex3/src/client/tests/PersonP_teset.cpp
 PersonP_teset.h
-/home/tchelet/CLionProjects/ex3/src/client/tests/PersonP_teset.h
+/home/naama/CLionProjects/ex3/src/client/tests/PersonP_teset.h
 ../PersonP.h
-/home/tchelet/CLionProjects/ex3/src/client/PersonP.h
+/home/naama/CLionProjects/ex3/src/client/PersonP.h
 
-/home/tchelet/CLionProjects/ex3/src/client/tests/PersonP_teset.h
+/home/naama/CLionProjects/ex3/src/client/tests/PersonP_teset.h
 ../gtest_src/gtest.h
-/home/tchelet/CLionProjects/ex3/src/client/gtest_src/gtest.h
+/home/naama/CLionProjects/ex3/src/client/gtest_src/gtest.h
 
-/home/tchelet/CLionProjects/ex3/src/client/tests/StandartLogic_test.cpp
+/home/naama/CLionProjects/ex3/src/client/tests/StandartLogic_test.cpp
 StandartLogic_test.h
-/home/tchelet/CLionProjects/ex3/src/client/tests/StandartLogic_test.h
+/home/naama/CLionProjects/ex3/src/client/tests/StandartLogic_test.h
 ../BoardConsole.h
-/home/tchelet/CLionProjects/ex3/src/client/BoardConsole.h
+/home/naama/CLionProjects/ex3/src/client/BoardConsole.h
 ../StandartLogic.h
-/home/tchelet/CLionProjects/ex3/src/client/StandartLogic.h
+/home/naama/CLionProjects/ex3/src/client/StandartLogic.h
 
-/home/tchelet/CLionProjects/ex3/src/client/tests/StandartLogic_test.h
+/home/naama/CLionProjects/ex3/src/client/tests/StandartLogic_test.h
 ../gtest_src/gtest.h
-/home/tchelet/CLionProjects/ex3/src/client/gtest_src/gtest.h
+/home/naama/CLionProjects/ex3/src/client/gtest_src/gtest.h
 

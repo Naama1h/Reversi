@@ -10,11 +10,11 @@ file(REMOVE_RECURSE
   "CMakeFiles/ex3.dir/src/client/tests/StandartLogic_test.cpp.o"
   "CMakeFiles/ex3.dir/src/client/tests/AIPlayer_test.cpp.o"
   "CMakeFiles/ex3.dir/src/client/tests/PersonP_teset.cpp.o"
-  "CMakeFiles/ex3.dir/src/client/PrintConsole.cpp.o"
   "CMakeFiles/ex3.dir/src/client/Client.cpp.o"
   "CMakeFiles/ex3.dir/src/client/RemotePlayer.cpp.o"
   "CMakeFiles/ex3.dir/src/client/PersonPServer.cpp.o"
   "CMakeFiles/ex3.dir/src/client/MenuConsole.cpp.o"
+  "CMakeFiles/ex3.dir/src/client/PrintConsole.cpp.o"
   "ex3.pdb"
   "ex3"
 )

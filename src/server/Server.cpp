@@ -16,7 +16,6 @@ using namespace std;
 #define MAX_CONNECTED_CLIENT 2
 
 Server::Server(int port) : port(port), serverSocket(0) {
-    this->clientManager = new ClientManager();
 }
 
 void Server::start() {
@@ -63,6 +62,7 @@ void Server::start() {
 //        close(clientSocket2);
 //    }
 
+    this->clientManager = new ClientManager();
     //create a socket point
     serverSocket = socket(AF_INET, SOCK_STREAM, 0);
     if (serverSocket == -1) {
@@ -95,6 +95,7 @@ void Server::start() {
         pthread_t thread;
         Server* ser = new Server(this->port);
         ser->clientSocket = clientSocket1;
+        ser->setClientManager(this->clientManager);
         int rc = pthread_create(&thread, NULL, forThread, (void*)ser);
         if (rc) {
             cout << "Error: unable to create thread " << rc << endl;
@@ -172,4 +173,8 @@ void* Server::forThread(void* clientThread1) {
 void Server::stop() {
     delete this->clientManager;
     close(serverSocket);
+}
+
+void Server::setClientManager(ClientManager *clientManager) {
+    this->clientManager = clientManager;
 }

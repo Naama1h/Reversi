@@ -26,6 +26,7 @@ public:
      */
     void stop();
 
+    void setClientManager(ClientManager* clientManager);
 private:
     // members
     int port;

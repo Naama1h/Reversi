@@ -68,6 +68,9 @@ int main() {
         command[0] = tmp1;
         command[1] = tmp2;
         while (strcmp(command[0],"close") != 0) {
+            if (strcmp(command[0],"start") == 0) {
+                
+            }
             //char* tmp = *client.getCommand();
 //            command[0] = *client.getCommand();
             cin >> command[0] >> command[1];
@@ -98,8 +101,6 @@ int main() {
                 Game* game = new Game(board, standartLogic, myPlayer, rival);
                 game->run();
                 delete game;
-            } else if (strcmp(command[0],"start") == 0) { // start
-
             } else if (strcmp(command[0],"close") == 0) { // close
                 break;
             } else if (strcmp(command[0],"start") == 0) {

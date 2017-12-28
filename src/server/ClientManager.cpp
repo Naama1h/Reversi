@@ -30,6 +30,7 @@ ClientManager::~ClientManager() {
 void ClientManager::executeCommand(string command, char* arg) {
     Command* commandObj = this->commandsMap[command];
     commandObj->execute(arg, this->clientSocket, *games);
+    cout << games->at(1)->getName();
 }
 
 void ClientManager::setClientSocket(int socket) {

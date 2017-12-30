@@ -76,3 +76,11 @@ void PrintConsole::enterEnd() const {
 void PrintConsole::NoPossibleMovesToRival() const {
     cout << "your rival didn't have any move" << endl;
 }
+
+void PrintConsole::listGame() const{
+    cout << "list of games:" << endl;
+}
+
+void PrintConsole::nameOfGame(string name) const{
+    cout << name << endl;
+}

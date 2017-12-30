@@ -6,7 +6,7 @@
  */
 
 #include "GameMembers.h"
-GameMembers::GameMembers(char *name, int socket1, int socket2) {
+GameMembers::GameMembers(string name, int socket1, int socket2) {
     this->name = name;
     this->socket1 = socket1;
     this->socket2 = socket2;
@@ -16,7 +16,7 @@ void GameMembers::setSocket2(int socket2) {
     this->socket2 = socket2;
 }
 
-char* GameMembers::getName() {
+string GameMembers::getName() {
     return this->name;
 }
 

@@ -47,6 +47,8 @@ public:
 	void waitOtherPlayer();
 
     void sendCommand(char** command);
+
+	void readListOfGames();
 private:
 	//members
 	const char* serverIP;

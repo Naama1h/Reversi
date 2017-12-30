@@ -74,6 +74,15 @@ public:
      * finish the game.
      */
     virtual void enterEnd() const;
+    /**
+     * print the name of the game.
+     * @param name string
+     */
+    virtual void nameOfGame(string name) const;
+    /**
+     * print "list of game:\n"
+     */
+    virtual void listGame() const;
 };
 
 

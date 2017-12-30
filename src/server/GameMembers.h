@@ -8,16 +8,18 @@
 #ifndef GAMEMEMBERS_H
 #define GAMEMEMBERS_H
 
+#include "string"
+using namespace std;
 
 class GameMembers {
 public:
-    GameMembers(char* name, int socket1, int socekt2);
+    GameMembers(string name, int socket1, int socekt2);
     void setSocket2(int socket2);
-    char* getName();
+    string getName();
     int getSocket1();
     int getSocket2();
 private:
-    char* name;
+    string name;
     int socket1;
     int socket2;
 };

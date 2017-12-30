@@ -50,7 +50,6 @@ int main() {
         ip[9] = '\n';
         inFile.close();
         Client client(ip,port);
-        client.connectToServer();
 //        char type[1];
 //        type[0] = client.getCellType();
 //        if (type[0] == '1') {
@@ -66,14 +65,18 @@ int main() {
         char tmp2[10] = "";
         char* command[3];
         command[0] = tmp1;
-        command[1] = tmp2;
-        while (strcmp(command[0],"close") != 0) {
-            if (strcmp(command[0],"start") == 0) {
-                
-            }
+        while (strcmp(command[0],"exit") != 0) {
+            client.connectToServer();
+            command[0] = tmp1;
+            command[1] = tmp2;
             //char* tmp = *client.getCommand();
 //            command[0] = *client.getCommand();
-            cin >> command[0] >> command[1];
+            cin >> command[0];
+            if (strcmp(command[0], "list_games") == 0) {
+                command[1] = "";
+            } else {
+            cin >> command[1];
+            }
 //            command[0] = client.getCommand();
 //            command[1] = client.getArg();
             if (strcmp(command[0],"play") == 0) {
@@ -81,16 +84,18 @@ int main() {
             } else {
                 command[2] = "";
             }
+            if (strcmp(command[0],"start") == 0) {
+                p->waitingForRival();
+            }
             client.sendCommand((char**)command);
             if (strcmp(command[0],"list_games") == 0) { // list_games
-
-            } else if (strcmp(command[0],"join") == 0) { // join
+                client.readListOfGames();
+            } else if (strcmp(command[0],"join") == 0 || strcmp(command[0],"start") == 0) { // join
                 char type[1];
                 type[0] = client.getCellType();
                 if (type[0] == '1') {
                     myPlayer = new PersonPServer("X", Black, &client);
                     rival = new RemotePlayer("O", White, &client);
-                    p->waitingForRival();
                     client.waitOtherPlayer();
                 } else {
                     myPlayer = new PersonPServer("O", White, &client);
@@ -101,10 +106,6 @@ int main() {
                 Game* game = new Game(board, standartLogic, myPlayer, rival);
                 game->run();
                 delete game;
-            } else if (strcmp(command[0],"close") == 0) { // close
-                break;
-            } else if (strcmp(command[0],"start") == 0) {
-                
             }
         }
     }

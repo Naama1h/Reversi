@@ -38,7 +38,7 @@ private:
      * @param clientSocket2
      */
 //    void handleClient(int clientSocket, int clientSocket2);
-    void *handleClient(int clientSocket);
+//    void *handleClient(int clientSocket);
     static void* forThread(void* clientThread1);
     int clientSocket;
 };

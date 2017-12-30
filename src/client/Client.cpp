@@ -11,6 +11,7 @@
 #include <arpa/inet.h>
 #include <netdb.h>
 #include <unistd.h>
+#include "PrintConsole.h"
 
 using namespace std;
 
@@ -106,12 +107,40 @@ void Client::waitOtherPlayer() {
 }
 
 void Client::sendCommand(char** command) {
-    ssize_t m = write(clientSocket, command[0], sizeof(command[0]));
+    char message[200] = "";
+    int i = 0;
+    while (command[0][i] != '\0') {
+        message[i] = command[0][i];
+        i++;
+    }
+    command[0][i] = message[i];
+    i++;
+    int j = 0;
+    while (command[1][j] != '\0') {
+        message[i] = command[1][j];
+        i++;
+        j++;
+    }
+    message[i] = '\0';
+    ssize_t m = write(clientSocket, message, sizeof(message));
     if(m == -1) {
         throw "Error writing move to socket";
     }
-    m = write(clientSocket, command[1], sizeof(command[1]));
-    if(m == -1) {
-        throw "Error writing move to socket";
+}
+
+void Client::readListOfGames() {
+    char message[190];
+    PrintConsole printer;
+    printer.listGame();
+    ssize_t n = read(clientSocket, &message, sizeof(message));
+    if(n == -1) {
+        throw "Error reading result from socket";
+    }
+    while (message[0] != '\0') {
+        printer.nameOfGame(message);
+        ssize_t n = read(clientSocket, &message, sizeof(message));
+        if(n == -1) {
+            throw "Error reading result from socket";
+        }
     }
 }

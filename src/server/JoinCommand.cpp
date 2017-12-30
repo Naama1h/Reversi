@@ -17,7 +17,7 @@ void JoinCommand::execute(char* arg, int* socket, vector<GameMembers*>& games) {
     this->socket = socket;
     if (!this->games.empty()) {
         for (int i = 0; i < games.size(); i++) {
-            if (strcmp(arg,games.at(i)->getName()) == 0 && games.at(i)->getSocket2() == 0) {
+            if (games.at(i)->getName().compare(arg) == 0 && games.at(i)->getSocket2() == 0) {
                 games.at(i)->setSocket2(*this->socket);
                 write(games.at(i)->getSocket1(), "1", sizeof(char));
                 write(games.at(i)->getSocket2(), "2", sizeof(char));
@@ -28,6 +28,8 @@ void JoinCommand::execute(char* arg, int* socket, vector<GameMembers*>& games) {
 //                read(games.at(i)->getSocket2(), &tmp2, sizeof(tmp2));
 //                read(*this->socket, &tmp2, sizeof(tmp2));
                 handleClient(games.at(i));
+                close(games.at(i)->getSocket1());
+                close(games.at(i)->getSocket2());
                 return;
             }
         }

@@ -52,7 +52,6 @@ void JoinCommand::handleClient(GameMembers* game) {
     char tmp1[190] = "";
     char tmp2[190] = "";
     while (strcmp(input1, "close") != 0 && strcmp(input2, "close") != 0) {
-        read(games.at(this->gameIndex)->getSocket1(), &tmp1, sizeof(tmp1));
         ssize_t n = read(game->getSocket1(), &input, sizeof(input));
         int i = 0;
         while (input[i] != '\0') {
@@ -63,12 +62,11 @@ void JoinCommand::handleClient(GameMembers* game) {
             i++;
         }
         int j = 0;
-        while (input[i+1] != '\0' && input[i] != '\0') {
+        while (input[i] != '\0') {
             input2[j] = input[i];
             i++;
             j++;
         }
-//        read(game->getSocket1(), &dummy, sizeof(dummy));
         if (n == -1) {
             cout << "Error reading move" << endl;
             return;
@@ -78,20 +76,8 @@ void JoinCommand::handleClient(GameMembers* game) {
             return;
         }
         if (strcmp(input1,"play") == 0) {
-            /*
-            ssize_t n = read(game->getSocket1(), &string1char2, sizeof(string1char2));
-            read(game->getSocket1(), &dummy, sizeof(dummy));
-            if (n == -1) {
-                cout << "Error reading move" << endl;
-                return;
-            }
-            if (n == 0) {
-                cout << "Client disconnected" << endl;
-                return;
-            }
-             */
             int k = 0;
-            while (input2[k] != '\0' && input2[k + 1] != '\0') {
+            while (k != 3) {
                 string1char2[k] = input2[k];
                 k++;
             }
@@ -101,20 +87,8 @@ void JoinCommand::handleClient(GameMembers* game) {
             } else {
                 return;
             }
-            /*
-            n = read(game->getSocket1(), &string1char2, sizeof(string1char2));
-            read(game->getSocket1(), &dummy, sizeof(dummy));
-            if (n == -1) {
-                cout << "Error reading move" << endl;
-                return;
-            }
-            if (n == 0) {
-                cout << "Client disconnected" << endl;
-                return;
-            }
-             */
             int p = 0;
-            while (input2[k] != '\0') {
+            while (p != 3) {
                 string1char2[p] = input2[k];
                 k++;
                 p++;
@@ -129,7 +103,6 @@ void JoinCommand::handleClient(GameMembers* game) {
             write(game->getSocket2(), "End", sizeof("End"));
             break;
         }
-        read(games.at(this->gameIndex)->getSocket2(), &tmp2, sizeof(tmp2));
         n = read(game->getSocket2(), &inputx, sizeof(inputx));
         i = 0;
         while (inputx[i] != '\0') {
@@ -140,12 +113,11 @@ void JoinCommand::handleClient(GameMembers* game) {
             i++;
         }
         j = 0;
-        while (inputx[i+1] != '\0') {
+        while (inputx[i] != '\0') {
             inputx2[j] = inputx[i];
             i++;
             j++;
         }
-//        read(game->getSocket2(), &dummy, sizeof(dummy));
         if (n == -1) {
             cout << "Error reading move" << endl;
             return;
@@ -155,21 +127,9 @@ void JoinCommand::handleClient(GameMembers* game) {
             return;
         }
         if (strcmp(inputx1,"play") == 0) {
-            /*
-            ssize_t n = read(game->getSocket2(), &string2char2, sizeof(string2char2));
-            read(game->getSocket2(), &dummy, sizeof(dummy));
-            if (n == -1) {
-                cout << "Error reading move" << endl;
-                return;
-            }
-            if (n == 0) {
-                cout << "Client disconnected" << endl;
-                return;
-            }
-             */
             int k = 0;
-            while (inputx2[k] != '\0') {
-                string1char2[k] = inputx2[k];
+            while (k != 3) {
+                string2char2[k] = inputx2[k];
                 k++;
             }
             if (string2char2[0] == '<' && string2char2[2] == '>') {
@@ -178,21 +138,9 @@ void JoinCommand::handleClient(GameMembers* game) {
             } else {
                 return;
             }
-            /*
-            n = read(game->getSocket2(), &string2char2, sizeof(string2char2));
-            read(game->getSocket2(), &dummy, sizeof(dummy));
-            if (n == -1) {
-                cout << "Error reading move" << endl;
-                return;
-            }
-            if (n == 0) {
-                cout << "Client disconnected" << endl;
-                return;
-            }
-             */
             int p = 0;
-            while (inputx2[k] != '\0') {
-                string1char2[p] = inputx2[k];
+            while (p != 3) {
+                string2char2[p] = inputx2[k];
                 k++;
                 p++;
             }

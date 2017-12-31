@@ -23,14 +23,18 @@ Point PersonPServer::chooseCell(vector<Point> *options, StandartLogic *logic) co
     printer.itsYourMove(this->personP->getName());
     printer.possibleMoves(options);
     printer.enterMove();
-    char input[7];
+    char input[12];
     cin >> input;
     if (strcmp(input,"End") == 0) {
         return Point(-1,-1);
     } else if (strcmp(input,"NoMove") == 0) {
         return Point(-2,-2);
     } else {
-        Point cell(input[0] - 48, input[2] - 48);
+        char playX[3];
+        char playY[3];
+        cin >> playX;
+        cin >> playY;
+        Point cell(playX[1] - 48, playY[1] - 48);
         return cell;
     }
 }

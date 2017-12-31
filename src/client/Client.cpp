@@ -51,26 +51,14 @@ void Client:: connectToServer() {
 
 void Client:: sendMove(char* move) {
 	// Write the exercise arguments to the socket
-	char play[6] = "play";
-	ssize_t m = write(clientSocket, play, sizeof(play));
-	if(m == -1) {
-		throw "Error writing move to socket";
-	}
-	char moveX[3], moveY[3];
-	moveX[0] = '<';
-	moveX[1] = move[0];
-	moveX[2] = '>';
-    moveY[0] = '<';
-    moveY[1] = move[2];
-    moveY[2] = '>';
-	ssize_t n = write(clientSocket, moveX, sizeof(moveX));
-	if(n == -1) {
-		throw "Error writing move to socket";
-	}
-	n = write(clientSocket, moveY, sizeof(moveY));
-	if(n == -1) {
-		throw "Error writing move to socket";
-	}
+	char play[11] = "";
+    play[0] = 'p'; play[1] = 'l'; play[2] = 'a'; play[3] = 'y'; play[4] = '\0';
+    play[5] = '<'; play[6] = move[0]; play[7] = '>';
+    play[8] = '<'; play[9] = move[2]; play[10] = '>';
+    ssize_t m = write(clientSocket, play, sizeof(play));
+    if(m == -1) {
+        throw "Error writing move to socket";
+    }
 }
 
 Point Client::getRivalMove() {

@@ -83,6 +83,14 @@ public:
      * print "list of game:\n"
      */
     virtual void listGame() const;
+    /**
+     * print commands
+     */
+    virtual void optionOfCommand() const;
+    /**
+     * print "cant Choose This Game\n"
+     */
+    virtual void cantChooseThisGame() const; 
 };
 
 

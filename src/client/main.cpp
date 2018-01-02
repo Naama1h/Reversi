@@ -50,46 +50,36 @@ int main() {
         ip[9] = '\n';
         inFile.close();
         Client client(ip,port);
-//        char type[1];
-//        type[0] = client.getCellType();
-//        if (type[0] == '1') {
-//            myPlayer = new PersonPServer("X", Black, &client);
-//            rival = new RemotePlayer("O", White, &client);
-//            p->waitingForRival();
-//            client.waitOtherPlayer();
-//        } else {
-//            myPlayer = new PersonPServer("O", White, &client);
-//            rival = new RemotePlayer("X", Black, &client);
-//        }
         char tmp1[10] = "";
         char tmp2[10] = "";
         char* command[3];
         command[0] = tmp1;
-        while (strcmp(command[0],"exit") != 0) {
-            client.connectToServer();
+        bool serverConnection = true;
+        while (serverConnection) {
+            serverConnection = client.connectToServer();
+            if(!serverConnection) {
+                break;
+            }
+            p->optionOfCommand();
             command[0] = tmp1;
             command[1] = tmp2;
-            //char* tmp = *client.getCommand();
-//            command[0] = *client.getCommand();
             cin >> command[0];
-            if (strcmp(command[0], "list_games") == 0) {
-                command[1] = "";
-            } else {
-            cin >> command[1];
+            if (strcmp(command[0], "list_games") != 0) {
+                cin >> command[1];
             }
-//            command[0] = client.getCommand();
-//            command[1] = client.getArg();
             if (strcmp(command[0],"play") == 0) {
                 cin >> command[2];
-            } else {
-                command[2] = "";
             }
             if (strcmp(command[0],"start") == 0) {
                 p->waitingForRival();
             }
             client.sendCommand((char**)command);
             if (strcmp(command[0],"list_games") == 0) { // list_games
-                client.readListOfGames();
+                try {
+                    client.readListOfGames();
+                } catch (const char *msg) {
+                    break;
+                }
             } else if (strcmp(command[0],"join") == 0 || strcmp(command[0],"start") == 0) { // join
                 char type[1];
                 type[0] = client.getCellType();
@@ -97,11 +87,16 @@ int main() {
                     myPlayer = new PersonPServer("X", Black, &client);
                     rival = new RemotePlayer("O", White, &client);
                     client.waitOtherPlayer();
-                } else {
+                } else if (type[0] == '2'){
                     myPlayer = new PersonPServer("O", White, &client);
                     rival = new RemotePlayer("X", Black, &client);
+                } else if (type[0] == 'n') {
+                    p->cantChooseThisGame();
+                    continue;
+                } else {
+                    break;
                 }
-                Board* board = new BoardConsole();
+                Board* board = new BoardConsole(4);
                 Logic* standartLogic = new StandartLogic(board);
                 Game* game = new Game(board, standartLogic, myPlayer, rival);
                 game->run();

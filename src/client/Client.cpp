@@ -18,7 +18,7 @@ using namespace std;
 Client::Client(const char* serverIP, int serverPort): serverIP(serverIP), serverPort(serverPort), clientSocket(0) {
 }
 
-void Client:: connectToServer() {
+bool Client:: connectToServer() {
 	// Create a socket point
 	clientSocket = socket(AF_INET, SOCK_STREAM, 0);
 	if(clientSocket == -1) {
@@ -44,20 +44,35 @@ void Client:: connectToServer() {
 	serverAddress.sin_port = htons(serverPort);
 	// Establish a connection with the TCP server
 	if(connect(clientSocket, (struct sockaddr*)&serverAddress, sizeof(serverAddress)) == -1) {
-		throw "Error connecting to server";
+        return false;
 	}
-	cout << "Connected to server" << endl;
+    return true;
 }
 
 void Client:: sendMove(char* move) {
-	// Write the exercise arguments to the socket
-	char play[11] = "";
-    play[0] = 'p'; play[1] = 'l'; play[2] = 'a'; play[3] = 'y'; play[4] = '\0';
-    play[5] = '<'; play[6] = move[0]; play[7] = '>';
-    play[8] = '<'; play[9] = move[2]; play[10] = '>';
-    ssize_t m = write(clientSocket, play, sizeof(play));
-    if(m == -1) {
-        throw "Error writing move to socket";
+    if(strcmp(move,"End") == 0) {
+        ssize_t m = write(clientSocket, move, sizeof(move));
+        if(m == -1) {
+            throw "Error writing move to socket";
+        }
+    } else if(strcmp(move,"NoMove") == 0) {
+        // Write the exercise arguments to the socket
+        char play[7] = "";
+        play[0] = 'p'; play[1] = 'l'; play[2] = 'a'; play[3] = 'y'; play[4] = '\0';
+        play[5] = '-'; play[6] = '-';
+        ssize_t m = write(clientSocket, play, sizeof(play));
+        if(m == -1) {
+            throw "Error writing move to socket";
+        }
+    } else {
+        // Write the exercise arguments to the socket
+        char play[7] = "";
+        play[0] = 'p'; play[1] = 'l'; play[2] = 'a'; play[3] = 'y'; play[4] = '\0';
+        play[5] = move[0]; play[6] = move[2];
+        ssize_t m = write(clientSocket, play, sizeof(play));
+        if(m == -1) {
+            throw "Error writing move to socket";
+        }
     }
 }
 
@@ -68,7 +83,7 @@ Point Client::getRivalMove() {
     if (n == -1) {
         throw "Error reading result from socket";
     }
-    if (strcmp(result, "NoMove") == 0) {
+    if (strcmp(result, "NoMove") == 0 || (result[0] == '-' && result[2] == '-')) {
         return Point(-2, -2);
     } else if(strcmp(result, "End") == 0){
         return Point(-1, -1);
@@ -117,12 +132,15 @@ void Client::sendCommand(char** command) {
 }
 
 void Client::readListOfGames() {
-    char message[190];
+    char message[190] = "";
     PrintConsole printer;
     printer.listGame();
     ssize_t n = read(clientSocket, &message, sizeof(message));
     if(n == -1) {
         throw "Error reading result from socket";
+    }
+    if(message[0] == 0) {
+        return;
     }
     while (message[0] != '\0') {
         printer.nameOfGame(message);

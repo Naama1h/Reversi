@@ -84,3 +84,14 @@ void PrintConsole::listGame() const{
 void PrintConsole::nameOfGame(string name) const{
     cout << name << endl;
 }
+
+void PrintConsole::optionOfCommand() const{
+    cout << endl << endl << "choose one of them-" << endl;
+    cout << "start <nameOfGame> to start new game" << endl;
+    cout << "join <nameOfGame> to join other game" << endl;
+    cout << "list_games to the list of the open games" << endl;
+}
+
+void PrintConsole::cantChooseThisGame() const{
+    cout << "can't Choose This Game" << endl;
+}

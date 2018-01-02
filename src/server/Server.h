@@ -9,12 +9,13 @@
 #define SERVER_H
 
 #include "ClientManager.h"
+#include <pthread.h>
 
 class Server {
 public:
     /**
      * constructor.
-     * @param port
+     * @param port int
      */
     Server(int port);
     /**
@@ -25,22 +26,31 @@ public:
      * stop.
      */
     void stop();
-
+    /**
+     * set the client manager.
+     * @param clientManager ClientManager*
+     */
     void setClientManager(ClientManager* clientManager);
+    /**
+     * do the first thread loop
+     * @param clientThread1 void*
+     * @return void*
+     */
+    static void* firstThreadLoop(void* clientThread1);
 private:
     // members
     int port;
     int serverSocket;
     ClientManager* clientManager;
-    /**
-     * handle client.
-     * @param clientSocket
-     * @param clientSocket2
-     */
-//    void handleClient(int clientSocket, int clientSocket2);
-//    void *handleClient(int clientSocket);
-    static void* forThread(void* clientThread1);
+    vector<pthread_t>* threads;
+    static pthread_mutex_t lock;
     int clientSocket;
+    /**
+     * static function to the little thread
+     * @param clientThread1 void*
+     * @return void*
+     */
+    static void* forThread(void* clientThread1);
 };
 
 

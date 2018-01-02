@@ -80,14 +80,6 @@ void Game::run() {
         }
         delete vec;
     }
-    if (player->trueIfRemote()) {
-        char in[3] = "";
-        do {
-            printer.enterEnd();
-            cin >> in;
-        } while (strcmp(in,"End") != 0);
-        player->sendMove(Point(-1,-1));
-    }
     this->board->printBoard();
     printer.counter(White, this->board->getOCounter());
     printer.counter(Black, this->board->getXCounter());

@@ -12,25 +12,31 @@ ClientManager::ClientManager() {
     this->games = new vector<GameMembers*>();
     int i = 0;
     this->clientSocket = &i;
-    this->commandsMap["play"] = new PlayCommand();
     this->commandsMap["list_games"] = new ListGamesCommand();
     this->commandsMap["join"] = new JoinCommand();
     this->commandsMap["start"] = new StartCommand();
-    this->commandsMap["close"] = new CloseCommand();
 }
 
 ClientManager::~ClientManager() {
-    map<string, Command*>::iterator it;
-    for (it = this->commandsMap.begin(); it != this->commandsMap.end(); it++) {
-        delete it->second;
+    if (!this->games->empty()) {
+        for (int i = 0; i < this->games->size(); i++) {
+            if(this->games->at(i)->getSocket1() != 0) {
+                write(this->games->at(i)->getSocket1(),"End",sizeof("End"));
+                close(this->games->at(i)->getSocket1());
+            }
+            if(this->games->at(i)->getSocket2() != 0) {
+                write(this->games->at(i)->getSocket2(),"End",sizeof("End"));
+                close(this->games->at(i)->getSocket2());
+            }
+        }
     }
     delete this->games;
 }
 
-void ClientManager::executeCommand(string command, char* arg) {
+void ClientManager::executeCommand(string command, char* arg, int socket) {
     Command* commandObj = this->commandsMap[command];
     if (commandObj != NULL) {
-        commandObj->execute(arg, this->clientSocket, *games);
+        commandObj->execute(arg, &socket, *games);
     }
 }
 
@@ -38,11 +44,11 @@ void ClientManager::setClientSocket(int socket) {
     this->clientSocket = &socket;
 }
 
-void ClientManager::readCommand() {
+void ClientManager::readCommand(int socket) {
     char input[200] = "";
     char command[10] = "";
     char arg[190] = ""; // magic number!!!!!
-    ssize_t n = read(*this->clientSocket, &input, sizeof(input));
+    ssize_t n = read(socket, &input, sizeof(input));
     if (n == -1) {
         cout << "Error reading" << endl;
         return;
@@ -65,5 +71,5 @@ void ClientManager::readCommand() {
         i++;
         j++;
     }
-    this->executeCommand(command, arg);
+    this->executeCommand(command, arg, socket);
 }

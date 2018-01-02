@@ -25,7 +25,7 @@ public:
 	/**
 	 * connecting to server.
 	 */
-	void connectToServer();
+	bool connectToServer();
 	/**
 	 * send move.
 	 * @param move

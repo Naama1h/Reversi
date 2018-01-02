@@ -25,9 +25,9 @@ Point PersonP::chooseCell(vector<Point>* options, StandartLogic* logic) const {
     cin >> x >> tmp >> y;
     if (cin.fail()) {
         cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //skip bad input
+        printer.onlyNumbers();
     }
     // user didn't input a number
-    printer.onlyNumbers();;
     cin.clear(); // reset failbit
     cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //skip bad input
     Point cell(x, y);

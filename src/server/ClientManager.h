@@ -10,10 +10,8 @@
 
 #include <map>
 #include "string"
-#include "PlayCommand.h"
 #include "JoinCommand.h"
 #include "ListGamesCommand.h"
-#include "CloseCommand.h"
 #include "StartCommand.h"
 #include <vector>
 #include "Command.h"
@@ -29,12 +27,33 @@ struct game {
 
 class ClientManager {
 public:
+    /**
+     * constructor.
+     */
     ClientManager();
+    /**
+     * destructor.
+     */
     ~ClientManager();
-    void executeCommand(string command, char* arg);
+    /**
+     * execute the commands.
+     * @param command string
+     * @param arg char*
+     * @param socket int
+     */
+    void executeCommand(string command, char* arg, int socket);
+    /**
+     * set the client socket.
+     * @param socket int
+     */
     void setClientSocket(int socket);
-    void readCommand();
+    /**
+     * read command.
+     * @param socket int
+     */
+    void readCommand(int socket);
 private:
+    // members
     int* clientSocket;
     map<string, Command*> commandsMap;
     vector<GameMembers*>* games;

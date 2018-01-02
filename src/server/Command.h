@@ -17,6 +17,12 @@ using namespace std;
 
 class Command {
 public:
+    /**
+     * execute
+     * @param arg char*
+     * @param socket int*
+     * @param games vector<GameMembers*>
+     */
     virtual void execute(char* arg, int* socket, vector<GameMembers*> &games) = 0;
 };
 

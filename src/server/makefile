@@ -1,6 +1,6 @@
 
 a.out: compileAll
-	g++ *.o -o ../../exe/server.out
+	g++ *.o -o ../../exe/server.out  -pthread
 	rm -f *.o
 
 compileAll: *.h *.cpp

@@ -21,19 +21,16 @@ void JoinCommand::execute(char* arg, int* socket, vector<GameMembers*>& games) {
                 games.at(i)->setSocket2(*this->socket);
                 write(games.at(i)->getSocket1(), "1", sizeof(char));
                 write(games.at(i)->getSocket2(), "2", sizeof(char));
-//                char tmp1[190] = "";
-//                char tmp2[190] = "";
                 this->gameIndex = i;
-//                read(games.at(i)->getSocket1(), &tmp1, sizeof(tmp1));
-//                read(games.at(i)->getSocket2(), &tmp2, sizeof(tmp2));
-//                read(*this->socket, &tmp2, sizeof(tmp2));
                 handleClient(games.at(i));
                 close(games.at(i)->getSocket1());
                 close(games.at(i)->getSocket2());
+                games.erase(games.begin() + i);
                 return;
             }
         }
     }
+    write(*this->socket, "n", sizeof(char));
 }
 
 void JoinCommand::handleClient(GameMembers* game) {
@@ -45,13 +42,8 @@ void JoinCommand::handleClient(GameMembers* game) {
     char inputx1[7] = "";
     char inputx2[180] = "";
     char string1[7] = "";
-    char string1char2[3] = "";
     char string2[7] = "";
-    char string2char2[3] = "";
-    char dummy[1];
-    char tmp1[190] = "";
-    char tmp2[190] = "";
-    while (strcmp(input1, "close") != 0 && strcmp(input2, "close") != 0) {
+    while (strcmp(input1, "End") != 0 && strcmp(input2, "End") != 0) {
         ssize_t n = read(game->getSocket1(), &input, sizeof(input));
         int i = 0;
         while (input[i] != '\0') {
@@ -76,30 +68,11 @@ void JoinCommand::handleClient(GameMembers* game) {
             return;
         }
         if (strcmp(input1,"play") == 0) {
-            int k = 0;
-            while (k != 3) {
-                string1char2[k] = input2[k];
-                k++;
-            }
-            if (string1char2[0] == '<' && string1char2[2] == '>') {
-                string1[0] = string1char2[1];
-                string1[1] = ',';
-            } else {
-                return;
-            }
-            int p = 0;
-            while (p != 3) {
-                string1char2[p] = input2[k];
-                k++;
-                p++;
-            }
-            if (string1char2[0] == '<' && string1char2[2] == '>') {
-                string1[2] = string1char2[1];
-            } else {
-                return;
-            }
+            string1[0] = input2[0];
+            string1[1] = ',';
+            string1[2] = input2[1];
             write(game->getSocket2(), &string1, sizeof(string1));
-        } else if (strcmp(input1, "close") == 0) {
+        } else if (strcmp(input1, "End") == 0) {
             write(game->getSocket2(), "End", sizeof("End"));
             break;
         }
@@ -127,30 +100,11 @@ void JoinCommand::handleClient(GameMembers* game) {
             return;
         }
         if (strcmp(inputx1,"play") == 0) {
-            int k = 0;
-            while (k != 3) {
-                string2char2[k] = inputx2[k];
-                k++;
-            }
-            if (string2char2[0] == '<' && string2char2[2] == '>') {
-                string2[0] = string2char2[1];
-                string2[1] = ',';
-            } else {
-                return;
-            }
-            int p = 0;
-            while (p != 3) {
-                string2char2[p] = inputx2[k];
-                k++;
-                p++;
-            }
-            if (string2char2[0] == '<' && string2char2[2] == '>') {
-                string2[2] = string2char2[1];
-            } else {
-                return;
-            }
+            string2[0] = inputx2[0];
+            string2[1] = ',';
+            string2[2] = inputx2[1];
             write(game->getSocket1(), &string2, sizeof(string2));
-        } else if (strcmp(inputx1, "close") == 0) {
+        } else if (strcmp(inputx1, "End") == 0) {
             write(game->getSocket1(), "End", sizeof("End"));
             break;
         }

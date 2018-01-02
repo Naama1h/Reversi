@@ -30,11 +30,11 @@ Point PersonPServer::chooseCell(vector<Point> *options, StandartLogic *logic) co
     } else if (strcmp(input,"NoMove") == 0) {
         return Point(-2,-2);
     } else {
-        char playX[3];
-        char playY[3];
+        char playX;
+        char playY;
         cin >> playX;
         cin >> playY;
-        Point cell(playX[1] - 48, playY[1] - 48);
+        Point cell(playX - 48, playY - 48);
         return cell;
     }
 }
@@ -48,7 +48,7 @@ string PersonPServer::getName() const {
 }
 
 void PersonPServer::sendMove(Point p){
-    if(p == Point(-1,-1)) {
+    if (p == Point(-1,-1)) {
         char message[3] = {'E','n','d'};
         this->client->sendMove(message);
     } else if(p == Point(-2,-2)) {

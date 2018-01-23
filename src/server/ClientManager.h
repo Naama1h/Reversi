@@ -16,6 +16,7 @@
 #include <vector>
 #include "Command.h"
 #include "GameMembers.h"
+#include "ThreadPool.h"
 using namespace std;
 /**
 struct game {
@@ -57,6 +58,7 @@ private:
     int* clientSocket;
     map<string, Command*> commandsMap;
     vector<GameMembers*>* games;
+    ThreadPool* threadPool;
 };
 
 

@@ -25,7 +25,7 @@ public:
     /**
      * stop.
      */
-    void stop();
+//    void stop();
     /**
      * set the client manager.
      * @param clientManager ClientManager*
@@ -42,7 +42,7 @@ private:
     int port;
     int serverSocket;
     ClientManager* clientManager;
-    vector<pthread_t>* threads;
+//    vector<pthread_t>* threads;
     static pthread_mutex_t lock;
     int clientSocket;
     /**

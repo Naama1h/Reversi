@@ -15,6 +15,7 @@ ClientManager::ClientManager() {
     this->commandsMap["list_games"] = new ListGamesCommand();
     this->commandsMap["join"] = new JoinCommand();
     this->commandsMap["start"] = new StartCommand();
+    this->threadPool = new ThreadPool(5);
 }
 
 ClientManager::~ClientManager() {
@@ -31,12 +32,14 @@ ClientManager::~ClientManager() {
         }
     }
     delete this->games;
+    delete this->threadPool;
 }
 
 void ClientManager::executeCommand(string command, char* arg, int socket) {
     Command* commandObj = this->commandsMap[command];
     if (commandObj != NULL) {
-        commandObj->execute(arg, &socket, *games);
+//        commandObj->execute(arg, &socket, *games);
+        this->threadPool->addCommand(commandObj);
     }
 }
 

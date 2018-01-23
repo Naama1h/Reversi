@@ -40,9 +40,9 @@ void Server::start() {
     // define the client socket's structures
     struct sockaddr_in clientAddress1;
     socklen_t clientAddressLen1 = sizeof((struct sockaddr*) &clientAddress1);
-    this->threads = new vector<pthread_t>();
+//    this->threads = new vector<pthread_t>();
     while (true) {
-        pthread_mutex_lock(&lock);
+//        pthread_mutex_lock(&lock);
         // accept a new client connection
         int clientSocket1 = accept(serverSocket,
                                    (struct sockaddr*)&clientAddress1, &clientAddressLen1);
@@ -51,17 +51,18 @@ void Server::start() {
             break;
         }
         this->clientSocket = clientSocket1;
-        pthread_t thread;
+//        pthread_t thread;
         Server* ser = new Server(this->port);
         ser->clientSocket = clientSocket1;
         ser->setClientManager(this->clientManager);
-        int rc = pthread_create(&thread, NULL, forThread, (void*)ser);
-        if (rc) {
-            cout << "Error: unable to create thread " << rc << endl;
-            return;
-        }
-        pthread_mutex_unlock(&lock);
-        this->threads->push_back(thread);
+        //int rc = pthread_create(&thread, NULL, forThread, (void*)ser);
+        ser->clientManager->readCommand(ser->clientSocket);
+//        if (rc) {
+//            cout << "Error: unable to create thread " << rc << endl;
+//            return;
+//        }
+//        pthread_mutex_unlock(&lock);
+//        this->threads->push_back(thread);
     }
 }
 
@@ -76,13 +77,13 @@ void* Server::forThread(void* clientThread1) {
     clientThread2->clientManager->readCommand(clientThread2->clientSocket);
 }
 
-void Server::stop() {
-    for(int i = 0; i < this->threads->size(); i++) {
-        pthread_cancel(this->threads->at(i));
-    }
-    delete this->clientManager;
-    close(serverSocket);
-}
+//void Server::stop() {
+//    for(int i = 0; i < this->threads->size(); i++) {
+//        pthread_cancel(this->threads->at(i));
+//    }
+//    delete this->clientManager;
+//    close(serverSocket);
+//}
 
 void Server::setClientManager(ClientManager *clientManager) {
     this->clientManager = clientManager;

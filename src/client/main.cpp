@@ -96,7 +96,7 @@ int main() {
                 } else {
                     break;
                 }
-                Board* board = new BoardConsole(4);
+                Board* board = new BoardConsole();
                 Logic* standartLogic = new StandartLogic(board);
                 Game* game = new Game(board, standartLogic, myPlayer, rival);
                 game->run();

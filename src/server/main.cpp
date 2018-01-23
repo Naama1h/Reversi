@@ -30,7 +30,7 @@ int main() {
             cout << "Enter exit to stop server" << endl;
             cin >> str;
         } while (str != "exit");
-        server.stop();
+//        server.stop();
         pthread_cancel(mainThread);
     } catch (const char *msg) {
         cout << "Cannot start server. Reason:" << msg << endl;

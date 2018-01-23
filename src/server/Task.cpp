@@ -7,9 +7,10 @@
 
 #include "Task.h"
 
-Task::Task(Command *command, char *arg, int socket, vector<GameMembers*>* games) : command(command), arg(arg),
-                                                                                   socket(socket), games(games) {}
+Task::Task(void * (*func)(void *arg), void *arg) : func(func), arg(arg) {}
 
-void Task::execute() {
-    this->command->execute(this->arg,this->socket, this->games);
+void Task::execute() { func(arg); }
+
+Task::~Task() {
+    delete this->arg;
 }

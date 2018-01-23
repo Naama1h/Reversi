@@ -8,14 +8,12 @@
 #include "ClientManager.h"
 
 ClientManager::ClientManager() {
-//    this->games = new vector<GameMembers*>();
     this->games = new vector<GameMembers*>();
     int i = 0;
     this->clientSocket = &i;
     this->commandsMap["list_games"] = new ListGamesCommand();
     this->commandsMap["join"] = new JoinCommand();
     this->commandsMap["start"] = new StartCommand();
-    this->threadPool = new ThreadPool(5);
 }
 
 ClientManager::~ClientManager() {
@@ -32,14 +30,12 @@ ClientManager::~ClientManager() {
         }
     }
     delete this->games;
-    delete this->threadPool;
 }
 
 void ClientManager::executeCommand(string command, char* arg, int socket) {
     Command* commandObj = this->commandsMap[command];
     if (commandObj != NULL) {
-//        commandObj->execute(arg, &socket, *games);
-        this->threadPool->addCommand(commandObj);
+        commandObj->execute(arg, &socket, *games);
     }
 }
 
@@ -50,7 +46,7 @@ void ClientManager::setClientSocket(int socket) {
 void ClientManager::readCommand(int socket) {
     char input[200] = "";
     char command[10] = "";
-    char arg[190] = ""; // magic number!!!!!
+    char arg[190] = "";
     ssize_t n = read(socket, &input, sizeof(input));
     if (n == -1) {
         cout << "Error reading" << endl;

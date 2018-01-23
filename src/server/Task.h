@@ -13,14 +13,24 @@
 
 class Task {
 public:
-    Task(Command* command, char* arg, int socket, vector<GameMembers*>* games);
+    /**
+     * constructor.
+     * @param func void*
+     * @param arg void*
+     */
+    Task(void * (*func)(void *arg), void *arg);
+    /**
+     * execute the task.
+     */
     void execute();
-
+    /**
+     * destructor.
+     */
+    virtual ~Task();
 private:
-    Command* command;
-    char* arg;
-    int socket;
-    vector<GameMembers*>* games;
+    // members:
+    void * (*func)(void *arg);
+    void *arg;
 };
 
 

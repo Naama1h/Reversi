@@ -135,6 +135,7 @@ void Client::readListOfGames() {
     char message[190] = "";
     PrintConsole printer;
     printer.listGame();
+    sleep(1);
     ssize_t n = read(clientSocket, &message, sizeof(message));
     if(n == -1) {
         throw "Error reading result from socket";

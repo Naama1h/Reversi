@@ -58,7 +58,7 @@ private:
     int* clientSocket;
     map<string, Command*> commandsMap;
     vector<GameMembers*>* games;
-    ThreadPool* threadPool;
+//    ThreadPool* threadPool;
 };
 
 

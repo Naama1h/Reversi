@@ -21,18 +21,19 @@ void* ThreadPool::execute(void *arg) {
     pool->executeCommands();
 }
 
-void ThreadPool::addCommand(Command *command) {
-    commandQueue.push(command);
+void ThreadPool::addTask(Task *task) {
+    taskQueue.push(task);
 }
 
 void ThreadPool::executeCommands() {
     while (!stopped) {
         pthread_mutex_lock(&lock);
-        if (!commandQueue.empty()) {
-            Command* command = commandQueue.front();
-            commandQueue.pop();
+        if (!taskQueue.empty()) {
+            Task* task = taskQueue.front();
+            taskQueue.pop();
             pthread_mutex_unlock(&lock);
-            command->execute();
+            task->execute();
+            delete task;
         } else {
             pthread_mutex_unlock(&lock);
             sleep(1);

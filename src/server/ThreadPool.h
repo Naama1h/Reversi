@@ -8,7 +8,7 @@
 #ifndef THREADPOOL_H
 #define THREADPOOL_H
 
-#include "Command.h"
+#include "Task.h"
 #include <queue>
 #include <pthread.h>
 using namespace std;
@@ -24,7 +24,7 @@ public:
      * adding command.
      * @param command
      */
-    void addCommand(Command *command);
+    void addTask(Task *task);
     /**
      * terminate.
      */
@@ -36,7 +36,7 @@ public:
 
 private:
     //members
-    queue<Command *> commandQueue;
+    queue<Task *> taskQueue;
     pthread_t* threads;
     bool stopped;
     pthread_mutex_t lock;
